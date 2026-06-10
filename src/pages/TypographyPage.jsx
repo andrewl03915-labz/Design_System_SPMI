@@ -3,31 +3,31 @@ import React from 'react'
 const TYPE_SCALE = [
   {
     token: '--text-xl',
-    label: 'Page title',
-    sample: 'Typography builds clarity and hierarchy',
-    note: 'Используется для главных заголовков страниц и ключевых entry points.',
+    label: 'Заголовок страницы',
+    sample: 'Типографика формирует ясность и иерархию',
+    note: 'Используется для главных заголовков страниц и ключевых точек входа.',
     className: 'ds-type-specimen ds-type-specimen--xl',
   },
   {
     token: '--text-lg',
-    label: 'Section heading',
-    sample: 'Section heading introduces a content block',
+    label: 'Заголовок секции',
+    sample: 'Заголовок секции вводит блок контента',
     note: 'Подходит для заголовков секций и вторичного визуального акцента.',
     className: 'ds-type-specimen ds-type-specimen--lg',
   },
   {
     token: '--text-base',
-    label: 'Body text',
+    label: 'Основной текст',
     sample:
-      'Body text is used for the main reading experience. It should remain neutral, readable and comfortable in longer interface descriptions.',
+      'Основной текст используется для базового чтения. Он должен оставаться нейтральным, разборчивым и комфортным в более длинных интерфейсных описаниях.',
     note: 'Основной текстовый размер для интерфейсов, описаний и пояснений.',
     className: 'ds-type-specimen ds-type-specimen--base',
   },
   {
     token: '--text-sm',
-    label: 'UI text',
-    sample: 'Helper text, secondary descriptions, controls and support content.',
-    note: 'Используется для вспомогательного текста, control labels и secondary content.',
+    label: 'Текст интерфейса',
+    sample: 'Вспомогательный текст, вторичные описания, элементы управления и поддерживающий контент.',
+    note: 'Используется для вспомогательного текста, подписей элементов управления и вторичного контента.',
     className: 'ds-type-specimen ds-type-specimen--sm',
   },
 ]
@@ -36,7 +36,7 @@ export default function TypographyPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Typography</h2>
+        <h2>Типографика</h2>
         <p>
           Типографика определяет, как текст выглядит, читается и организует
           интерфейс. Этот раздел описывает гарнитуру, scale tokens, текстовую
@@ -44,18 +44,18 @@ export default function TypographyPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Foundations</span>
-          <span className="ds-meta-item">Status: In progress</span>
-          <span className="ds-meta-item">Scope: Scale, hierarchy, readability</span>
-          <span className="ds-meta-item">Tokens: text, line-height, weight</span>
+          <span className="ds-meta-item">Категория: Основы</span>
+          <span className="ds-meta-item">Статус: В процессе</span>
+          <span className="ds-meta-item">Область: Scale, hierarchy, readability</span>
+          <span className="ds-meta-item">Токены: text, line-height, weight</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Typeface system</h3>
+        <h3>Система гарнитуры</h3>
         <p>
-          Типографическая система строится на одном основном шрифтовом наборе
-          для интерфейса и предсказуемой иерархии размеров. В MVP основная
+          Типографическая система строится на одном основном шрифтовом наборе NT Somic
+          для интерфейса и предсказуемой иерархии размеров. Основная
           задача typography — обеспечивать читаемость, ясную структуру и
           единый визуальный ритм.
         </p>
@@ -63,7 +63,7 @@ export default function TypographyPage() {
         <div className="ds-demo-card">
           <div className="ds-type-family-showcase">
             <div className="ds-type-family-showcase__item">
-              <span className="ds-type-family-showcase__label">Primary UI font</span>
+              <span className="ds-type-family-showcase__label">Основной UI-шрифт</span>
               <p className="ds-type-family-showcase__sample ds-type-family-showcase__sample--primary">
                 Aa Bb Cc 123
               </p>
@@ -74,7 +74,7 @@ export default function TypographyPage() {
             </div>
 
             <div className="ds-type-family-showcase__item">
-              <span className="ds-type-family-showcase__label">Tone</span>
+              <span className="ds-type-family-showcase__label">Характер</span>
               <p className="ds-type-family-showcase__meta">
                 Система стремится к академичной, нейтральной и уверенной подаче
                 без декоративности и без чрезмерно технологичного характера.
@@ -85,7 +85,7 @@ export default function TypographyPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Type scale</h3>
+        <h3>Шкала размеров</h3>
         <p>
           Type scale задаёт ограниченный набор текстовых размеров, который
           используется во всей системе. Это помогает поддерживать консистентность
@@ -108,7 +108,7 @@ export default function TypographyPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Hierarchy in use</h3>
+        <h3>Иерархия в интерфейсе</h3>
         <p>
           Текстовая иерархия должна помогать пользователю быстро понимать
           структуру страницы: что главное, что вторичное и что поясняет детали.
@@ -116,9 +116,9 @@ export default function TypographyPage() {
 
         <div className="ds-demo-card">
           <div className="ds-type-hierarchy-example">
-            <p className="ds-type-hierarchy-example__eyebrow">Foundation example</p>
+            <p className="ds-type-hierarchy-example__eyebrow">Пример foundations</p>
             <h3 className="ds-type-hierarchy-example__title">
-              Admissions documentation and student services
+              Документы для поступления и студенческие сервисы
             </h3>
             <p className="ds-type-hierarchy-example__lead">
               Этот уровень текста помогает быстро обозначить тему страницы и
@@ -127,7 +127,7 @@ export default function TypographyPage() {
 
             <div className="ds-type-hierarchy-example__section">
               <h4 className="ds-type-hierarchy-example__section-title">
-                Document requirements
+                Требования к документам
               </h4>
               <p className="ds-type-hierarchy-example__body">
                 Основной текст используется для описаний, пояснений и сценариев,
@@ -135,7 +135,7 @@ export default function TypographyPage() {
                 нейтральным по тону и комфортным для длительного чтения.
               </p>
               <p className="ds-type-hierarchy-example__meta">
-                Updated 2 days ago
+                Обновлено 2 дня назад
               </p>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function TypographyPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте ограниченный набор text tokens вместо произвольных размеров.</li>
           <li>Основной body text должен оставаться читаемым и визуально нейтральным.</li>
@@ -154,21 +154,21 @@ export default function TypographyPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <div className="ds-type-guidance-card">
                 <h4 className="ds-type-guidance-card__title">
-                  Clear hierarchy with restrained emphasis
+                  Ясная иерархия со сдержанным акцентом
                 </h4>
                 <p className="ds-type-guidance-card__body">
                   Используйте понятный контраст между title, body и secondary text.
                   Делайте акцент через роль текста, а не через случайное увеличение размера.
                 </p>
-                <p className="ds-type-guidance-card__meta">Section note</p>
+                <p className="ds-type-guidance-card__meta">Примечание к разделу</p>
               </div>
             </div>
             <ul className="ds-guidelines">
@@ -179,18 +179,18 @@ export default function TypographyPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
               <div className="ds-type-guidance-card ds-type-guidance-card--bad">
                 <h4 className="ds-type-guidance-card__title ds-type-guidance-card__title--bad">
-                  Too many font sizes and too much emphasis everywhere
+                  Слишком много размеров и слишком много акцента везде
                 </h4>
                 <p className="ds-type-guidance-card__body ds-type-guidance-card__body--bad">
                   Когда каждый фрагмент текста пытается выглядеть важным, иерархия
                   исчезает, а страница становится визуально шумной и трудной для чтения.
                 </p>
                 <p className="ds-type-guidance-card__meta ds-type-guidance-card__meta--bad">
-                  Overstyled text
+                  Перегруженный текст
                 </p>
               </div>
             </div>
@@ -204,9 +204,9 @@ export default function TypographyPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
-          Typography foundation в MVP опирается на text tokens, ограниченный
+          Typography foundation опирается на text tokens, ограниченный
           набор размеров и повторяемую hierarchy model. Компоненты и страницы
           должны использовать системные классы и token values вместо локальных
           произвольных font-size решений.

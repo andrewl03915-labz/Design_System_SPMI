@@ -2,19 +2,19 @@ import React from 'react'
 import Table from '../components/ui/Table'
 
 const programColumns = [
-  { key: 'program', label: 'Program' },
-  { key: 'degree', label: 'Degree' },
-  { key: 'deadline', label: 'Deadline' },
+  { key: 'program', label: 'Программа' },
+  { key: 'degree', label: 'Степень' },
+  { key: 'deadline', label: 'Срок подачи' },
   {
     key: 'status',
-    label: 'Status',
+    label: 'Статус',
     render: (value) => (
       <span className="ds-table__status">
         <span
           className={`ds-table__dot ${
-            value === 'Open'
+            value === 'Открыт'
               ? 'ds-table__dot--success'
-              : value === 'Closing soon'
+              : value === 'Скоро закрывается'
               ? 'ds-table__dot--warning'
               : 'ds-table__dot--neutral'
           }`}
@@ -28,44 +28,44 @@ const programColumns = [
 const programData = [
   {
     id: 1,
-    program: 'Design Systems',
-    degree: 'Master',
-    deadline: '15 July',
-    status: 'Open',
+    program: 'Дизайн-системы',
+    degree: 'Магистратура',
+    deadline: '15 июля',
+    status: 'Открыт',
   },
   {
     id: 2,
-    program: 'Digital Management',
-    degree: 'Bachelor',
-    deadline: '22 July',
-    status: 'Closing soon',
+    program: 'Цифровой менеджмент',
+    degree: 'Бакалавриат',
+    deadline: '22 июля',
+    status: 'Скоро закрывается',
   },
   {
     id: 3,
-    program: 'Applied Informatics',
-    degree: 'Bachelor',
-    deadline: 'Completed',
-    status: 'Closed',
+    program: 'Прикладная информатика',
+    degree: 'Бакалавриат',
+    deadline: 'Завершено',
+    status: 'Закрыт',
   },
 ]
 
 const compactColumns = [
-  { key: 'document', label: 'Document' },
-  { key: 'type', label: 'Type' },
-  { key: 'updated', label: 'Updated' },
+  { key: 'document', label: 'Документ' },
+  { key: 'type', label: 'Тип' },
+  { key: 'updated', label: 'Обновлено' },
 ]
 
 const compactData = [
-  { id: 1, document: 'Passport copy', type: 'PDF', updated: 'Yesterday' },
-  { id: 2, document: 'Application form', type: 'DOCX', updated: 'Today' },
-  { id: 3, document: 'Portfolio', type: 'ZIP', updated: '2 days ago' },
+  { id: 1, document: 'Копия паспорта', type: 'PDF', updated: 'Вчера' },
+  { id: 2, document: 'Форма заявления', type: 'DOCX', updated: 'Сегодня' },
+  { id: 3, document: 'Портфолио', type: 'ZIP', updated: '2 дня назад' },
 ]
 
 export default function TablePage() {
   return (
     <section className="ds-section ds-section--table">
       <div className="ds-page-intro">
-        <h2>Table</h2>
+        <h2>Таблица</h2>
         <p>
           Table используется для структурированного отображения связанных данных
           в строках и колонках. Компонент особенно полезен для списков,
@@ -74,22 +74,23 @@ export default function TablePage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Data display</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, border, text, shadow</span>
+          <span className="ds-meta-item">Категория: Отображение данных</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, border, text, shadow</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
-          Базовая структура table включает caption, header row, body rows и cells
-          с согласованным выравниванием и predictable spacing.
+          Базовая структура table включает caption, строку заголовков, строки
+          данных и ячейки с согласованным выравниванием и предсказуемыми
+          отступами.
         </p>
 
         <div className="ds-demo-card">
           <Table
-            caption="Admissions overview"
+            caption="Обзор приёмной кампании"
             columns={programColumns}
             data={programData}
           />
@@ -103,29 +104,29 @@ export default function TablePage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Variants</h3>
+        <h3>Варианты</h3>
         <p>Ниже показаны базовые visual variants для разных сценариев использования.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Default</h3>
+            <h3>По умолчанию</h3>
             <Table columns={programColumns} data={programData} />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Striped</h3>
+            <h3>С чередованием строк</h3>
             <Table columns={programColumns} data={programData} striped />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Compact</h3>
+            <h3>Компактная</h3>
             <Table columns={compactColumns} data={compactData} compact />
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
           Для table в MVP особенно важны default, hover и empty-state, потому что
           они напрямую влияют на читаемость списков и на восприятие данных.
@@ -133,12 +134,12 @@ export default function TablePage() {
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Default</h3>
+            <h3>По умолчанию</h3>
             <Table columns={programColumns} data={programData} />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Hover</h3>
+            <h3>Наведение</h3>
             <p>
               Hover-state помогает отслеживать строку при чтении плотных наборов данных,
               особенно в административных и учебных таблицах.
@@ -147,35 +148,35 @@ export default function TablePage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Empty</h3>
+            <h3>Пустое состояние</h3>
             <Table
               columns={compactColumns}
               data={[]}
-              caption="Uploaded files"
+              caption="Загруженные файлы"
             />
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
-        <p>Компонент подходит для admissions views, documents lists и structured system overviews.</p>
+        <h3>Примеры</h3>
+        <p>Компонент подходит для admissions views, documents lists и структурированных системных обзоров.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Programs</h3>
+            <h3>Программы</h3>
             <Table columns={programColumns} data={programData} striped />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Documents</h3>
+            <h3>Документы</h3>
             <Table columns={compactColumns} data={compactData} compact />
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте table, когда пользователю нужно сравнивать данные по колонкам и строкам.</li>
           <li>Не применяйте таблицу для коротких списков, если карточки или обычный list-pattern читаются лучше.</li>
@@ -186,11 +187,11 @@ export default function TablePage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-column">
               <Table columns={programColumns} data={programData} />
             </div>
@@ -202,7 +203,7 @@ export default function TablePage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-column">
               <div className="ds-note">
                 Не превращайте table в перегруженный grid с длинными абзацами,
@@ -220,7 +221,7 @@ export default function TablePage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает <code>columns</code>, <code>data</code>,{' '}
           <code>caption</code>, <code>striped</code> и <code>compact</code>.

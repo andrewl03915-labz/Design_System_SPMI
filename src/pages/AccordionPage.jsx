@@ -3,21 +3,21 @@ import Accordion from '../components/ui/Accordion'
 
 const previewItems = [
   {
-    title: 'What documents are required?',
+    title: 'Какие документы необходимы?',
     content: (
       <p>
-        Upload your passport copy, academic transcript and motivation letter
-        before submitting the application.
+        Загрузите копию паспорта, академическую справку и мотивационное письмо
+        перед отправкой заявки.
       </p>
     ),
     defaultOpen: true,
   },
   {
-    title: 'When will I receive a response?',
+    title: 'Когда я получу ответ?',
     content: (
       <p>
-        Applications are usually reviewed within ten working days after all
-        required documents are submitted.
+        Заявки обычно рассматриваются в течение десяти рабочих дней после
+        предоставления всех необходимых документов.
       </p>
     ),
   },
@@ -25,30 +25,30 @@ const previewItems = [
 
 const settingsItems = [
   {
-    title: 'Profile settings',
+    title: 'Настройки профиля',
     content: (
       <p>
-        Manage personal information, contact details and account preferences in
-        one place.
+        Управляйте личной информацией, контактными данными и предпочтениями
+        учётной записи в одном месте.
       </p>
     ),
   },
   {
-    title: 'Notification settings',
+    title: 'Настройки уведомлений',
     content: (
       <p>
-        Choose which updates you want to receive by email and which alerts stay
-        inside the product interface.
+        Выберите, какие обновления вы хотите получать по электронной почте, а
+        какие уведомления должны оставаться внутри интерфейса продукта.
       </p>
     ),
     defaultOpen: true,
   },
   {
-    title: 'Security settings',
+    title: 'Настройки безопасности',
     content: (
       <p>
-        Update your password, enable two-factor authentication and review recent
-        login activity.
+        Обновляйте пароль, включайте двухфакторную аутентификацию и
+        просматривайте недавнюю активность входа в систему.
       </p>
     ),
   },
@@ -58,7 +58,7 @@ export default function AccordionPage() {
   return (
     <section className="ds-section ds-section--accordion">
       <div className="ds-page-intro">
-        <h2>Accordion</h2>
+        <h2>"Аккордеон"</h2>
         <p>
           Accordion используется для показа и скрытия связанных блоков контента
           внутри ограниченного пространства. Компонент помогает структурировать
@@ -67,14 +67,14 @@ export default function AccordionPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Disclosure</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, border, text</span>
+          <span className="ds-meta-item">Категория: Раскрытие контента</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, border, text</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Preview</h3>
+        <h3>Превью</h3>
         <p>
           Accordion помогает показывать контент по запросу, не перегружая экран
           всеми деталями сразу.
@@ -86,40 +86,43 @@ export default function AccordionPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Variants</h3>
-        <p>Ниже показаны типичные сценарии использования accordion в документации и product UI.</p>
+        <h3>Варианты</h3>
+        <p>
+          Ниже показаны типичные сценарии использования accordion в документации
+          и продуктовых интерфейсах.
+        </p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>FAQ pattern</h3>
+            <h3>FAQ-паттерн</h3>
             <Accordion items={previewItems} />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Settings groups</h3>
+            <h3>Группы настроек</h3>
             <Accordion items={settingsItems} />
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
-          Для accordion наиболее важны состояния collapsed и expanded, потому
+          Для accordion наиболее важны состояния "Свернуто" и "Раскрыто", потому
           что именно они определяют, доступен ли пользователю скрытый контент.
         </p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Collapsed</h3>
+            <h3>Свернуто</h3>
             <Accordion
               items={[
                 {
-                  title: 'Application timeline',
+                  title: 'Сроки рассмотрения заявки',
                   content: (
                     <p>
-                      The full review timeline becomes visible after the section
-                      is expanded.
+                      Полная информация о сроках рассмотрения становится видимой
+                      после раскрытия раздела.
                     </p>
                   ),
                 },
@@ -128,15 +131,16 @@ export default function AccordionPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Expanded</h3>
+            <h3>Раскрыто</h3>
             <Accordion
               items={[
                 {
-                  title: 'Application timeline',
+                  title: 'Сроки рассмотрения заявки',
                   content: (
                     <p>
-                      The application is reviewed after document verification,
-                      eligibility check and final approval.
+                      Заявка рассматривается после проверки документов,
+                      подтверждения соответствия требованиям и финального
+                      одобрения.
                     </p>
                   ),
                   defaultOpen: true,
@@ -148,21 +152,22 @@ export default function AccordionPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
-          Базовая структура accordion включает item container, trigger button,
-          title, icon indicator и expandable content panel.
+          Базовая структура accordion включает контейнер элемента, кнопку
+          раскрытия, заголовок, индикатор состояния и раскрывающуюся панель
+          контента.
         </p>
 
         <div className="ds-demo-card">
           <Accordion
             items={[
               {
-                title: 'Admission requirements',
+                title: 'Требования к поступлению',
                 content: (
                   <p>
-                    This panel contains detailed explanation, supporting text and
-                    additional context for the selected topic.
+                    Эта панель содержит подробное объяснение, сопровождающий
+                    текст и дополнительный контекст по выбранной теме.
                   </p>
                 ),
                 defaultOpen: true,
@@ -171,16 +176,19 @@ export default function AccordionPage() {
           />
 
           <ul className="ds-guidelines">
-            <li>Каждый item должен иметь короткий и понятный заголовок.</li>
-            <li>Trigger должен clearly indicate expandable behavior.</li>
+            <li>Каждый элемент должен иметь короткий и понятный заголовок.</li>
+            <li>Триггер должен явно указывать на возможность раскрытия контента.</li>
             <li>Скрытый контент должен появляться только по запросу пользователя.</li>
           </ul>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
-        <p>Accordion особенно полезен для FAQ, настроек, правил и длинных поясняющих блоков.</p>
+        <h3>Примеры</h3>
+        <p>
+          Accordion особенно полезен для FAQ, настроек, правил и длинных
+          поясняющих блоков.
+        </p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
@@ -188,19 +196,20 @@ export default function AccordionPage() {
             <Accordion
               items={[
                 {
-                  title: 'Can I edit my application after submission?',
+                  title: 'Можно ли отредактировать заявку после отправки?',
                   content: (
                     <p>
-                      Changes are available until the final submission deadline.
+                      Изменения доступны до наступления окончательного срока
+                      подачи.
                     </p>
                   ),
                 },
                 {
-                  title: 'How do I upload missing documents?',
+                  title: 'Как загрузить недостающие документы?',
                   content: (
                     <p>
-                      Open your application dashboard and use the upload section
-                      in the required documents block.
+                      Откройте панель управления заявкой и воспользуйтесь
+                      разделом загрузки в блоке обязательных документов.
                     </p>
                   ),
                 },
@@ -209,23 +218,25 @@ export default function AccordionPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Policies</h3>
+            <h3>Политики</h3>
             <Accordion
               items={[
                 {
-                  title: 'Attendance policy',
+                  title: 'Политика посещаемости',
                   content: (
                     <p>
-                      Students are expected to attend all required sessions and
-                      notify the program coordinator about justified absence.
+                      Студенты должны посещать все обязательные занятия и
+                      уведомлять координатора программы об уважительной причине
+                      отсутствия.
                     </p>
                   ),
                 },
                 {
-                  title: 'Assessment policy',
+                  title: 'Политика оценивания',
                   content: (
                     <p>
-                      Final grades combine coursework, participation and end-of-term evaluation.
+                      Итоговая оценка складывается из результатов по курсу,
+                      участия и итоговой аттестации в конце периода обучения.
                     </p>
                   ),
                 },
@@ -236,31 +247,31 @@ export default function AccordionPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте accordion для связанных блоков вторичного или подробного контента.</li>
           <li>Не скрывайте внутри accordion критически важную информацию, которую нужно видеть сразу.</li>
-          <li>Заголовки должны быть короткими, понятными и сканируемыми.</li>
-          <li>Используйте accordion там, где действительно есть смысл в progressive disclosure.</li>
-          <li>Не перегружайте один item слишком большим количеством сложного контента.</li>
+          <li>Заголовки должны быть короткими, понятными и удобными для быстрого просмотра.</li>
+          <li>Используйте accordion там, где действительно есть смысл в постепенном раскрытии информации.</li>
+          <li>Не перегружайте один элемент слишком большим количеством сложного контента.</li>
         </ul>
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <Accordion
                 items={[
                   {
-                    title: 'Required documents',
+                    title: 'Необходимые документы',
                     content: (
                       <p>
-                        Upload a passport copy, academic transcript and language
-                        certificate before the deadline.
+                        Загрузите копию паспорта, академическую справку и
+                        языковой сертификат до окончания срока подачи.
                       </p>
                     ),
                     defaultOpen: true,
@@ -269,23 +280,24 @@ export default function AccordionPage() {
               />
             </div>
             <ul className="ds-guidelines">
-              <li>Пишите ясные, конкретные заголовки.</li>
-              <li>Используйте accordion для logically grouped details.</li>
+              <li>Пишите ясные и конкретные заголовки.</li>
+              <li>Используйте accordion для логически сгруппированных деталей.</li>
               <li>Делайте раскрываемый контент кратким и полезным.</li>
             </ul>
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
               <Accordion
                 items={[
                   {
-                    title: 'Click here to see many different things that may or may not be useful',
+                    title: 'Нажмите здесь, чтобы увидеть много разных вещей, которые могут быть полезны, а могут и не быть',
                     content: (
                       <p>
-                        This item uses a vague title and does not help the user
-                        predict what is hidden inside the panel.
+                        В этом элементе используется расплывчатый заголовок,
+                        который не помогает пользователю понять, что скрыто
+                        внутри панели.
                       </p>
                     ),
                     defaultOpen: true,
@@ -296,19 +308,18 @@ export default function AccordionPage() {
             <ul className="ds-guidelines">
               <li>Не делайте заголовки размытыми и слишком длинными.</li>
               <li>Не используйте accordion как контейнер для несвязанных тем.</li>
-              <li>Не прячьте essential content без причины.</li>
+              <li>Не скрывайте важный контент без причины.</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
-          Компонент принимает <code>items</code>, где каждый item содержит{' '}
-          <code>title</code>, <code>content</code> и optional{' '}
-          <code>defaultOpen</code>. В MVP accordion реализован как простой
-          disclosure pattern с независимым раскрытием каждого item.
+          Компонент принимает <code>items</code>, где каждый элемент содержит{' '}
+          <code>title</code>, <code>content</code> и необязательное поле{' '}
+          <code>defaultOpen</code>.
         </div>
       </div>
     </section>

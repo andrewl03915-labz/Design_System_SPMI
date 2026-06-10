@@ -8,7 +8,7 @@ export default function RadioPage() {
   return (
     <section className="ds-section ds-section--radio">
       <div className="ds-page-intro">
-        <h2>Radio</h2>
+        <h2>Радиокнопки</h2>
         <p>
           Radio используется для выбора одного варианта из нескольких
           взаимоисключающих опций. Компонент помогает представить single-choice
@@ -16,14 +16,14 @@ export default function RadioPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Form</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, border, text, shadow</span>
+          <span className="ds-meta-item">Категория: Форма</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, border, text, shadow</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Preview</h3>
+        <h3>Предпросмотр</h3>
         <p>
           Radio group помогает выбрать один вариант из набора опций с ясным
           указанием текущего selected state.
@@ -31,26 +31,26 @@ export default function RadioPage() {
 
         <div className="ds-demo-card">
           <RadioGroup
-            label="Program type"
+            label="Тип программы"
             name="program-type-preview"
             value={programType}
             onChange={setProgramType}
-            helperText="Choose one option."
+            helperText="Выберите один вариант."
             options={[
               {
                 value: 'bachelor',
-                label: 'Bachelor program',
-                description: 'Undergraduate degree for first-cycle higher education.',
+                label: 'Программа бакалавриата',
+                description: 'Базовая ступень высшего образования первого цикла.',
               },
               {
                 value: 'master',
-                label: 'Master program',
-                description: 'Graduate degree for advanced academic specialisation.',
+                label: 'Программа магистратуры',
+                description: 'Следующая ступень высшего образования для углублённой специализации.',
               },
               {
                 value: 'phd',
-                label: 'PhD track',
-                description: 'Research-focused doctoral study path.',
+                label: 'Траектория PhD',
+                description: 'Исследовательская траектория докторской подготовки.',
               },
             ]}
           />
@@ -58,67 +58,67 @@ export default function RadioPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Variants</h3>
+        <h3>Варианты</h3>
         <p>Ниже показаны типичные варианты использования radio group в интерфейсе.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Vertical group</h3>
+            <h3>Вертикальная группа</h3>
             <RadioGroup
-              label="Study format"
+              label="Формат обучения"
               name="study-format"
               value={deliveryMode}
               onChange={setDeliveryMode}
-              helperText="Select one delivery mode."
+              helperText="Выберите один формат."
               options={[
                 {
                   value: 'online',
-                  label: 'Online',
-                  description: 'Remote participation with digital materials and video sessions.',
+                  label: 'Онлайн',
+                  description: 'Дистанционное участие с цифровыми материалами и видеозанятиями.',
                 },
                 {
                   value: 'hybrid',
-                  label: 'Hybrid',
-                  description: 'Combination of online learning and in-person workshops.',
+                  label: 'Гибридный формат',
+                  description: 'Сочетание онлайн-обучения и очных занятий.',
                 },
                 {
                   value: 'campus',
-                  label: 'On campus',
-                  description: 'Full in-person participation at the university.',
+                  label: 'Очно',
+                  description: 'Полноценное очное участие в университете.',
                 },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Horizontal group</h3>
+            <h3>Горизонтальная группа</h3>
             <RadioGroup
-              label="Language"
+              label="Язык"
               name="language"
               value="en"
               onChange={() => {}}
               direction="horizontal"
               options={[
-                { value: 'en', label: 'English' },
-                { value: 'de', label: 'German' },
-                { value: 'fr', label: 'French' },
+                { value: 'en', label: 'Английский' },
+                { value: 'de', label: 'Немецкий' },
+                { value: 'fr', label: 'Французский' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled group</h3>
+            <h3>Недоступная группа</h3>
             <RadioGroup
-              label="Application status"
+              label="Статус заявки"
               name="application-status"
               value="submitted"
               onChange={() => {}}
-              helperText="Selection is locked after submission."
+              helperText="После отправки выбор блокируется."
               disabled
               options={[
-                { value: 'draft', label: 'Draft' },
-                { value: 'submitted', label: 'Submitted' },
-                { value: 'review', label: 'Under review' },
+                { value: 'draft', label: 'Черновик' },
+                { value: 'submitted', label: 'Отправлено' },
+                { value: 'review', label: 'На рассмотрении' },
               ]}
             />
           </div>
@@ -126,7 +126,7 @@ export default function RadioPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
           Для radio особенно важны default, selected, focus, disabled и error
           states, потому что выбор должен быть очевидным и легко проверяемым.
@@ -134,47 +134,47 @@ export default function RadioPage() {
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Selected</h3>
+            <h3>Выбрано</h3>
             <RadioGroup
-              label="Selected state"
+              label="Состояние выбора"
               name="selected-state"
               value="option-2"
               onChange={() => {}}
               options={[
-                { value: 'option-1', label: 'Option one' },
-                { value: 'option-2', label: 'Option two' },
-                { value: 'option-3', label: 'Option three' },
+                { value: 'option-1', label: 'Вариант один' },
+                { value: 'option-2', label: 'Вариант два' },
+                { value: 'option-3', label: 'Вариант три' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Error</h3>
+            <h3>Ошибка</h3>
             <RadioGroup
-              label="Payment method"
+              label="Способ оплаты"
               name="payment-method"
               value=""
               onChange={() => {}}
-              error="Please select one payment method before continuing."
+              error="Перед продолжением выберите один способ оплаты."
               options={[
-                { value: 'card', label: 'Card' },
-                { value: 'invoice', label: 'Invoice' },
-                { value: 'grant', label: 'Grant funding' },
+                { value: 'card', label: 'Карта' },
+                { value: 'invoice', label: 'Счёт' },
+                { value: 'grant', label: 'Грантовое финансирование' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled</h3>
+            <h3>Недоступно</h3>
             <RadioGroup
-              label="Archived mode"
+              label="Архивный режим"
               name="archived-mode"
               value="manual"
               onChange={() => {}}
               disabled
               options={[
-                { value: 'manual', label: 'Manual review' },
-                { value: 'automatic', label: 'Automatic review' },
+                { value: 'manual', label: 'Ручная проверка' },
+                { value: 'automatic', label: 'Автоматическая проверка' },
               ]}
             />
           </div>
@@ -182,30 +182,30 @@ export default function RadioPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
-          Базовая структура radio group включает fieldset, legend, set of radio
-          options, control indicator, option label, optional description и
-          helper or error text.
+          Базовая структура radio group включает fieldset, legend, набор radio
+          options, индикатор выбора, label варианта, необязательное описание и
+          helper text или текст ошибки.
         </p>
 
         <div className="ds-demo-card">
           <RadioGroup
-            label="Accommodation type"
+            label="Тип размещения"
             name="accommodation-type"
             value="shared"
             onChange={() => {}}
-            helperText="Choose one option for your application."
+            helperText="Выберите один вариант для заявки."
             options={[
               {
                 value: 'shared',
-                label: 'Shared room',
-                description: 'Lower cost option with shared occupancy.',
+                label: 'Общая комната',
+                description: 'Более доступный вариант с совместным проживанием.',
               },
               {
                 value: 'private',
-                label: 'Private room',
-                description: 'Single occupancy room with increased privacy.',
+                label: 'Отдельная комната',
+                description: 'Одноместное размещение с повышенной приватностью.',
               },
             ]}
           />
@@ -219,51 +219,51 @@ export default function RadioPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>Компонент особенно полезен в формах, настройках, фильтрах и шагах онбординга.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Application form</h3>
+            <h3>Форма заявки</h3>
             <RadioGroup
-              label="Enrollment type"
+              label="Форма обучения"
               name="enrollment-type"
               value="full-time"
               onChange={() => {}}
               options={[
-                { value: 'full-time', label: 'Full-time' },
-                { value: 'part-time', label: 'Part-time' },
+                { value: 'full-time', label: 'Очная' },
+                { value: 'part-time', label: 'Заочная' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Settings</h3>
+            <h3>Настройки</h3>
             <RadioGroup
-              label="Theme preference"
+              label="Тема оформления"
               name="theme-preference"
               value="system"
               onChange={() => {}}
               options={[
-                { value: 'light', label: 'Light' },
-                { value: 'dark', label: 'Dark' },
-                { value: 'system', label: 'System default' },
+                { value: 'light', label: 'Светлая' },
+                { value: 'dark', label: 'Тёмная' },
+                { value: 'system', label: 'Системная по умолчанию' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Filter group</h3>
+            <h3>Группа фильтров</h3>
             <RadioGroup
-              label="Sort order"
+              label="Порядок сортировки"
               name="sort-order"
               value="latest"
               onChange={() => {}}
               direction="horizontal"
               options={[
-                { value: 'latest', label: 'Latest' },
-                { value: 'oldest', label: 'Oldest' },
-                { value: 'popular', label: 'Popular' },
+                { value: 'latest', label: 'Сначала новые' },
+                { value: 'oldest', label: 'Сначала старые' },
+                { value: 'popular', label: 'Популярные' },
               ]}
             />
           </div>
@@ -271,7 +271,7 @@ export default function RadioPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте radio, когда пользователь должен выбрать только один вариант.</li>
           <li>Не используйте radio для множественного выбора — для этого подходит checkbox.</li>
@@ -282,20 +282,20 @@ export default function RadioPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <RadioGroup
-                label="Attendance mode"
+                label="Формат участия"
                 name="attendance-mode"
                 value="in-person"
                 onChange={() => {}}
                 options={[
-                  { value: 'in-person', label: 'In person' },
-                  { value: 'remote', label: 'Remote' },
+                  { value: 'in-person', label: 'Очно' },
+                  { value: 'remote', label: 'Дистанционно' },
                 ]}
               />
             </div>
@@ -307,11 +307,11 @@ export default function RadioPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
               <p>
-                Option A / Option B / Option C without a clear group question or
-                explanation of what changes after selection.
+                Вариант A / Вариант B / Вариант C без понятного вопроса группы и
+                без объяснения того, что изменится после выбора.
               </p>
             </div>
             <ul className="ds-guidelines">
@@ -324,7 +324,7 @@ export default function RadioPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает <code>label</code>, <code>name</code>,{' '}
           <code>options</code>, <code>value</code>, <code>onChange</code>,{' '}

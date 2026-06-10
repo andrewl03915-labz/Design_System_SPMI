@@ -2,85 +2,85 @@ import React from 'react'
 
 const PRIMITIVE_GROUPS = [
   {
-    title: 'Surfaces',
+    title: 'Поверхности',
     items: [
-      { token: '--color-white', value: '#ffffff', name: 'White' },
-      { token: '--color-bg-base', value: '#f6f7f5', name: 'Background base' },
-      { token: '--color-surface-base', value: '#ffffff', name: 'Surface base' },
-      { token: '--color-surface-alt-base', value: '#eef1ec', name: 'Surface alt base' },
+      { token: '--color-white', value: '#ffffff', name: 'Белый' },
+      { token: '--color-bg-base', value: '#f6f7f5', name: 'Базовый фон' },
+      { token: '--color-surface-base', value: '#ffffff', name: 'Базовая поверхность' },
+      { token: '--color-surface-alt-base', value: '#eef1ec', name: 'Альтернативная базовая поверхность' },
     ],
   },
   {
-    title: 'Text',
+    title: 'Текст',
     items: [
-      { token: '--color-text-base', value: '#1f2933', name: 'Text base' },
-      { token: '--color-text-muted-base', value: '#5c6670', name: 'Text muted base' },
+      { token: '--color-text-base', value: '#1f2933', name: 'Базовый текст' },
+      { token: '--color-text-muted-base', value: '#5c6670', name: 'Приглушённый базовый текст' },
     ],
   },
   {
-    title: 'Borders',
+    title: 'Границы',
     items: [
-      { token: '--color-border-subtle-base', value: '#d4d9de', name: 'Border subtle base' },
-      { token: '--color-border-strong-base', value: '#a7b0ba', name: 'Border strong base' },
+      { token: '--color-border-subtle-base', value: '#d4d9de', name: 'Базовая мягкая граница' },
+      { token: '--color-border-strong-base', value: '#a7b0ba', name: 'Базовая акцентная граница' },
     ],
   },
   {
-    title: 'Brand',
+    title: 'Бренд',
     items: [
-      { token: '--color-primary-base', value: '#125735', name: 'Primary green' },
-      { token: '--color-primary-hover-base', value: '#0d4027', name: 'Primary hover' },
-      { token: '--color-primary-active-base', value: '#092b1a', name: 'Primary active' },
-      { token: '--color-primary-soft-base', value: '#e4f2e8', name: 'Primary soft' },
-      { token: '--color-gold-base', value: '#c8962a', name: 'Gold' },
-      { token: '--color-gold-soft-base', value: '#f9f0d9', name: 'Gold soft' },
+      { token: '--color-primary-base', value: '#125735', name: 'Основной зелёный' },
+      { token: '--color-primary-hover-base', value: '#0d4027', name: 'Основной hover' },
+      { token: '--color-primary-active-base', value: '#092b1a', name: 'Основной active' },
+      { token: '--color-primary-soft-base', value: '#e4f2e8', name: 'Мягкий основной' },
+      { token: '--color-gold-base', value: '#c8962a', name: 'Золотой' },
+      { token: '--color-gold-soft-base', value: '#f9f0d9', name: 'Мягкий золотой' },
     ],
   },
   {
-    title: 'Status',
+    title: 'Статусы',
     items: [
-      { token: '--color-success-base', value: '#1d7a3a', name: 'Success' },
-      { token: '--color-success-bg-base', value: '#e3f4e8', name: 'Success background' },
-      { token: '--color-warning-base', value: '#b7791f', name: 'Warning' },
-      { token: '--color-warning-bg-base', value: '#fff4e0', name: 'Warning background' },
-      { token: '--color-error-base', value: '#b3261e', name: 'Error' },
-      { token: '--color-error-bg-base', value: '#fce7e7', name: 'Error background' },
-      { token: '--color-info-base', value: '#2563a6', name: 'Info' },
-      { token: '--color-info-bg-base', value: '#e6f0fb', name: 'Info background' },
+      { token: '--color-success-base', value: '#1d7a3a', name: 'Успех' },
+      { token: '--color-success-bg-base', value: '#e3f4e8', name: 'Фон успеха' },
+      { token: '--color-warning-base', value: '#b7791f', name: 'Предупреждение' },
+      { token: '--color-warning-bg-base', value: '#fff4e0', name: 'Фон предупреждения' },
+      { token: '--color-error-base', value: '#b3261e', name: 'Ошибка' },
+      { token: '--color-error-bg-base', value: '#fce7e7', name: 'Фон ошибки' },
+      { token: '--color-info-base', value: '#2563a6', name: 'Информация' },
+      { token: '--color-info-bg-base', value: '#e6f0fb', name: 'Информационный фон' },
     ],
   },
 ]
 
 const SEMANTIC_TOKENS = [
-  { token: '--color-bg', role: 'Page background', mapsTo: '--color-bg-base' },
-  { token: '--color-surface', role: 'Card and panel surface', mapsTo: '--color-surface-base' },
-  { token: '--color-surface-alt', role: 'Alternative neutral surface', mapsTo: '--color-surface-alt-base' },
-  { token: '--color-text', role: 'Primary text', mapsTo: '--color-text-base' },
-  { token: '--color-text-muted', role: 'Secondary text', mapsTo: '--color-text-muted-base' },
-  { token: '--color-border-subtle', role: 'Soft borders and dividers', mapsTo: '--color-border-subtle-base' },
-  { token: '--color-border-strong', role: 'Higher-emphasis borders', mapsTo: '--color-border-strong-base' },
-  { token: '--color-primary', role: 'Primary brand color', mapsTo: '--color-primary-base' },
-  { token: '--color-primary-hover', role: 'Primary hover state', mapsTo: '--color-primary-hover-base' },
-  { token: '--color-primary-active', role: 'Primary active state', mapsTo: '--color-primary-active-base' },
-  { token: '--color-primary-soft', role: 'Soft primary-tinted background', mapsTo: '--color-primary-soft-base' },
-  { token: '--color-accent-gold', role: 'Brand accent gold', mapsTo: '--color-gold-base' },
-  { token: '--color-accent-gold-soft', role: 'Soft gold background', mapsTo: '--color-gold-soft-base' },
-  { token: '--color-success', role: 'Success foreground', mapsTo: '--color-success-base' },
-  { token: '--color-success-bg', role: 'Success background', mapsTo: '--color-success-bg-base' },
-  { token: '--color-warning', role: 'Warning foreground', mapsTo: '--color-warning-base' },
-  { token: '--color-warning-bg', role: 'Warning background', mapsTo: '--color-warning-bg-base' },
-  { token: '--color-error', role: 'Error foreground', mapsTo: '--color-error-base' },
-  { token: '--color-error-bg', role: 'Error background', mapsTo: '--color-error-bg-base' },
-  { token: '--color-info', role: 'Info foreground', mapsTo: '--color-info-base' },
-  { token: '--color-info-bg', role: 'Info background', mapsTo: '--color-info-bg-base' },
-  { token: '--color-neutral-bg', role: 'Neutral helper background', mapsTo: '--color-surface-alt-base' },
-  { token: '--color-accent', role: 'Compatibility alias', mapsTo: '--color-accent-gold' },
+  { token: '--color-bg', role: 'Фон страницы', mapsTo: '--color-bg-base' },
+  { token: '--color-surface', role: 'Поверхность карточек и панелей', mapsTo: '--color-surface-base' },
+  { token: '--color-surface-alt', role: 'Альтернативная нейтральная поверхность', mapsTo: '--color-surface-alt-base' },
+  { token: '--color-text', role: 'Основной текст', mapsTo: '--color-text-base' },
+  { token: '--color-text-muted', role: 'Вторичный текст', mapsTo: '--color-text-muted-base' },
+  { token: '--color-border-subtle', role: 'Мягкие границы и разделители', mapsTo: '--color-border-subtle-base' },
+  { token: '--color-border-strong', role: 'Границы с повышенным акцентом', mapsTo: '--color-border-strong-base' },
+  { token: '--color-primary', role: 'Основной цвет бренда', mapsTo: '--color-primary-base' },
+  { token: '--color-primary-hover', role: 'Состояние hover для основного цвета', mapsTo: '--color-primary-hover-base' },
+  { token: '--color-primary-active', role: 'Состояние active для основного цвета', mapsTo: '--color-primary-active-base' },
+  { token: '--color-primary-soft', role: 'Мягкий фон с оттенком основного цвета', mapsTo: '--color-primary-soft-base' },
+  { token: '--color-accent-gold', role: 'Золотой акцент бренда', mapsTo: '--color-gold-base' },
+  { token: '--color-accent-gold-soft', role: 'Мягкий золотой фон', mapsTo: '--color-gold-soft-base' },
+  { token: '--color-success', role: 'Цвет текста успеха', mapsTo: '--color-success-base' },
+  { token: '--color-success-bg', role: 'Фон успеха', mapsTo: '--color-success-bg-base' },
+  { token: '--color-warning', role: 'Цвет текста предупреждения', mapsTo: '--color-warning-base' },
+  { token: '--color-warning-bg', role: 'Фон предупреждения', mapsTo: '--color-warning-bg-base' },
+  { token: '--color-error', role: 'Цвет текста ошибки', mapsTo: '--color-error-base' },
+  { token: '--color-error-bg', role: 'Фон ошибки', mapsTo: '--color-error-bg-base' },
+  { token: '--color-info', role: 'Цвет информационного текста', mapsTo: '--color-info-base' },
+  { token: '--color-info-bg', role: 'Информационный фон', mapsTo: '--color-info-bg-base' },
+  { token: '--color-neutral-bg', role: 'Нейтральный вспомогательный фон', mapsTo: '--color-surface-alt-base' },
+  { token: '--color-accent', role: 'Совместимый alias', mapsTo: '--color-accent-gold' },
 ]
 
 export default function ColorsPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Color</h2>
+        <h2>Цвет</h2>
         <p>
           Цветовая система определяет визуальную идентичность, контраст,
           иерархию и состояния интерфейса. В проекте используются primitive и
@@ -89,15 +89,15 @@ export default function ColorsPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Foundations</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Model: Primitive + Semantic tokens</span>
-          <span className="ds-meta-item">Theme: Green / Gold</span>
+          <span className="ds-meta-item">Категория: Foundations</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Модель: Primitive + Semantic tokens</span>
+          <span className="ds-meta-item">Тема: Зелёный / Золотой</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Primitive palette</h3>
+        <h3>Базовая палитра</h3>
         <p>
           Primitive tokens — это базовые цветовые значения системы. Они не
           описывают конкретный UI-сценарий, а задают исходные цвета, на которые
@@ -133,7 +133,7 @@ export default function ColorsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Semantic tokens</h3>
+        <h3>Семантические токены</h3>
         <p>
           Semantic tokens определяют, как цвет используется в интерфейсе: для
           текста, поверхностей, границ, бренда и статусов. Именно semantic слой
@@ -156,7 +156,7 @@ export default function ColorsPage() {
               <div className="ds-token-map-row__content">
                 <p className="ds-token-map-row__title">{item.token}</p>
                 <p className="ds-token-map-row__role">{item.role}</p>
-                <p className="ds-token-map-row__meta">Maps to {item.mapsTo}</p>
+                <p className="ds-token-map-row__meta">Связан с {item.mapsTo}</p>
               </div>
             </div>
           ))}
@@ -164,7 +164,7 @@ export default function ColorsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Brand accents</h3>
+        <h3>Брендовые акценты</h3>
         <p>
           Зелёный является основным фирменным цветом системы и отвечает за
           primary actions и active emphasis. Золотой используется как
@@ -173,19 +173,19 @@ export default function ColorsPage() {
 
         <div className="ds-brand-pair">
           <div className="ds-brand-pair__item ds-brand-pair__item--green">
-            <p className="ds-brand-pair__title">Primary green</p>
+            <p className="ds-brand-pair__title">Основной зелёный</p>
             <p className="ds-brand-pair__token">--color-primary</p>
           </div>
 
           <div className="ds-brand-pair__item ds-brand-pair__item--gold">
-            <p className="ds-brand-pair__title">Accent gold</p>
+            <p className="ds-brand-pair__title">Акцентный золотой</p>
             <p className="ds-brand-pair__token">--color-accent-gold</p>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Status colors</h3>
+        <h3>Статусные цвета</h3>
         <p>
           Success, warning, error и info образуют отдельный semantic слой для
           notification patterns, validation, alerts и system feedback.
@@ -193,29 +193,29 @@ export default function ColorsPage() {
 
         <div className="ds-status-grid">
           <div className="ds-status-card ds-status-card--success">
-            <p className="ds-status-card__title">Success</p>
+            <p className="ds-status-card__title">Успех</p>
             <p className="ds-status-card__token">--color-success / --color-success-bg</p>
           </div>
 
           <div className="ds-status-card ds-status-card--warning">
-            <p className="ds-status-card__title">Warning</p>
+            <p className="ds-status-card__title">Предупреждение</p>
             <p className="ds-status-card__token">--color-warning / --color-warning-bg</p>
           </div>
 
           <div className="ds-status-card ds-status-card--error">
-            <p className="ds-status-card__title">Error</p>
+            <p className="ds-status-card__title">Ошибка</p>
             <p className="ds-status-card__token">--color-error / --color-error-bg</p>
           </div>
 
           <div className="ds-status-card ds-status-card--info">
-            <p className="ds-status-card__title">Info</p>
+            <p className="ds-status-card__title">Информация</p>
             <p className="ds-status-card__token">--color-info / --color-info-bg</p>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Surfaces and text</h3>
+        <h3>Поверхности и текст</h3>
         <p>
           Нейтральные поверхности и текстовые цвета обеспечивают читаемость,
           глубину и стабильный фон для брендовых акцентов. Именно они должны
@@ -224,31 +224,31 @@ export default function ColorsPage() {
 
         <div className="ds-surface-layers">
           <div className="ds-surface-layers__item ds-surface-layers__item--bg">
-            <p>Background</p>
+            <p>Фон</p>
             <span>--color-bg</span>
           </div>
           <div className="ds-surface-layers__item ds-surface-layers__item--surface">
-            <p>Surface</p>
+            <p>Поверхность</p>
             <span>--color-surface</span>
           </div>
           <div className="ds-surface-layers__item ds-surface-layers__item--alt">
-            <p>Surface alt</p>
+            <p>Альтернативная поверхность</p>
             <span>--color-surface-alt</span>
           </div>
         </div>
 
         <div className="ds-text-tone-list">
           <div className="ds-text-tone-list__item">
-            <p className="ds-text-sample-primary">Primary text — --color-text</p>
+            <p className="ds-text-sample-primary">Основной текст — --color-text</p>
           </div>
           <div className="ds-text-tone-list__item">
-            <p className="ds-text-sample-muted">Secondary text — --color-text-muted</p>
+            <p className="ds-text-sample-muted">Вторичный текст — --color-text-muted</p>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте semantic tokens в компонентах вместо прямых base values.</li>
           <li>Primary green должен оставаться основным action color системы.</li>
@@ -259,7 +259,7 @@ export default function ColorsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компоненты должны использовать semantic color tokens, например
           <code> --color-primary </code>, <code> --color-text </code>,

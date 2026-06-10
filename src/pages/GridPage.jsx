@@ -2,21 +2,21 @@ import React from 'react'
 
 const BREAKPOINTS = [
   {
-    label: 'Small',
-    range: 'Mobile',
-    columns: '4 columns',
+    label: 'Малый',
+    range: 'Мобильные устройства',
+    columns: '4 колонки',
     note: 'Компактная сетка для узких экранов и одноколоночных сценариев.',
   },
   {
-    label: 'Medium',
-    range: 'Tablet',
-    columns: '8 columns',
-    note: 'Промежуточная сетка для более свободного layout и side-by-side блоков.',
+    label: 'Средний',
+    range: 'Планшеты',
+    columns: '8 колонок',
+    note: 'Промежуточная сетка для более свободного layout и размещения блоков рядом.',
   },
   {
-    label: 'Large',
-    range: 'Desktop',
-    columns: '12 columns',
+    label: 'Большой',
+    range: 'Настольные устройства',
+    columns: '12 колонок',
     note: 'Основная рабочая сетка для сложных интерфейсов, dashboards и документации.',
   },
 ]
@@ -25,7 +25,7 @@ export default function GridPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Grid</h2>
+        <h2>Сетка</h2>
         <p>
           Сетка определяет пространственную структуру интерфейса и помогает
           согласованно размещать контент на разных экранах. Grid связывает layout,
@@ -33,15 +33,15 @@ export default function GridPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Foundations</span>
-          <span className="ds-meta-item">Status: In progress</span>
-          <span className="ds-meta-item">Scope: Columns, gutters, margins, rhythm</span>
-          <span className="ds-meta-item">Related: Spacing, layout, responsiveness</span>
+          <span className="ds-meta-item">Категория: Foundations</span>
+          <span className="ds-meta-item">Статус: В разработке</span>
+          <span className="ds-meta-item">Область: Колонки, gutters, margins, rhythm</span>
+          <span className="ds-meta-item">Связано: Spacing, layout, responsiveness</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Grid anatomy</h3>
+        <h3>Анатомия сетки</h3>
         <p>
           Базовая сетка состоит из колонок, промежутков между ними и внешних
           ограничителей контента. Вместе они создают предсказуемую структуру,
@@ -50,7 +50,7 @@ export default function GridPage() {
 
         <div className="ds-demo-card">
           <div className="ds-grid-anatomy">
-            <div className="ds-grid-anatomy__margin">Margin</div>
+            <div className="ds-grid-anatomy__margin">Отступ</div>
 
             <div className="ds-grid-anatomy__columns">
               <div className="ds-grid-anatomy__column">1</div>
@@ -67,11 +67,11 @@ export default function GridPage() {
               <div className="ds-grid-anatomy__column">12</div>
             </div>
 
-            <div className="ds-grid-anatomy__margin">Margin</div>
+            <div className="ds-grid-anatomy__margin">Отступ</div>
           </div>
 
           <ul className="ds-guidelines">
-            <li>Columns формируют основной layout skeleton.</li>
+            <li>Columns формируют основной каркас layout.</li>
             <li>Gutters разделяют соседние блоки и улучшают читаемость композиции.</li>
             <li>Margins задают безопасные внешние границы контента.</li>
           </ul>
@@ -79,7 +79,7 @@ export default function GridPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Responsive behavior</h3>
+        <h3>Адаптивное поведение</h3>
         <p>
           Сетка должна адаптироваться к размеру экрана, а не оставаться
           фиксированной. На мобильных экранах структура проще, а на desktop
@@ -102,7 +102,7 @@ export default function GridPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Layout examples</h3>
+        <h3>Примеры layout</h3>
         <p>
           Ниже показаны типичные layout patterns, которые строятся на основе
           grid и spacing tokens.
@@ -110,36 +110,36 @@ export default function GridPage() {
 
         <div className="ds-grid-example-stack">
           <div className="ds-grid-example-card">
-            <span className="ds-grid-example-card__label">Two-column layout</span>
+            <span className="ds-grid-example-card__label">Двухколоночный layout</span>
             <div className="ds-grid-example ds-grid-example--two">
-              <div className="ds-grid-example__block">Main content</div>
-              <div className="ds-grid-example__block">Supporting panel</div>
+              <div className="ds-grid-example__block">Основной контент</div>
+              <div className="ds-grid-example__block">Вспомогательная панель</div>
             </div>
           </div>
 
           <div className="ds-grid-example-card">
-            <span className="ds-grid-example-card__label">Three-column content</span>
+            <span className="ds-grid-example-card__label">Трёхколоночный контент</span>
             <div className="ds-grid-example ds-grid-example--three">
-              <div className="ds-grid-example__block">Card</div>
-              <div className="ds-grid-example__block">Card</div>
-              <div className="ds-grid-example__block">Card</div>
+              <div className="ds-grid-example__block">Карточка</div>
+              <div className="ds-grid-example__block">Карточка</div>
+              <div className="ds-grid-example__block">Карточка</div>
             </div>
           </div>
 
           <div className="ds-grid-example-card">
-            <span className="ds-grid-example-card__label">Content with wide lead area</span>
+            <span className="ds-grid-example-card__label">Контент с широкой ведущей областью</span>
             <div className="ds-grid-example ds-grid-example--asymmetric">
               <div className="ds-grid-example__block ds-grid-example__block--wide">
-                Primary content area
+                Основная область контента
               </div>
-              <div className="ds-grid-example__block">Meta</div>
+              <div className="ds-grid-example__block">Метаданные</div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Spacing and rhythm</h3>
+        <h3>Отступы и ритм</h3>
         <p>
           Grid не существует отдельно от spacing system. Размеры отступов,
           gaps и container padding должны опираться на spacing tokens, чтобы
@@ -150,24 +150,24 @@ export default function GridPage() {
           <div className="ds-grid-rhythm">
             <div className="ds-grid-rhythm__item">
               <span className="ds-grid-rhythm__token">--space-2</span>
-              <p>Плотные внутренние интервалы внутри мелких UI-блоков.</p>
+              <p>Плотные внутренние интервалы внутри небольших UI-блоков.</p>
             </div>
 
             <div className="ds-grid-rhythm__item">
               <span className="ds-grid-rhythm__token">--space-4</span>
-              <p>Стандартный шаг для card padding, field gaps и небольших layout groups.</p>
+              <p>Стандартный шаг для внутренних отступов карточек, промежутков между полями и небольших layout-групп.</p>
             </div>
 
             <div className="ds-grid-rhythm__item">
               <span className="ds-grid-rhythm__token">--space-6 / --space-8</span>
-              <p>Более крупный ритм для section spacing и separation between content groups.</p>
+              <p>Более крупный ритм для отступов между секциями и разделения групп контента.</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте grid для выравнивания и структурирования контента, а не только для декоративной симметрии.</li>
           <li>Адаптируйте количество колонок под breakpoint и плотность интерфейса.</li>
@@ -178,16 +178,16 @@ export default function GridPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <div className="ds-grid-guidance-card">
                 <div className="ds-grid-guidance-card__good-layout">
-                  <div className="ds-grid-guidance-card__good-main">Aligned content</div>
-                  <div className="ds-grid-guidance-card__good-side">Side panel</div>
+                  <div className="ds-grid-guidance-card__good-main">Выровненный контент</div>
+                  <div className="ds-grid-guidance-card__good-side">Боковая панель</div>
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function GridPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
               <div className="ds-grid-guidance-card">
                 <div className="ds-grid-guidance-card__bad-layout">
@@ -213,7 +213,7 @@ export default function GridPage() {
             </div>
 
             <ul className="ds-guidelines">
-              <li>Не размещайте блоки без общего alignment logic.</li>
+              <li>Не размещайте блоки без общей логики выравнивания.</li>
               <li>Не смешивайте случайные gaps и разные контейнерные отступы.</li>
               <li>Не усложняйте layout там, где достаточно простой структуры.</li>
             </ul>
@@ -222,9 +222,9 @@ export default function GridPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
-          В MVP grid foundation строится вокруг предсказуемых column layouts,
+          grid foundation строится вокруг предсказуемых column layouts,
           container bounds и spacing tokens. Реальные страницы и компоненты
           должны использовать системные grid- и gap-решения вместо случайных
           layout-значений.

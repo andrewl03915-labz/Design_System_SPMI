@@ -3,42 +3,42 @@ import { NavLink } from 'react-router-dom'
 
 const HOME_SECTIONS = [
   {
-    title: 'Foundations',
+    title: 'Основы',
     description:
-      'Базовый слой системы: foundations landing page, color, typography, grid и tokens.',
+      'Базовый слой системы: обзорная страница foundations, цвета, типографика, сетка и токены.',
     meta: 'Foundations · Color · Typography · Grid · Tokens',
     to: '/foundations',
   },
   {
-    title: 'Actions & Forms',
+    title: 'Действия и формы',
     description:
-      'Компоненты для пользовательских действий и ввода данных: button, input, textarea, select, checkbox, radio и file uploader.',
+      'Компоненты для пользовательских действий и ввода данных: кнопка, поле ввода, многострочное поле, выпадающий список, флажок, переключатель и загрузка файлов.',
     meta: 'Button · Input · Textarea · Select · Checkbox · Radio · File Uploader',
     to: '/components/button',
   },
   {
-    title: 'Content & Layout',
+    title: 'Контент и компоновка',
     description:
-      'Компоненты для представления информации, структуры контента и layout patterns внутри интерфейса.',
+      'Компоненты для представления информации, организации контента и паттернов компоновки внутри интерфейса.',
     meta: 'Badge · Card · Table · Tabs · Accordion',
     to: '/components/badge',
   },
   {
-    title: 'Navigation',
+    title: 'Навигация',
     description:
       'Навигационные элементы, которые помогают пользователю понимать своё положение в системе и перемещаться между разделами.',
     meta: 'Breadcrumbs · Pagination · Search',
     to: '/components/breadcrumbs',
   },
   {
-    title: 'Feedback & Overlays',
+    title: 'Обратная связь и оверлеи',
     description:
-      'Компоненты для системной обратной связи, модальных сценариев и вспомогательных interactive layers.',
+      'Компоненты для системной обратной связи, модальных сценариев и вспомогательных интерактивных слоёв.',
     meta: 'Notification · Modal · Tooltip',
     to: '/components/notification',
   },
   {
-    title: 'Assets',
+    title: 'Ресурсы',
     description:
       'Визуальные системные ресурсы и базовые графические элементы, используемые во всей библиотеке.',
     meta: 'Icon',
@@ -48,64 +48,58 @@ const HOME_SECTIONS = [
 
 const QUICK_PATHS = [
   {
-    title: 'Open Foundations',
+    title: 'Перейти к основам',
     description:
-      'Начните с foundations, чтобы увидеть базовые правила цвета, типографики, сетки и tokens.',
+      'Начните с foundations, чтобы увидеть базовые правила цвета, типографики, сетки и токенов.',
     to: '/foundations',
   },
   {
-    title: 'Open Button',
+    title: 'Перейти к кнопкам',
     description:
-      'Перейдите к Button как к базовому action component внутри группы Actions & Forms.',
+      'Откройте Button как базовый компонент действия внутри группы «Действия и формы».',
     to: '/components/button',
   },
   {
-    title: 'Open Notification',
+    title: 'Перейти к уведомлениям',
     description:
-      'Откройте Notification как пример feedback component внутри группы Feedback & Overlays.',
+      'Откройте Notification как пример компонента обратной связи внутри группы «Обратная связь и оверлеи».',
     to: '/components/notification',
   },
   {
-    title: 'Open Icon',
+    title: 'Перейти к иконкам',
     description:
-      'Перейдите к Icon, чтобы посмотреть системный asset layer и его роль в интерфейсе.',
+      'Перейдите к Icon, чтобы посмотреть системный слой ресурсов и его роль в интерфейсе.',
     to: '/components/icon',
   },
-]
-
-const SYSTEM_STATUS = [
-  'Foundations вынесены в самостоятельный navigation block.',
-  'Компоненты организованы по смысловым группам, а не по случайному списку.',
-  'Home синхронизирован с текущей sidebar navigation structure.',
-  'Documentation layer постепенно обновляется до более зрелого состояния.',
 ]
 
 export default function Home() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Home</h2>
+        <h2>Главная</h2>
         <p>
-          Это стартовая страница живой документации дизайн-системы Mining
-          University. Она повторяет структуру sidebar navigation и помогает
-          быстро перейти от overview к foundations, component groups и
+          Это стартовая страница живой документации дизайн-системы Санкт-Петербургского
+          горного университета. Она повторяет структуру боковой навигации и помогает
+          быстро перейти от обзора к основам, группам компонентов и
           конкретным страницам системы.
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Documentation type: Living system</span>
-          <span className="ds-meta-item">Navigation model: Sidebar-driven</span>
-          <span className="ds-meta-item">Structure: Foundations + component groups</span>
-          <span className="ds-meta-item">Status: In progress</span>
+          <span className="ds-meta-item">Тип документации: Живая система</span>
+          <span className="ds-meta-item">Модель навигации: На основе боковой панели</span>
+          <span className="ds-meta-item">Структура: Foundations + группы компонентов</span>
+          <span className="ds-meta-item">Статус: В разработке</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Documentation structure</h3>
+        <h3>Структура документации</h3>
         <p>
           Документация организована по тем же разделам, которые пользователь
-          видит в sidebar. Это делает Home не отдельной абстрактной страницей,
-          а обзорной точкой входа в реальную структуру системы.
+          видит в боковой панели. Это делает главную страницу
+          обзорной точкой входа в реальную структуру
+          системы.
         </p>
 
         <div className="ds-home-sections-grid">
@@ -133,84 +127,68 @@ export default function Home() {
       </div>
 
       <div className="ds-section-block">
-        <h3>How the system is organised</h3>
+        <h3>Как организована система</h3>
         <p>
           Сначала документация задаёт foundations как визуальный и системный
-          слой, а затем раскрывает component library по функциональным группам.
-          Такой порядок помогает читать систему последовательно: от базовых
-          решений к интерфейсным building blocks.
+          слой, а затем раскрывает библиотеку компонентов по функциональным
+          группам. Такой порядок помогает читать систему последовательно: от
+          базовых решений к интерфейсным строительным блокам.
         </p>
 
         <div className="ds-principles-grid">
           <div className="ds-principle-card">
-            <h4>Foundational layer</h4>
+            <h4>Базовый слой</h4>
             <p>
-              Color, typography, grid и tokens задают единый visual language и
-              implementation basis для всей системы.
+              Цвет, типографика, сетка и токены задают единый визуальный язык и
+              основу реализации для всей системы.
             </p>
           </div>
 
           <div className="ds-principle-card">
-            <h4>Functional grouping</h4>
+            <h4>Функциональная группировка</h4>
             <p>
               Компоненты сгруппированы по назначению: формы, контент, навигация,
-              feedback patterns и assets.
+              паттерны обратной связи и ресурсы.
             </p>
           </div>
 
           <div className="ds-principle-card">
-            <h4>Scalable navigation</h4>
+            <h4>Масштабируемая навигация</h4>
             <p>
-              Такая структура позволяет расширять библиотеку без потери
-              логики, читаемости и навигационной целостности.
+              Такая структура позволяет расширять библиотеку без потери логики,
+              читаемости и навигационной целостности.
             </p>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-  <h3>Quick paths</h3>
-  <p>
-    Ниже собраны прямые входы в ключевые точки системы. Они соответствуют
-    реальным route paths и помогают начать работу без лишнего поиска по
-    sidebar.
-  </p>
-
-  <div className="ds-home-quickpaths-grid">
-    {QUICK_PATHS.map((item) => (
-      <NavLink key={item.title} to={item.to} className="ds-home-quickpath-card">
-        <div className="ds-home-quickpath-card__top">
-          <h4 className="ds-home-quickpath-card__title">{item.title}</h4>
-          <span className="ds-home-quickpath-card__icon" aria-hidden="true">
-            →
-          </span>
-        </div>
-
-        <p className="ds-home-quickpath-card__description">
-          {item.description}
-        </p>
-      </NavLink>
-    ))}
-  </div>
-</div>
-
-      <div className="ds-section-block">
-        <h3>System status</h3>
+        <h3>Быстрые переходы</h3>
         <p>
-          Documentation layer уже заметно вырос по сравнению с ранним MVP.
-          Сейчас основная задача — поддерживать согласованность между sidebar,
-          page structure, component documentation и foundations language.
+          Ниже собраны прямые входы в ключевые точки системы. Они соответствуют
+          реальным маршрутам и помогают начать работу без лишнего поиска по
+          боковой панели.
         </p>
 
-        <div className="ds-home-status-grid">
-          {SYSTEM_STATUS.map((item) => (
-            <div key={item} className="ds-home-status-card">
-              <span className="ds-home-status-card__dot" aria-hidden="true" />
-              <p>{item}</p>
-            </div>
+        <div className="ds-home-quickpaths-grid">
+          {QUICK_PATHS.map((item) => (
+            <NavLink key={item.title} to={item.to} className="ds-home-quickpath-card">
+              <div className="ds-home-quickpath-card__top">
+                <h4 className="ds-home-quickpath-card__title">{item.title}</h4>
+                <span className="ds-home-quickpath-card__icon" aria-hidden="true">
+                  →
+                </span>
+              </div>
+
+              <p className="ds-home-quickpath-card__description">
+                {item.description}
+              </p>
+            </NavLink>
           ))}
         </div>
       </div>
+
+      
     </section>
   )
 }

@@ -7,33 +7,33 @@ export default function CardPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Card</h2>
+        <h2>Карточка</h2>
         <p>
           Card используется как базовый контейнер для группировки связанных данных,
-          описаний, actions и preview-блоков. Компонент помогает выстраивать
+          описаний, действий и preview-блоков. Компонент помогает выстраивать
           поверхность интерфейса и поддерживает единый ритм spacing, radius и border.
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Surface</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: surface, spacing, radius, border, shadow, text</span>
+          <span className="ds-meta-item">Категория: Поверхность</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: surface, spacing, radius, border, shadow, text</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Preview</h3>
+        <h3>Превью</h3>
         <p>
-          Preview показывает card в типичном сценарии: заголовок, supporting text
-          и содержимое внутри единого surface-container.
+          Превью показывает card в типичном сценарии: заголовок, вспомогательный текст
+          и содержимое внутри единого контейнера поверхности.
         </p>
 
         <div className="ds-demo-card">
           <Card
-            title="Foundations"
+            title="Основы"
             description="Базовые правила системы: цвет, типографика, spacing, radius и shadows."
           >
-            <Badge variant="primary">Core layer</Badge>
+            <Badge variant="primary">Базовый слой</Badge>
             <p>
               Card помогает собрать связанный контент в один понятный блок и
               использовать единый visual rhythm на странице.
@@ -43,19 +43,19 @@ export default function CardPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Variants</h3>
-        <p>В MVP card поддерживает базовый, accent и interactive сценарии.</p>
+        <h3>Варианты</h3>
+        <p>Card поддерживает базовый, акцентный и интерактивный сценарии.</p>
 
         <div className="ds-split-grid">
           <Card
-            title="Default card"
+            title="Базовая карточка"
             description="Нейтральный контейнер для обычного контента."
           >
-            <p>Используется для карточек обзора, описаний и documentation blocks.</p>
+            <p>Используется для карточек обзора, описаний и блоков документации.</p>
           </Card>
 
           <Card
-            title="Accent card"
+            title="Акцентная карточка"
             description="Лёгкое акцентное выделение важного блока."
             accent
           >
@@ -63,30 +63,30 @@ export default function CardPage() {
           </Card>
 
           <Card
-            title="Interactive card"
+            title="Интерактивная карточка"
             description="Карточка, которая может вести к следующему действию."
             interactive
           >
-            <p>Такой вариант уместен для overview navigation и selectable blocks.</p>
+            <p>Такой вариант уместен для обзорной навигации и выбираемых блоков.</p>
           </Card>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Composition</h3>
+        <h3>Композиция</h3>
         <p>
-          Card особенно хорошо работает как контейнер для mixed content:
-          текста, badge, actions и вспомогательных элементов.
+          Card особенно хорошо работает как контейнер для разнородного содержимого:
+          текста, badge, действий и вспомогательных элементов.
         </p>
 
         <div className="ds-demo-card">
           <Card
-            title="Component overview"
+            title="Обзор компонента"
             description="Карточка как контейнер для смешанного контента"
           >
             <div className="ds-demo-row">
-              <Badge>Ready</Badge>
-              <Badge variant="success">Stable</Badge>
+              <Badge>Готово</Badge>
+              <Badge variant="success">Стабильно</Badge>
             </div>
 
             <p>
@@ -95,15 +95,15 @@ export default function CardPage() {
             </p>
 
             <div className="ds-demo-row">
-              <Button variant="primary">Open details</Button>
-              <Button variant="ghost">Secondary action</Button>
+              <Button variant="primary">Открыть подробности</Button>
+              <Button variant="ghost">Вторичное действие</Button>
             </div>
           </Card>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте card для смысловой группировки связанных данных и действий.</li>
           <li>Не превращайте каждую секцию страницы в card без необходимости.</li>
@@ -114,14 +114,14 @@ export default function CardPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-column">
               <Card
-                title="Structured content"
+                title="Структурированный контент"
                 description="Заголовок, supporting text и content-area работают как единое целое."
               >
                 <p>Контент внутри card остаётся связанным и хорошо читается как единый блок.</p>
@@ -135,9 +135,9 @@ export default function CardPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-column">
-              <Card accent interactive title="Too much emphasis">
+              <Card accent interactive title="Перебор с акцентированием">
                 <p>Слишком много акцента и интерактивности одновременно делает card шумной.</p>
               </Card>
             </div>
@@ -151,11 +151,11 @@ export default function CardPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает <code>title</code>, <code>description</code>,{' '}
           <code>accent</code>, <code>interactive</code> и <code>children</code>.
-          Визуальная структура строится на системных tokens поверхности, границы,
+          Визуальная структура строится на системных токенах поверхности, границы,
           скругления, тени, текста и spacing.
         </div>
       </div>

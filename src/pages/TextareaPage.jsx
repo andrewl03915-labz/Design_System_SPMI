@@ -5,7 +5,7 @@ export default function TextareaPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Textarea</h2>
+        <h2>Многострочное поле</h2>
         <p>
           Textarea используется для ввода более длинного текста: комментариев,
           описаний, сообщений и других многострочных значений. В документации важно
@@ -14,23 +14,23 @@ export default function TextareaPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Form</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, text, border</span>
+          <span className="ds-meta-item">Категория: Форма</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, text, border</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
           Базовая структура textarea состоит из label, многострочной области ввода,
-          placeholder и вспомогательного или error-text.
+          placeholder и вспомогательного текста или текста ошибки.
         </p>
 
         <div className="ds-demo-card">
           <div className="ds-demo-column">
             <Textarea
-              label="Description"
+              label="Описание"
               placeholder="Введите описание"
               helperText="Опишите задачу или содержание коротким связным текстом"
               rows={4}
@@ -46,19 +46,19 @@ export default function TextareaPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>Ниже показаны базовые примеры textarea в разных сценариях.</p>
 
         <div className="ds-split-grid">
           <div className="ds-demo-card">
-            <h3>Empty</h3>
-            <Textarea label="Comment" placeholder="Введите комментарий" rows={4} />
+            <h3>Пусто</h3>
+            <Textarea label="Комментарий" placeholder="Введите комментарий" rows={4} />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Filled</h3>
+            <h3>Заполнено</h3>
             <Textarea
-              label="Comment"
+              label="Комментарий"
               value="Текущий MVP уже покрывает foundations, tokens и базовые компоненты."
               readOnly
               rows={4}
@@ -66,9 +66,9 @@ export default function TextareaPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled</h3>
+            <h3>Недоступно</h3>
             <Textarea
-              label="Internal note"
+              label="Внутренняя заметка"
               placeholder="Недоступно"
               disabled
               rows={4}
@@ -78,7 +78,7 @@ export default function TextareaPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
           Состояния textarea помогают показать активное редактирование, ошибку ввода
           и временную недоступность поля.
@@ -86,18 +86,18 @@ export default function TextareaPage() {
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Default</h3>
+            <h3>По умолчанию</h3>
             <Textarea
-              label="Project description"
+              label="Описание проекта"
               placeholder="Введите краткое описание проекта"
               rows={4}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Focus</h3>
+            <h3>Фокус</h3>
             <Textarea
-              label="Message"
+              label="Сообщение"
               placeholder="Введите сообщение"
               helperText="Активное поле ввода"
               className="is-focus-demo"
@@ -107,9 +107,9 @@ export default function TextareaPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Error</h3>
+            <h3>Ошибка</h3>
             <Textarea
-              label="Description"
+              label="Описание"
               placeholder="Введите описание"
               error="Опишите задачу чуть подробнее, минимум одним полным предложением"
               rows={4}
@@ -118,9 +118,9 @@ export default function TextareaPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled</h3>
+            <h3>Недоступно</h3>
             <Textarea
-              label="Moderator note"
+              label="Заметка модератора"
               placeholder="Недоступно"
               helperText="Поле станет доступно после смены статуса"
               disabled
@@ -132,7 +132,7 @@ export default function TextareaPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте textarea для многострочного и содержательного ввода, а не для коротких значений.</li>
           <li>Каждое поле должно иметь понятный label.</li>
@@ -143,14 +143,14 @@ export default function TextareaPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-column">
               <Textarea
-                label="Project summary"
+                label="Краткое описание проекта"
                 placeholder="Кратко опишите цель, контекст и ожидаемый результат"
                 helperText="2–4 предложения обычно достаточно"
                 rows={4}
@@ -164,7 +164,7 @@ export default function TextareaPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-column">
               <Textarea placeholder="Напишите что-нибудь..." rows={4} />
             </div>
@@ -178,13 +178,13 @@ export default function TextareaPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает <code>label</code>, <code>placeholder</code>,{' '}
           <code>helperText</code>, <code>error</code> и <code>disabled</code>, а также
           поддерживает нативные props элемента <code>textarea</code>, включая{' '}
-          <code>rows</code>. Helper- и error-text связываются с полем через{' '}
-          <code>aria-describedby</code>, а error-state передаёт{' '}
+          <code>rows</code>. Helper text и текст ошибки связываются с полем через{' '}
+          <code>aria-describedby</code>, а состояние ошибки передаётся через{' '}
           <code>aria-invalid</code>.
         </div>
       </div>

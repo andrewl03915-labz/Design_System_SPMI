@@ -9,7 +9,7 @@ export default function PaginationPage() {
   return (
     <section className="ds-section ds-section--pagination">
       <div className="ds-page-intro">
-        <h2>Pagination</h2>
+        <h2>Пагинация</h2>
         <p>
           Pagination используется для навигации по большим наборам данных,
           разбитым на отдельные страницы. Компонент помогает управлять длинными
@@ -17,16 +17,16 @@ export default function PaginationPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Navigation</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, border, text</span>
+          <span className="ds-meta-item">Категория: Навигация</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, border, text</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Preview</h3>
+        <h3>Предпросмотр</h3>
         <p>
-          Pagination помогает перемещаться между страницами данных и clearly
+          Pagination помогает перемещаться между страницами данных и наглядно
           показывает текущую позицию в наборе результатов.
         </p>
 
@@ -40,12 +40,12 @@ export default function PaginationPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Variants</h3>
+        <h3>Варианты</h3>
         <p>Ниже показаны типичные сценарии использования pagination в интерфейсе.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Standard list navigation</h3>
+            <h3>Стандартная навигация по списку</h3>
             <Pagination
               currentPage={previewPage}
               totalPages={5}
@@ -54,7 +54,7 @@ export default function PaginationPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Larger data set</h3>
+            <h3>Большой набор данных</h3>
             <Pagination
               currentPage={tablePage}
               totalPages={8}
@@ -63,7 +63,7 @@ export default function PaginationPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>First page state</h3>
+            <h3>Состояние первой страницы</h3>
             <Pagination
               currentPage={compactPage}
               totalPages={4}
@@ -74,7 +74,7 @@ export default function PaginationPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
           Для pagination особенно важны active, default и disabled states,
           потому что они помогают понять текущую страницу и доступность
@@ -83,7 +83,7 @@ export default function PaginationPage() {
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Current page</h3>
+            <h3>Текущая страница</h3>
             <Pagination
               currentPage={3}
               totalPages={5}
@@ -92,7 +92,7 @@ export default function PaginationPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Start of range</h3>
+            <h3>Начало диапазона</h3>
             <Pagination
               currentPage={1}
               totalPages={5}
@@ -101,7 +101,7 @@ export default function PaginationPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>End of range</h3>
+            <h3>Конец диапазона</h3>
             <Pagination
               currentPage={5}
               totalPages={5}
@@ -112,10 +112,10 @@ export default function PaginationPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
           Базовая структура pagination включает navigation container, previous
-          control, list of page items, current page indicator и next control.
+          control, список страниц, индикатор текущей страницы и next control.
         </p>
 
         <div className="ds-demo-card">
@@ -134,12 +134,12 @@ export default function PaginationPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>Компонент особенно полезен для таблиц, списков результатов и административных разделов.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Applications table</h3>
+            <h3>Таблица заявок</h3>
             <Pagination
               currentPage={tablePage}
               totalPages={8}
@@ -148,7 +148,7 @@ export default function PaginationPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Search results</h3>
+            <h3>Результаты поиска</h3>
             <Pagination
               currentPage={2}
               totalPages={6}
@@ -157,7 +157,7 @@ export default function PaginationPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Documentation archive</h3>
+            <h3>Архив документации</h3>
             <Pagination
               currentPage={4}
               totalPages={7}
@@ -168,10 +168,10 @@ export default function PaginationPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте pagination для длинных наборов данных, разбитых на страницы.</li>
-          <li>Не применяйте pagination там, где лучше работает infinite scroll или simple list.</li>
+          <li>Не применяйте pagination там, где лучше работает infinite scroll или простой список.</li>
           <li>Текущая страница должна быть визуально выделена.</li>
           <li>Previous и Next должны ясно показывать доступность навигации.</li>
           <li>Pagination дополняет таблицу или список, а не заменяет их контекст.</li>
@@ -179,11 +179,11 @@ export default function PaginationPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <Pagination
                 currentPage={3}
@@ -192,14 +192,14 @@ export default function PaginationPage() {
               />
             </div>
             <ul className="ds-guidelines">
-              <li>Выделяйте current page clearly.</li>
-              <li>Сохраняйте predictable navigation order.</li>
+              <li>Явно выделяйте текущую страницу.</li>
+              <li>Сохраняйте предсказуемый порядок навигации.</li>
               <li>Используйте disabled states на границах диапазона.</li>
             </ul>
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
               <p>
                 Previous 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 Next
@@ -215,7 +215,7 @@ export default function PaginationPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает <code>currentPage</code>, <code>totalPages</code> и{' '}
           <code>onPageChange</code>. В MVP pagination реализован как простой

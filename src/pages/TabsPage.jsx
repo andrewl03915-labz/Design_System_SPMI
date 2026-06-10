@@ -5,12 +5,12 @@ import Badge from '../components/ui/Badge'
 const overviewTabs = [
   {
     value: 'overview',
-    label: 'Overview',
+    label: 'Обзор',
     content: (
       <div className="ds-demo-column">
-        <h3>Overview</h3>
+        <h3>Обзор</h3>
         <p>
-          Вкладка overview помогает собрать основную информацию о разделе или сущности
+          Вкладка обзора помогает собрать основную информацию о разделе или сущности
           в одном компактном представлении.
         </p>
       </div>
@@ -18,10 +18,10 @@ const overviewTabs = [
   },
   {
     value: 'details',
-    label: 'Details',
+    label: 'Детали',
     content: (
       <div className="ds-demo-column">
-        <h3>Details</h3>
+        <h3>Детали</h3>
         <p>
           Детальная вкладка подходит для более плотного контента, расширенных описаний
           и связанных данных.
@@ -31,12 +31,12 @@ const overviewTabs = [
   },
   {
     value: 'settings',
-    label: 'Settings',
+    label: 'Настройки',
     content: (
       <div className="ds-demo-column">
-        <h3>Settings</h3>
+        <h3>Настройки</h3>
         <p>
-          Вкладка settings хорошо работает для управления параметрами, режимами и
+          Вкладка настроек хорошо работает для управления параметрами, режимами и
           дополнительными настройками.
         </p>
       </div>
@@ -48,7 +48,7 @@ export default function TabsPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Tabs</h2>
+        <h2>Вкладки</h2>
         <p>
           Tabs используются для переключения между связанными разделами контента
           без перехода на другую страницу. Компонент помогает организовывать
@@ -57,14 +57,14 @@ export default function TabsPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Navigation</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, border, text</span>
+          <span className="ds-meta-item">Категория: Навигация</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, border, text</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Preview</h3>
+        <h3>Предпросмотр</h3>
         <p>
           Tabs позволяют показывать только один активный блок контента за раз,
           сохраняя структуру страницы компактной и читаемой.
@@ -76,27 +76,27 @@ export default function TabsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>Ниже показаны типичные сценарии использования tabs в системном интерфейсе.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Section navigation</h3>
+            <h3>Навигация по разделам</h3>
             <Tabs
               items={[
                 {
                   value: 'foundation',
-                  label: 'Foundations',
+                  label: 'Основы',
                   content: <p>Цвет, типографика, spacing, radius и shadows.</p>,
                 },
                 {
                   value: 'components',
-                  label: 'Components',
+                  label: 'Компоненты',
                   content: <p>Набор переиспользуемых UI-элементов для интерфейсов.</p>,
                 },
                 {
                   value: 'patterns',
-                  label: 'Patterns',
+                  label: 'Паттерны',
                   content: <p>Повторяемые решения для организации layout и взаимодействия.</p>,
                 },
               ]}
@@ -104,22 +104,22 @@ export default function TabsPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Compact content switch</h3>
+            <h3>Компактное переключение контента</h3>
             <Tabs
               items={[
                 {
                   value: 'description',
-                  label: 'Description',
+                  label: 'Описание',
                   content: <p>Краткое описание образовательной программы.</p>,
                 },
                 {
                   value: 'requirements',
-                  label: 'Requirements',
+                  label: 'Требования',
                   content: <p>Требования к поступлению, формату документов и дедлайнам.</p>,
                 },
                 {
                   value: 'contacts',
-                  label: 'Contacts',
+                  label: 'Контакты',
                   content: <p>Контактная информация и каналы связи с приёмной комиссией.</p>,
                 },
               ]}
@@ -129,7 +129,7 @@ export default function TabsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
           Для tabs особенно важны default, active, focus и disabled-like поведение
           в структуре навигации. В MVP основной акцент делается на active-state и
@@ -138,30 +138,30 @@ export default function TabsPage() {
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Default</h3>
+            <h3>По умолчанию</h3>
             <div className="ds-tabs__list">
-              <button type="button" className="ds-tabs__tab">Overview</button>
-              <button type="button" className="ds-tabs__tab">Details</button>
-              <button type="button" className="ds-tabs__tab">Settings</button>
+              <button type="button" className="ds-tabs__tab">Обзор</button>
+              <button type="button" className="ds-tabs__tab">Детали</button>
+              <button type="button" className="ds-tabs__tab">Настройки</button>
             </div>
           </div>
 
           <div className="ds-demo-card">
-            <h3>Active</h3>
+            <h3>Активно</h3>
             <div className="ds-tabs__list">
-              <button type="button" className="ds-tabs__tab ds-tabs__tab--active">Overview</button>
-              <button type="button" className="ds-tabs__tab">Details</button>
-              <button type="button" className="ds-tabs__tab">Settings</button>
+              <button type="button" className="ds-tabs__tab ds-tabs__tab--active">Обзор</button>
+              <button type="button" className="ds-tabs__tab">Детали</button>
+              <button type="button" className="ds-tabs__tab">Настройки</button>
             </div>
             <p>Active-state показывает текущий раздел и управляет видимой панелью контента.</p>
           </div>
 
           <div className="ds-demo-card">
-            <h3>Focus</h3>
+            <h3>Фокус</h3>
             <div className="ds-tabs__list">
-              <button type="button" className="ds-tabs__tab is-focus-demo">Overview</button>
-              <button type="button" className="ds-tabs__tab">Details</button>
-              <button type="button" className="ds-tabs__tab">Settings</button>
+              <button type="button" className="ds-tabs__tab is-focus-demo">Обзор</button>
+              <button type="button" className="ds-tabs__tab">Детали</button>
+              <button type="button" className="ds-tabs__tab">Настройки</button>
             </div>
             <p>Focus-state помогает навигации с клавиатуры и делает взаимодействие более предсказуемым.</p>
           </div>
@@ -169,7 +169,7 @@ export default function TabsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Composition</h3>
+        <h3>Композиция</h3>
         <p>
           Tabs хорошо сочетаются с badge, cards и информационными блоками,
           когда нужно разделить контент без создания отдельных страниц.
@@ -180,17 +180,17 @@ export default function TabsPage() {
             items={[
               {
                 value: 'status',
-                label: 'Status',
+                label: 'Статус',
                 content: (
                   <div className="ds-demo-column">
-                    <Badge variant="success">Stable</Badge>
+                    <Badge variant="success">Стабильно</Badge>
                     <p>Текущая вкладка показывает системный статус и основные сигналы состояния.</p>
                   </div>
                 ),
               },
               {
                 value: 'guidelines',
-                label: 'Guidelines',
+                label: 'Рекомендации',
                 content: (
                   <div className="ds-demo-column">
                     <p>Используйте вкладки для связанных разделов, а не для полностью независимых сценариев.</p>
@@ -199,7 +199,7 @@ export default function TabsPage() {
               },
               {
                 value: 'notes',
-                label: 'Notes',
+                label: 'Примечания',
                 content: (
                   <div className="ds-demo-column">
                     <p>Сохраняйте названия вкладок короткими, ясными и семантически устойчивыми.</p>
@@ -212,7 +212,7 @@ export default function TabsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте tabs для переключения между связанными разделами внутри одного контекста.</li>
           <li>Названия вкладок должны быть короткими, ясными и легко сравнимыми между собой.</li>
@@ -223,17 +223,17 @@ export default function TabsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-column">
               <Tabs
                 items={[
-                  { value: 'one', label: 'Overview', content: <p>Overview content.</p> },
-                  { value: 'two', label: 'Details', content: <p>Details content.</p> },
-                  { value: 'three', label: 'Settings', content: <p>Settings content.</p> },
+                  { value: 'one', label: 'Обзор', content: <p>Содержимое обзора.</p> },
+                  { value: 'two', label: 'Детали', content: <p>Содержимое деталей.</p> },
+                  { value: 'three', label: 'Настройки', content: <p>Содержимое настроек.</p> },
                 ]}
               />
             </div>
@@ -245,7 +245,7 @@ export default function TabsPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-column">
               <div className="ds-tabs__list">
                 <button type="button" className="ds-tabs__tab">Очень длинное название вкладки номер один</button>
@@ -263,7 +263,7 @@ export default function TabsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает массив <code>items</code> с полями <code>value</code>,{' '}
           <code>label</code> и <code>content</code>, а также поддерживает{' '}

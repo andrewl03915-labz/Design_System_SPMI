@@ -2,17 +2,17 @@ import React from 'react'
 import Select from '../components/ui/Select'
 
 const facultyOptions = [
-  { value: 'design', label: 'Design' },
-  { value: 'engineering', label: 'Engineering' },
-  { value: 'it', label: 'Information Technology' },
-  { value: 'management', label: 'Management' },
+  { value: 'design', label: 'ИБИО' },
+  { value: 'engineering', label: 'Горный факультет' },
+  { value: 'it', label: 'Экономический факультет' },
+  { value: 'management', label: 'Строительный факультет' },
 ]
 
 export default function SelectPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Select</h2>
+        <h2>Выпадающий список</h2>
         <p>
           Select используется для выбора одного значения из заранее заданного списка.
           Компонент особенно полезен в формах, фильтрах и административных интерфейсах,
@@ -20,23 +20,23 @@ export default function SelectPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Form</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, text, border</span>
+          <span className="ds-meta-item">Категория: Форма</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, text, border</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
           Базовая структура select состоит из label, поля выбора, placeholder
-          или selected-value, а также helper- или error-text.
+          или выбранного значения, а также helper text или текста ошибки.
         </p>
 
         <div className="ds-demo-card">
           <div className="ds-demo-column">
             <Select
-              label="Faculty"
+              label="Факультет"
               placeholder="Выберите факультет"
               helperText="Поле позволяет выбрать один вариант из списка"
               defaultValue=""
@@ -53,47 +53,46 @@ export default function SelectPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>Ниже показаны базовые сценарии использования select в интерфейсе.</p>
 
         <div className="ds-split-grid">
           <div className="ds-demo-card">
-            <h3>Empty</h3>
+            <h3>Пусто</h3>
             <Select
-              label="Programme"
+              label="Программа"
               placeholder="Выберите программу"
               defaultValue=""
               options={[
-                { value: 'bachelor', label: 'Bachelor' },
-                { value: 'master', label: 'Master' },
-                { value: 'phd', label: 'PhD' },
+                { value: 'bachelor', label: 'Бакалавриат' },
+                { value: 'master', label: 'СпецВО' }
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Selected</h3>
+            <h3>Выбрано</h3>
             <Select
-              label="Semester"
+              label="Семестр"
               value="spring"
               onChange={() => {}}
               options={[
-                { value: 'autumn', label: 'Autumn semester' },
-                { value: 'spring', label: 'Spring semester' },
+                { value: 'autumn', label: 'Осенний семестр' },
+                { value: 'spring', label: 'Весенний семестр' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled</h3>
+            <h3>Недоступно</h3>
             <Select
-              label="Campus"
+              label="Общежитие"
               placeholder="Недоступно"
               disabled
               defaultValue=""
               options={[
-                { value: 'spb', label: 'Saint Petersburg' },
-                { value: 'msk', label: 'Moscow' },
+                { value: 'spb', label: 'Санкт-Петербург' },
+                { value: 'msk', label: 'Москва' },
               ]}
             />
           </div>
@@ -101,7 +100,7 @@ export default function SelectPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
           Состояния select помогают показать активное взаимодействие, ошибку выбора
           или временную недоступность контрола.
@@ -109,60 +108,60 @@ export default function SelectPage() {
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Default</h3>
+            <h3>По умолчанию</h3>
             <Select
-              label="Study level"
+              label="Уровень обучения"
               placeholder="Выберите уровень"
               defaultValue=""
               options={[
-                { value: 'bachelor', label: 'Bachelor' },
-                { value: 'master', label: 'Master' },
+                { value: 'bachelor', label: 'Бакалавриат' },
+                { value: 'master', label: 'Специалитет' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Focus</h3>
+            <h3>Фокус</h3>
             <Select
-              label="Department"
+              label="Кафедра"
               placeholder="Выберите кафедру"
               defaultValue=""
               className="is-focus-demo"
               options={[
-                { value: 'ux', label: 'UX / UI' },
-                { value: 'product', label: 'Product Design' },
-                { value: 'research', label: 'Design Research' },
+                { value: 'ux', label: 'Высшая математика' },
+                { value: 'product', label: 'Иностранные языки' },
+                { value: 'research', label: 'История' },
               ]}
             />
             <p>Focus-state помогает показать активный выбор и поддерживает визуальный контекст взаимодействия.</p>
           </div>
 
           <div className="ds-demo-card">
-            <h3>Error</h3>
+            <h3>Ошибка</h3>
             <Select
-              label="Admission track"
+              label="Траектория поступления"
               placeholder="Выберите направление"
               defaultValue=""
               error="Пожалуйста, выберите одно направление из списка"
               options={[
-                { value: 'design', label: 'Design track' },
-                { value: 'analytics', label: 'Analytics track' },
+                { value: 'design', label: 'Экономическая теория' },
+                { value: 'analytics', label: 'АОтраслевая экономика' },
               ]}
             />
             <p>Error-state должен объяснять, какое действие требуется выполнить пользователю.</p>
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled</h3>
+            <h3>Недоступно</h3>
             <Select
-              label="Education format"
+              label="Формат обучения"
               placeholder="Недоступно"
               disabled
               defaultValue=""
               helperText="Поле станет доступно на следующем шаге"
               options={[
-                { value: 'offline', label: 'Offline' },
-                { value: 'online', label: 'Online' },
+                { value: 'offline', label: 'Очно' },
+                { value: 'online', label: 'Онлайн' },
               ]}
             />
             <p>Disabled-state показывает, что поле присутствует в сценарии, но пока недоступно.</p>
@@ -171,7 +170,7 @@ export default function SelectPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте select, когда пользователь выбирает одно значение из готового списка.</li>
           <li>Если вариантов мало и они важны для сравнения, лучше рассмотреть radio-group.</li>
@@ -182,14 +181,14 @@ export default function SelectPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-column">
               <Select
-                label="Faculty"
+                label="Факультет"
                 placeholder="Выберите факультет"
                 helperText="Доступен выбор одного значения"
                 defaultValue=""
@@ -204,7 +203,7 @@ export default function SelectPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-column">
               <Select
                 placeholder="Выберите..."
@@ -222,13 +221,13 @@ export default function SelectPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает <code>label</code>, <code>placeholder</code>,{' '}
           <code>helperText</code>, <code>error</code>, <code>disabled</code> и{' '}
           <code>options</code>, а также поддерживает нативные props элемента{' '}
-          <code>select</code>. Helper- и error-text связываются с полем через{' '}
-          <code>aria-describedby</code>, а error-state передаёт{' '}
+          <code>select</code>. Helper text и текст ошибки связываются с полем через{' '}
+          <code>aria-describedby</code>, а состояние ошибки передаётся через{' '}
           <code>aria-invalid</code>.
         </div>
       </div>

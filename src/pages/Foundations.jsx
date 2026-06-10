@@ -3,28 +3,28 @@ import { NavLink } from 'react-router-dom'
 
 const FOUNDATION_AREAS = [
   {
-    title: 'Color',
+    title: 'Цвет',
     to: '/foundations/color',
     description:
-      'Цветовая система описывает брендовые цвета, semantic roles, surface hierarchy и status colors для интерфейсов университета.',
+      'Цветовая система описывает фирменные цвета, семантические роли, иерархию поверхностей и статусные цвета для интерфейсов университета.',
     meta: 'Palette · Semantic roles · Surfaces · Feedback',
   },
   {
-    title: 'Typography',
+    title: 'Типографика',
     to: '/foundations/typography',
     description:
       'Типографика определяет основную гарнитуру, иерархию текста, scale tokens и правила чтения в интерфейсе.',
     meta: 'Font family · Scale · Headings · Body text',
   },
   {
-    title: 'Grid',
+    title: 'Сетка',
     to: '/foundations/grid',
     description:
       'Сетка задаёт структуру страниц, контейнеры, отступы, responsive behavior и пространственный ритм системы.',
     meta: 'Layout · Columns · Spacing · Responsiveness',
   },
   {
-    title: 'Tokens',
+    title: 'Токены',
     to: '/foundations/tokens',
     description:
       'Токены связывают foundation decisions с кодом и обеспечивают единый source of truth для компонентов.',
@@ -36,7 +36,7 @@ export default function FoundationsPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Foundations</h2>
+        <h2>Основы</h2>
         <p>
           Foundations формируют визуальную и системную основу дизайн-системы.
           Этот раздел объединяет цвет, типографику, сетку и токены как набор
@@ -45,15 +45,15 @@ export default function FoundationsPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Foundations</span>
-          <span className="ds-meta-item">Status: In progress</span>
-          <span className="ds-meta-item">Structure: 4 sections</span>
-          <span className="ds-meta-item">Role: Visual and system foundation</span>
+          <span className="ds-meta-item">Категория: Foundations</span>
+          <span className="ds-meta-item">Статус: В разработке</span>
+          <span className="ds-meta-item">Структура: 4 раздела</span>
+          <span className="ds-meta-item">Роль: Визуальная и системная основа</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Explore foundations</h3>
+        <h3>Изучение основ</h3>
         <p>
           Foundations разделены на самостоятельные направления, чтобы каждая тема
           раскрывалась глубже и не терялась внутри одной обзорной страницы.
@@ -68,7 +68,7 @@ export default function FoundationsPage() {
             >
               <div className="ds-foundation-nav-card__top">
                 <span className="ds-foundation-nav-card__eyebrow">
-                  Foundation
+                  Основа
                 </span>
                 <span
                   className="ds-foundation-nav-card__icon"
@@ -92,7 +92,7 @@ export default function FoundationsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>How the system works</h3>
+        <h3>Как работает система</h3>
         <p>
           Foundations работают как связующий слой между визуальной идентичностью
           проекта и компонентным уровнем. Они задают правила, которыми затем
@@ -101,7 +101,7 @@ export default function FoundationsPage() {
 
         <div className="ds-principles-grid">
           <div className="ds-principle-card">
-            <h4>Identity</h4>
+            <h4>Идентичность</h4>
             <p>
               Цвет и типографика передают характер, академичность и визуальную
               принадлежность университета.
@@ -109,15 +109,15 @@ export default function FoundationsPage() {
           </div>
 
           <div className="ds-principle-card">
-            <h4>Structure</h4>
+            <h4>Структура</h4>
             <p>
               Сетка и пространственные правила помогают строить устойчивые,
-              читаемые и масштабируемые layouts.
+              читаемые и масштабируемые layout-решения.
             </p>
           </div>
 
           <div className="ds-principle-card">
-            <h4>Consistency</h4>
+            <h4>Согласованность</h4>
             <p>
               Токены превращают визуальные решения в единый системный язык для
               кода, документации и компонентов.
@@ -127,7 +127,7 @@ export default function FoundationsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Relationship with components</h3>
+        <h3>Связь с компонентами</h3>
         <p>
           Компоненты не должны самостоятельно определять визуальные значения.
           Они используют foundations как источник решений для цвета, текста,
@@ -137,7 +137,7 @@ export default function FoundationsPage() {
         <div className="ds-demo-card">
           <div className="ds-foundation-flow">
             <div className="ds-foundation-flow__item">
-              <span className="ds-foundation-flow__label">Color</span>
+              <span className="ds-foundation-flow__label">Цвет</span>
               <p>Primary, accent, success, warning, surfaces</p>
             </div>
 
@@ -146,8 +146,8 @@ export default function FoundationsPage() {
             </div>
 
             <div className="ds-foundation-flow__item">
-              <span className="ds-foundation-flow__label">Tokens</span>
-              <p>Semantic variables and implementation mapping</p>
+              <span className="ds-foundation-flow__label">Токены</span>
+              <p>Семантические переменные и карта реализации</p>
             </div>
 
             <div className="ds-foundation-flow__arrow" aria-hidden="true">
@@ -155,7 +155,7 @@ export default function FoundationsPage() {
             </div>
 
             <div className="ds-foundation-flow__item">
-              <span className="ds-foundation-flow__label">Components</span>
+              <span className="ds-foundation-flow__label">Компоненты</span>
               <p>Button, Input, Badge, Notification, Icon</p>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function FoundationsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Getting started</h3>
+        <h3>Начало работы</h3>
         <p>
           Начинать работу с системой лучше с foundations, чтобы сразу увидеть
           логику цвета, типографики, layout и token-based implementation.
@@ -177,29 +177,7 @@ export default function FoundationsPage() {
         </ol>
       </div>
 
-      <div className="ds-section-block">
-        <h3>System status</h3>
-        <p>
-          Foundations уже собраны как самостоятельный documentation block и
-          постепенно переходят от обзорного формата к более зрелой структуре
-          с отдельными pages и расширенным наполнением.
-        </p>
-
-        <div className="ds-status-inline-list">
-          <span className="ds-status-inline-item ds-status-inline-item--ready">
-            Color page available
-          </span>
-          <span className="ds-status-inline-item ds-status-inline-item--ready">
-            Typography page available
-          </span>
-          <span className="ds-status-inline-item ds-status-inline-item--ready">
-            Grid page available
-          </span>
-          <span className="ds-status-inline-item ds-status-inline-item--ready">
-            Tokens page available
-          </span>
-        </div>
-      </div>
+      
     </section>
   )
 }

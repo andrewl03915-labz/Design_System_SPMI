@@ -9,7 +9,7 @@ export default function SearchPage() {
   return (
     <section className="ds-section ds-section--search">
       <div className="ds-page-intro">
-        <h2>Search</h2>
+        <h2>Поиск</h2>
         <p>
           Search используется для быстрого поиска по спискам, разделам,
           документам и наборам данных внутри интерфейса. Компонент помогает
@@ -18,14 +18,14 @@ export default function SearchPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Input / Utility</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, radius, border, text, shadow</span>
+          <span className="ds-meta-item">Категория: Поле ввода / Утилита</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, radius, border, text, shadow</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Preview</h3>
+        <h3>Предпросмотр</h3>
         <p>
           Search помогает быстро ввести поисковый запрос и управлять его
           состоянием в одном компактном поле.
@@ -35,40 +35,40 @@ export default function SearchPage() {
           <Search
             value={query}
             onChange={setQuery}
-            placeholder="Search components"
+            placeholder="Поиск компонентов"
           />
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Variants</h3>
+        <h3>Варианты</h3>
         <p>Ниже показаны типичные варианты использования search field в интерфейсе.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Default</h3>
+            <h3>По умолчанию</h3>
             <Search
               value={query}
               onChange={setQuery}
-              placeholder="Search components"
+              placeholder="Поиск компонентов"
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Empty state</h3>
+            <h3>Пустое состояние</h3>
             <Search
               value={emptyQuery}
               onChange={setEmptyQuery}
-              placeholder="Search documentation"
+              placeholder="Поиск по документации"
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled</h3>
+            <h3>Недоступно</h3>
             <Search
-              value="Search unavailable"
+              value="Поиск недоступен"
               onChange={() => {}}
-              placeholder="Search"
+              placeholder="Поиск"
               disabled
             />
           </div>
@@ -76,7 +76,7 @@ export default function SearchPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
           Для search особенно важны empty, filled, focus и disabled states,
           потому что они напрямую влияют на ввод запроса и восприятие доступности
@@ -85,29 +85,29 @@ export default function SearchPage() {
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Empty</h3>
+            <h3>Пусто</h3>
             <Search
               value=""
               onChange={() => {}}
-              placeholder="Search students"
+              placeholder="Поиск студентов"
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Filled</h3>
+            <h3>Заполнено</h3>
             <Search
               value="Scholarship"
               onChange={() => {}}
-              placeholder="Search students"
+              placeholder="Поиск студентов"
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Disabled</h3>
+            <h3>Недоступно</h3>
             <Search
-              value="Archived search"
+              value="Архивный поиск"
               onChange={() => {}}
-              placeholder="Search students"
+              placeholder="Поиск студентов"
               disabled
             />
           </div>
@@ -115,17 +115,17 @@ export default function SearchPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
-          Базовая структура search включает field container, leading icon, input
-          field и optional clear action.
+          Базовая структура search включает контейнер поля, ведущую иконку, поле
+          ввода и необязательное действие очистки.
         </p>
 
         <div className="ds-demo-card">
           <Search
             value={tableQuery}
             onChange={setTableQuery}
-            placeholder="Search applications"
+            placeholder="Поиск заявок"
           />
 
           <ul className="ds-guidelines">
@@ -137,41 +137,41 @@ export default function SearchPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>Компонент особенно полезен в таблицах, документации, списках и административных интерфейсах.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Table filter</h3>
+            <h3>Фильтр таблицы</h3>
             <Search
               value={tableQuery}
               onChange={setTableQuery}
-              placeholder="Search applications"
+              placeholder="Поиск заявок"
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Documentation search</h3>
+            <h3>Поиск по документации</h3>
             <Search
               value="Pagination"
               onChange={() => {}}
-              placeholder="Search documentation"
+              placeholder="Поиск по документации"
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>User directory</h3>
+            <h3>Каталог пользователей</h3>
             <Search
               value=""
               onChange={() => {}}
-              placeholder="Search users"
+              placeholder="Поиск пользователей"
             />
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте search для быстрого поиска по большому набору элементов.</li>
           <li>Не подменяйте search обычным input, если у поля есть отдельный сценарий поиска.</li>
@@ -182,31 +182,31 @@ export default function SearchPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <Search
                 value="Design tokens"
                 onChange={() => {}}
-                placeholder="Search documentation"
+                placeholder="Поиск по документации"
               />
             </div>
             <ul className="ds-guidelines">
-              <li>Делайте search focused и понятным.</li>
+              <li>Делайте search сфокусированным и понятным.</li>
               <li>Уточняйте область поиска через placeholder.</li>
               <li>Показывайте clear action только при наличии значения.</li>
             </ul>
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
               <p>
-                Input without search icon, vague placeholder and no clear pattern
-                of what the user is searching for.
+                Поле ввода без иконки поиска, с расплывчатым placeholder и без
+                ясного сценария того, что именно ищет пользователь.
               </p>
             </div>
             <ul className="ds-guidelines">
@@ -219,7 +219,7 @@ export default function SearchPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент принимает <code>value</code>, <code>onChange</code>,{' '}
           <code>placeholder</code> и <code>disabled</code>. В MVP search

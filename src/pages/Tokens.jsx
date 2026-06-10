@@ -2,19 +2,19 @@ import React from 'react'
 
 const TOKEN_LAYERS = [
   {
-    title: 'Primitive tokens',
+    title: 'Примитивные токены',
     token: '--green-700 / --space-4 / --radius-md',
     description:
-      'Primitive tokens содержат базовые значения: цвета палитры, размеры, радиусы, тени и шаги scale.',
+      'Примитивные токены содержат базовые значения: цвета палитры, размеры, радиусы, тени и шаги scale.',
   },
   {
-    title: 'Semantic tokens',
+    title: 'Семантические токены',
     token: '--color-primary / --color-text / --color-border-subtle',
     description:
-      'Semantic tokens описывают роль значения в интерфейсе и связывают foundations с практическим использованием.',
+      'Семантические токены описывают роль значения в интерфейсе и связывают foundations с практическим использованием.',
   },
   {
-    title: 'Component usage',
+    title: 'Использование в компонентах',
     token: 'Button → background / Input → border / Notification → feedback',
     description:
       'Компоненты используют semantic tokens вместо локальных чисел и случайных значений, чтобы оставаться согласованными.',
@@ -25,7 +25,7 @@ export default function TokensPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Tokens</h2>
+        <h2>Токены</h2>
         <p>
           Токены — это именованные значения, которые фиксируют визуальные решения
           системы и делают их повторяемыми в дизайне и коде. Они связывают foundations
@@ -33,15 +33,15 @@ export default function TokensPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Foundations</span>
-          <span className="ds-meta-item">Status: In progress</span>
-          <span className="ds-meta-item">Scope: Primitive, semantic, implementation</span>
-          <span className="ds-meta-item">Role: Single source of truth</span>
+          <span className="ds-meta-item">Категория: Основы</span>
+          <span className="ds-meta-item">Статус: В процессе</span>
+          <span className="ds-meta-item">Область: Primitive, semantic, implementation</span>
+          <span className="ds-meta-item">Роль: Единый источник истины</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Why tokens matter</h3>
+        <h3>Почему токены важны</h3>
         <p>
           Без токенов интерфейс быстро начинает зависеть от hardcoded values:
           случайных hex-кодов, разрозненных отступов и локальных font-size решений.
@@ -52,7 +52,7 @@ export default function TokensPage() {
         <div className="ds-demo-card">
           <div className="ds-token-summary-grid">
             <div className="ds-token-summary-card">
-              <h4>Consistency</h4>
+              <h4>Согласованность</h4>
               <p>
                 Один и тот же token используется в разных местах системы и делает
                 интерфейс визуально связным.
@@ -60,7 +60,7 @@ export default function TokensPage() {
             </div>
 
             <div className="ds-token-summary-card">
-              <h4>Scalability</h4>
+              <h4>Масштабируемость</h4>
               <p>
                 Изменение token value обновляет сразу все связанные паттерны,
                 не требуя ручной правки каждого компонента.
@@ -68,7 +68,7 @@ export default function TokensPage() {
             </div>
 
             <div className="ds-token-summary-card">
-              <h4>Shared language</h4>
+              <h4>Общий язык</h4>
               <p>
                 Tokens создают общий словарь между foundations, component pages и кодовой базой.
               </p>
@@ -78,7 +78,7 @@ export default function TokensPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Token layers</h3>
+        <h3>Слои токенов</h3>
         <p>
           Система токенов строится послойно: от базовых значений к смысловым ролям,
           а затем к использованию внутри компонентов.
@@ -98,7 +98,7 @@ export default function TokensPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Token flow</h3>
+        <h3>Поток токенов</h3>
         <p>
           Хорошая token architecture показывает, как foundation values становятся
           рабочими решениями в интерфейсе.
@@ -107,8 +107,8 @@ export default function TokensPage() {
         <div className="ds-demo-card">
           <div className="ds-token-flow">
             <div className="ds-token-flow__item">
-              <span className="ds-token-flow__label">Primitive</span>
-              <p>Base palette, spacing scale, radius values, text sizes</p>
+              <span className="ds-token-flow__label">Примитивный слой</span>
+              <p>Базовая палитра, шкала отступов, значения радиусов, размеры текста</p>
             </div>
 
             <div className="ds-token-flow__arrow" aria-hidden="true">
@@ -116,8 +116,8 @@ export default function TokensPage() {
             </div>
 
             <div className="ds-token-flow__item">
-              <span className="ds-token-flow__label">Semantic</span>
-              <p>Primary action, background, text, muted text, success, warning</p>
+              <span className="ds-token-flow__label">Семантический слой</span>
+              <p>Основное действие, фон, текст, приглушённый текст, успех, предупреждение</p>
             </div>
 
             <div className="ds-token-flow__arrow" aria-hidden="true">
@@ -125,15 +125,15 @@ export default function TokensPage() {
             </div>
 
             <div className="ds-token-flow__item">
-              <span className="ds-token-flow__label">Component</span>
-              <p>Button, Input, Badge, Notification and future UI patterns</p>
+              <span className="ds-token-flow__label">Компонентный слой</span>
+              <p>Button, Input, Badge, Notification и будущие UI-паттерны</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>
           Ниже показаны типичные связи между foundation values, semantic mapping
           и использованием в компонентной системе.
@@ -141,19 +141,19 @@ export default function TokensPage() {
 
         <div className="ds-token-example-grid">
           <div className="ds-token-example-card">
-            <span className="ds-token-example-card__eyebrow">Color</span>
-            <h4 className="ds-token-example-card__title">Primitive to semantic</h4>
+            <span className="ds-token-example-card__eyebrow">Цвет</span>
+            <h4 className="ds-token-example-card__title">От primitive к semantic</h4>
             <p className="ds-token-example-card__code">
               --green-700 → --color-primary
             </p>
             <p className="ds-token-example-card__text">
-              Базовый brand value становится semantic token для primary actions и links.
+              Базовое brand value становится semantic token для primary actions и links.
             </p>
           </div>
 
           <div className="ds-token-example-card">
-            <span className="ds-token-example-card__eyebrow">Spacing</span>
-            <h4 className="ds-token-example-card__title">Scale to layout</h4>
+            <span className="ds-token-example-card__eyebrow">Отступы</span>
+            <h4 className="ds-token-example-card__title">От шкалы к layout</h4>
             <p className="ds-token-example-card__code">
               --space-4 → card padding / field gap
             </p>
@@ -163,8 +163,8 @@ export default function TokensPage() {
           </div>
 
           <div className="ds-token-example-card">
-            <span className="ds-token-example-card__eyebrow">Typography</span>
-            <h4 className="ds-token-example-card__title">Text role mapping</h4>
+            <span className="ds-token-example-card__eyebrow">Типографика</span>
+            <h4 className="ds-token-example-card__title">Связь роли текста</h4>
             <p className="ds-token-example-card__code">
               --text-base → body content
             </p>
@@ -174,8 +174,8 @@ export default function TokensPage() {
           </div>
 
           <div className="ds-token-example-card">
-            <span className="ds-token-example-card__eyebrow">Components</span>
-            <h4 className="ds-token-example-card__title">Semantic in use</h4>
+            <span className="ds-token-example-card__eyebrow">Компоненты</span>
+            <h4 className="ds-token-example-card__title">Семантика в действии</h4>
             <p className="ds-token-example-card__code">
               Button → background: var(--color-primary)
             </p>
@@ -187,7 +187,7 @@ export default function TokensPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте tokens вместо hardcoded values в коде и макетах.</li>
           <li>Выбирайте semantic token по смыслу, а не по визуальному совпадению.</li>
@@ -198,11 +198,11 @@ export default function TokensPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <div className="ds-token-guidance-card">
                 <p className="ds-token-guidance-card__code">
@@ -222,7 +222,7 @@ export default function TokensPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
               <div className="ds-token-guidance-card ds-token-guidance-card--bad">
                 <p className="ds-token-guidance-card__code ds-token-guidance-card__code--bad">
@@ -244,7 +244,7 @@ export default function TokensPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           В MVP token architecture строится как минимум из двух обязательных слоёв:
           primitive tokens для базовых значений и semantic tokens для ролей интерфейса.

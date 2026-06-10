@@ -36,7 +36,7 @@ export default function IconsPage() {
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
-        <h2>Icons</h2>
+        <h2>Иконки</h2>
         <p>
           Icons — это системная библиотека визуальных символов для
           образовательного, административного и сервисного интерфейса
@@ -46,18 +46,18 @@ export default function IconsPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Foundations</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Library: Lucide</span>
-          <span className="ds-meta-item">Set size: {totalIcons} icons</span>
+          <span className="ds-meta-item">Категория: Foundations</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Библиотека: Lucide</span>
+          <span className="ds-meta-item">Размер набора: {totalIcons} иконок</span>
           <span className="ds-meta-item">
-            Categories: {Object.keys(ICON_CATEGORIES).length}
+            Категории: {Object.keys(ICON_CATEGORIES).length}
           </span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
           Библиотека разделена на тематические категории, чтобы ускорить выбор
           иконок и сделать использование системы более предсказуемым. Такой
@@ -85,10 +85,10 @@ export default function IconsPage() {
       ))}
 
       <div className="ds-section-block">
-        <h3>Sizes</h3>
+        <h3>Размеры</h3>
         <p>
           Для системного использования достаточно трёх основных размеров. Это
-          сохраняет визуальную консистентность и не превращает иконки в
+          сохраняет визуальную согласованность и не превращает иконки в
           произвольный декоративный слой.
         </p>
 
@@ -96,28 +96,28 @@ export default function IconsPage() {
           <div className="ds-icon-size-row">
             <div className="ds-icon-size-demo">
               <Icon name="academic" size={16} className="ds-icon" />
-              <span>16 / compact UI</span>
+              <span>16 / компактный интерфейс</span>
             </div>
 
             <div className="ds-icon-size-demo">
               <Icon name="academic" size={20} className="ds-icon" />
-              <span>20 / default UI</span>
+              <span>20 / интерфейс по умолчанию</span>
             </div>
 
             <div className="ds-icon-size-demo">
               <Icon name="academic" size={24} className="ds-icon" />
-              <span>24 / section emphasis</span>
+              <span>24 / акцент в секции</span>
             </div>
           </div>
 
           <p className="ds-icon-section-note">
-            Рекомендуемый stroke width для системного использования: 1.75.
+            Рекомендуемая толщина штриха для системного использования: 1.75.
           </p>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте только утверждённый registry, а не весь каталог Lucide.</li>
           <li>Сохраняйте единый stroke width и ограниченный набор размеров.</li>
@@ -128,7 +128,7 @@ export default function IconsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
+        <h3>Примеры</h3>
         <p>
           Ниже показаны типичные сценарии использования иконок внутри
           университетского интерфейса.
@@ -138,37 +138,37 @@ export default function IconsPage() {
           <div className="ds-demo-card">
             <div className="ds-icon-inline-demo">
               <Icon name="search" size={18} className="ds-icon" />
-              <span>Search documents and services</span>
+              <span>Поиск документов и сервисов</span>
             </div>
           </div>
 
           <div className="ds-demo-card">
             <div className="ds-icon-inline-demo">
               <Icon name="upload" size={18} className="ds-icon" />
-              <span>Upload admission documents</span>
+              <span>Загрузка документов для поступления</span>
             </div>
           </div>
 
           <div className="ds-demo-card">
             <div className="ds-icon-inline-demo ds-icon-inline-demo--muted">
               <Icon name="calendarCheck" size={18} className="ds-icon" />
-              <span>Confirmed academic event</span>
+              <span>Подтверждённое учебное событие</span>
             </div>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
 
             <div className="ds-demo-card ds-do-dont-demo">
               <div className="ds-icon-inline-demo">
                 <Icon name="fileText" size={18} className="ds-icon" />
-                <span>Application documents</span>
+                <span>Ваши документы</span>
               </div>
             </div>
 
@@ -180,12 +180,12 @@ export default function IconsPage() {
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
 
             <div className="ds-demo-card ds-do-dont-demo">
               <div className="ds-icon-inline-demo ds-icon-inline-demo--muted">
                 <Icon name="info" size={18} className="ds-icon" />
-                <span>Icon without clear semantic meaning</span>
+                <span>Иконка без ясного семантического значения</span>
               </div>
             </div>
 
@@ -199,7 +199,7 @@ export default function IconsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
           Компонент <code>Icon</code> работает как системная обёртка над Lucide и
           использует единый <code>iconRegistry</code>. Каждая иконка описана через

@@ -2,29 +2,29 @@ import React from 'react'
 import Breadcrumbs from '../components/ui/Breadcrumbs'
 
 const simpleItems = [
-  { label: 'Home', href: '#' },
-  { label: 'Components', href: '#' },
-  { label: 'Breadcrumbs' },
+  { label: 'Главная', href: '#' },
+  { label: 'Компоненты', href: '#' },
+  { label: '"Хлебные крошки"' },
 ]
 
 const nestedItems = [
-  { label: 'Home', href: '#' },
-  { label: 'Admissions', href: '#' },
-  { label: 'Applications', href: '#' },
-  { label: 'Application details' },
+  { label: 'Главная', href: '#' },
+  { label: 'Поступление', href: '#' },
+  { label: 'Заявки', href: '#' },
+  { label: 'Детали заявки' },
 ]
 
 const settingsItems = [
-  { label: 'Home', href: '#' },
-  { label: 'Account', href: '#' },
-  { label: 'Security settings' },
+  { label: 'Главная', href: '#' },
+  { label: 'Аккаунт', href: '#' },
+  { label: 'Настройки безопасности' },
 ]
 
 export default function BreadcrumbsPage() {
   return (
     <section className="ds-section ds-section--breadcrumbs">
       <div className="ds-page-intro">
-        <h2>Breadcrumbs</h2>
+        <h2>"Хлебные крошки"</h2>
         <p>
           Breadcrumbs показывают путь пользователя внутри иерархии интерфейса и
           помогают быстро понять текущий уровень навигации. Компонент особенно
@@ -33,14 +33,14 @@ export default function BreadcrumbsPage() {
         </p>
 
         <div className="ds-meta-row">
-          <span className="ds-meta-item">Category: Navigation</span>
-          <span className="ds-meta-item">Status: Ready</span>
-          <span className="ds-meta-item">Tokens: color, spacing, text</span>
+          <span className="ds-meta-item">Категория: Навигация</span>
+          <span className="ds-meta-item">Статус: Готово</span>
+          <span className="ds-meta-item">Токены: color, spacing, text</span>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Preview</h3>
+        <h3>Превью</h3>
         <p>
           Breadcrumbs должны кратко и ясно показывать путь без перегрузки
           интерфейса.
@@ -52,42 +52,45 @@ export default function BreadcrumbsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Variants</h3>
-        <p>Ниже показаны типичные варианты breadcrumb navigation для разных уровней вложенности.</p>
+        <h3>Варианты</h3>
+        <p>
+          Ниже показаны типичные варианты навигации breadcrumb для разных
+          уровней вложенности.
+        </p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Three-level path</h3>
+            <h3>Путь из трёх уровней</h3>
             <Breadcrumbs items={simpleItems} />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Deeper hierarchy</h3>
+            <h3>Более глубокая иерархия</h3>
             <Breadcrumbs items={nestedItems} />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Custom separator</h3>
+            <h3>Пользовательский разделитель</h3>
             <Breadcrumbs items={settingsItems} separator="›" />
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>States</h3>
+        <h3>Состояния</h3>
         <p>
-          Для breadcrumbs важнее не interactive states в стиле кнопки, а ясное
-          различие между linked ancestors и current page.
+          Для breadcrumbs важнее не интерактивные состояния в стиле кнопки, а
+          ясное различие между ссылками на предыдущие уровни и текущей страницей.
         </p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Linked ancestors</h3>
+            <h3>Предыдущие уровни как ссылки</h3>
             <Breadcrumbs
               items={[
-                { label: 'Home', href: '#' },
-                { label: 'Programs', href: '#' },
-                { label: 'Design' },
+                { label: 'Главная', href: '#' },
+                { label: 'Программы', href: '#' },
+                { label: 'Дизайн' },
               ]}
             />
             <p>
@@ -97,12 +100,12 @@ export default function BreadcrumbsPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Current page</h3>
+            <h3>Текущая страница</h3>
             <Breadcrumbs
               items={[
-                { label: 'Home', href: '#' },
-                { label: 'Documents', href: '#' },
-                { label: 'Upload files' },
+                { label: 'Главная', href: '#' },
+                { label: 'Документы', href: '#' },
+                { label: 'Загрузка файлов' },
               ]}
             />
             <p>
@@ -114,19 +117,20 @@ export default function BreadcrumbsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Structure</h3>
+        <h3>Структура</h3>
         <p>
-          Базовая структура breadcrumb состоит из navigation wrapper, ordered list,
-          linked items, separator и current item.
+          Базовая структура breadcrumb состоит из навигационной обёртки,
+          упорядоченного списка, элементов-ссылок, разделителя и текущего
+          элемента.
         </p>
 
         <div className="ds-demo-card">
           <Breadcrumbs
             items={[
-              { label: 'Home', href: '#' },
-              { label: 'Students', href: '#' },
-              { label: 'Profile', href: '#' },
-              { label: 'Edit profile' },
+              { label: 'Главная', href: '#' },
+              { label: 'Студенты', href: '#' },
+              { label: 'Профиль', href: '#' },
+              { label: 'Редактирование профиля' },
             ]}
           />
 
@@ -139,43 +143,46 @@ export default function BreadcrumbsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Examples</h3>
-        <p>Компонент особенно полезен в сложных, вложенных и административных интерфейсах.</p>
+        <h3>Примеры</h3>
+        <p>
+          Компонент особенно полезен в сложных, вложенных и административных
+          интерфейсах.
+        </p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
-            <h3>Admissions flow</h3>
+            <h3>Сценарий поступления</h3>
             <Breadcrumbs
               items={[
-                { label: 'Home', href: '#' },
-                { label: 'Admissions', href: '#' },
-                { label: 'Applications', href: '#' },
-                { label: 'Review application' },
+                { label: 'Главная', href: '#' },
+                { label: 'Поступление', href: '#' },
+                { label: 'Заявки', href: '#' },
+                { label: 'Проверка заявки' },
               ]}
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Account settings</h3>
+            <h3>Настройки аккаунта</h3>
             <Breadcrumbs
               items={[
-                { label: 'Home', href: '#' },
-                { label: 'Account', href: '#' },
-                { label: 'Preferences', href: '#' },
-                { label: 'Notifications' },
+                { label: 'Главная', href: '#' },
+                { label: 'Аккаунт', href: '#' },
+                { label: 'Предпочтения', href: '#' },
+                { label: 'Уведомления' },
               ]}
               separator="›"
             />
           </div>
 
           <div className="ds-demo-card">
-            <h3>Content hierarchy</h3>
+            <h3>Иерархия контента</h3>
             <Breadcrumbs
               items={[
-                { label: 'Library', href: '#' },
-                { label: 'Guides', href: '#' },
-                { label: 'Design system', href: '#' },
-                { label: 'Navigation patterns' },
+                { label: 'Библиотека', href: '#' },
+                { label: 'Руководства', href: '#' },
+                { label: 'Дизайн-система', href: '#' },
+                { label: 'Паттерны навигации' },
               ]}
             />
           </div>
@@ -183,62 +190,62 @@ export default function BreadcrumbsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Usage rules</h3>
+        <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте breadcrumbs там, где есть реальная иерархия уровней.</li>
           <li>Не применяйте компонент для плоской навигации без вложенности.</li>
-          <li>Последний элемент должен обозначать текущую страницу, а не дублировать link-state.</li>
+          <li>Последний элемент должен обозначать текущую страницу, а не дублировать состояние ссылки.</li>
           <li>Подписи должны быть короткими и понятными.</li>
-          <li>Breadcrumbs дополняют page title, а не заменяют его.</li>
+          <li>Breadcrumbs дополняют заголовок страницы, а не заменяют его.</li>
         </ul>
       </div>
 
       <div className="ds-section-block">
-        <h3>Do / Don&apos;t</h3>
+        <h3>Рекомендуется / Не рекомендуется</h3>
 
         <div className="ds-split-grid">
           <div className="ds-do">
-            <h3>Do</h3>
+            <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <Breadcrumbs
                 items={[
-                  { label: 'Home', href: '#' },
-                  { label: 'Programs', href: '#' },
-                  { label: 'Master’s degree' },
+                  { label: 'Главная', href: '#' },
+                  { label: 'Программы', href: '#' },
+                  { label: 'Магистратура' },
                 ]}
               />
             </div>
             <ul className="ds-guidelines">
               <li>Показывайте понятный и последовательный путь.</li>
               <li>Сохраняйте короткие названия разделов.</li>
-              <li>Используйте current item как финальную точку пути.</li>
+              <li>Используйте текущий элемент как финальную точку пути.</li>
             </ul>
           </div>
 
           <div className="ds-dont">
-            <h3>Don&apos;t</h3>
+            <h3>Не рекомендуется</h3>
             <div className="ds-demo-card">
-                <div className="ds-breadcrumbs-demo ds-breadcrumbs-demo--bad">
-              <p>
-                Home / Very long section name that behaves like a page subtitle /
-                Another verbose navigation level / Current page title
-              </p>
-            </div>
+              <div className="ds-breadcrumbs-demo ds-breadcrumbs-demo--bad">
+                <p>
+                  Главная / Очень длинное название раздела, которое ведёт себя как подзаголовок страницы /
+                  Ещё один многословный уровень навигации / Заголовок текущей страницы
+                </p>
+              </div>
             </div>
             <ul className="ds-guidelines">
               <li>Не делайте breadcrumb длинным и шумным.</li>
               <li>Не используйте его вместо локального меню.</li>
-              <li>Не превращайте current item в обычную ссылку.</li>
+              <li>Не превращайте текущий элемент в обычную ссылку.</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div className="ds-section-block">
-        <h3>Implementation note</h3>
+        <h3>Примечание по реализации</h3>
         <div className="ds-note">
-          Компонент принимает <code>items</code> и optional <code>separator</code>.
-          Каждый item может содержать <code>label</code> и <code>href</code>.
+          Компонент принимает <code>items</code> и необязательный параметр <code>separator</code>.
+          Каждый элемент может содержать <code>label</code> и <code>href</code>.
           Последний элемент считается текущей страницей и получает{' '}
           <code>aria-current="page"</code>.
         </div>
