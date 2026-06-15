@@ -28,18 +28,9 @@
   margin-bottom: var(--space-6);
 }
 
-.ds-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-pill);
-  background-color: var(--color-primary);
-  color: #fff;
-  font-weight: 700;
-  font-size: var(--text-sm);
-  box-shadow: var(--shadow-sm);
+.ds-logo-svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 .ds-sidebar-title {

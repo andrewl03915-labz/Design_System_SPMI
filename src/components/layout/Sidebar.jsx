@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import logoSrc from '../../assets/spmi-logo.svg'
 
 const navLinkClass = ({ isActive }) => `ds-link${isActive ? ' active' : ''}`
 
@@ -7,12 +8,18 @@ export default function Sidebar() {
   return (
     <aside className="ds-sidebar">
       <div className="ds-sidebar-brand">
-        <span className="ds-logo">DS</span>
-        <div className="ds-sidebar-brand-text">
-          <span className="ds-sidebar-title">Mining University</span>
-          <span className="ds-sidebar-subtitle">Design System</span>
-        </div>
-      </div>
+  <img
+    src={logoSrc}
+    className="ds-logo-svg"
+    width={33}
+    height={42}
+    alt=""
+    aria-hidden="true"
+  />
+  <span className="ds-sidebar-title">
+    Mining University<br />Design System
+  </span>
+</div>
 
       <div className="ds-sidebar-scroll">
         <nav className="ds-sidebar-nav" aria-label="Main navigation">
