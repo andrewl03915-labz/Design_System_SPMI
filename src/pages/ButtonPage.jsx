@@ -1,4 +1,3 @@
-import React from 'react'
 import Button from '../components/ui/Button'
 
 export default function ButtonPage() {
@@ -12,11 +11,7 @@ export default function ButtonPage() {
           понятную иерархию действий в интерфейсе.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Действие</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, shadow, text</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

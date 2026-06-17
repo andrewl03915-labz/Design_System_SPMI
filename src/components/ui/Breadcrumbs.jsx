@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Breadcrumbs({
   items = [],
   separator = '/',
@@ -10,7 +8,7 @@ export default function Breadcrumbs({
   return (
     <nav
       className={`ds-breadcrumbs ${className}`.trim()}
-      aria-label="Breadcrumb"
+      aria-label="Навигационная цепочка"
     >
       <ol className="ds-breadcrumbs__list">
         {items.map((item, index) => {
@@ -19,7 +17,13 @@ export default function Breadcrumbs({
           return (
             <li key={item.label || index} className="ds-breadcrumbs__item">
               {item.href && !isLast ? (
-                <a href={item.href} className="ds-breadcrumbs__link">
+                <a
+                  href={item.href}
+                  className="ds-breadcrumbs__link"
+                  // '#' — это placeholder-ссылка: оставляем кликабельной,
+                  // но без перехода и прыжка в начало страницы.
+                  onClick={item.href === '#' ? (event) => event.preventDefault() : undefined}
+                >
                   {item.label}
                 </a>
               ) : (

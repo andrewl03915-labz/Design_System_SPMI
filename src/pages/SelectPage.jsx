@@ -1,4 +1,3 @@
-import React from 'react'
 import Select from '../components/ui/Select'
 
 const facultyOptions = [
@@ -19,11 +18,7 @@ export default function SelectPage() {
           где важно обеспечить быстрый и предсказуемый выбор.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Форма</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, text, border</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

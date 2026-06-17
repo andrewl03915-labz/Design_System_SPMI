@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Pagination({
   currentPage = 1,
   totalPages = 1,
@@ -18,7 +16,7 @@ export default function Pagination({
   return (
     <nav
       className={`ds-pagination ${className}`.trim()}
-      aria-label="Pagination"
+      aria-label="Навигация по страницам"
     >
       <button
         type="button"
@@ -26,7 +24,7 @@ export default function Pagination({
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
-        Previous
+        Назад
       </button>
 
       <ol className="ds-pagination__list">
@@ -54,7 +52,7 @@ export default function Pagination({
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
-        Next
+        Вперёд
       </button>
     </nav>
   )

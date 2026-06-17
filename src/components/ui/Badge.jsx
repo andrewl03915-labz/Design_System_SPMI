@@ -1,5 +1,3 @@
-import React from 'react'
-
 const variantClassMap = {
   neutral: 'ds-badge--neutral',
   primary: 'ds-badge--primary',

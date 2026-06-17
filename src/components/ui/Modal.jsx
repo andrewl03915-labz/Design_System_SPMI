@@ -1,4 +1,4 @@
-import React from 'react'
+import Icon from './Icon'
 
 export default function Modal({
   open = false,
@@ -31,9 +31,9 @@ export default function Modal({
             type="button"
             className="ds-modal__close"
             onClick={onClose}
-            aria-label="Close modal"
+            aria-label="Закрыть"
           >
-            ×
+            <Icon name="close" size={18} />
           </button>
         </div>
 

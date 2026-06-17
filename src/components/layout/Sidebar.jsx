@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import logoSrc from '../../assets/spmi-logo.svg'
 
@@ -8,127 +7,122 @@ export default function Sidebar() {
   return (
     <aside className="ds-sidebar">
       <div className="ds-sidebar-brand">
-  <img
-    src={logoSrc}
-    className="ds-logo-svg"
-    width={33}
-    height={42}
-    alt=""
-    aria-hidden="true"
-  />
-  <span className="ds-sidebar-title">
-    Mining University<br />Design System
-  </span>
-</div>
+        <span className="ds-logo">
+          <img src={logoSrc} className="ds-logo-svg" alt="" aria-hidden="true" />
+        </span>
+        <span className="ds-sidebar-title">
+          Горный университет<br />Дизайн-система
+        </span>
+      </div>
 
       <div className="ds-sidebar-scroll">
-        <nav className="ds-sidebar-nav" aria-label="Main navigation">
+        <nav className="ds-sidebar-nav" aria-label="Основная навигация">
           <div className="ds-sidebar-section">
-            <div className="ds-sidebar-section-title">Overview</div>
-            <NavLink to="/" className={navLinkClass}>
-              Home
+            <div className="ds-sidebar-section-title">Обзор</div>
+            <NavLink to="/" end className={navLinkClass}>
+              Главная
             </NavLink>
           </div>
 
           <div className="ds-sidebar-section">
-            <div className="ds-sidebar-section-title">Foundations</div>
+            <div className="ds-sidebar-section-title">Основы</div>
 
-            <NavLink to="/foundations" className={navLinkClass}>
-              Foundations
+            <NavLink to="/foundations" end className={navLinkClass}>
+              Основы
             </NavLink>
             <NavLink to="/foundations/color" className={navLinkClass}>
-              Color
+              Цвет
             </NavLink>
             <NavLink to="/foundations/typography" className={navLinkClass}>
-              Typography
+              Типографика
             </NavLink>
             <NavLink to="/foundations/grid" className={navLinkClass}>
-              Grid
+              Сетка
             </NavLink>
             <NavLink to="/foundations/tokens" className={navLinkClass}>
-              Tokens
+              Токены
             </NavLink>
           </div>
 
           <div className="ds-sidebar-section">
-            <div className="ds-sidebar-section-title">Actions & Forms</div>
+            <div className="ds-sidebar-section-title">Действия и формы</div>
 
             <NavLink to="/components/button" className={navLinkClass}>
-              Button
+              Кнопка
             </NavLink>
             <NavLink to="/components/input" className={navLinkClass}>
-              Input
+              Поле ввода
             </NavLink>
             <NavLink to="/components/textarea" className={navLinkClass}>
-              Textarea
+              Многострочное поле
             </NavLink>
             <NavLink to="/components/select" className={navLinkClass}>
-              Select
+              Выпадающий список
             </NavLink>
             <NavLink to="/components/checkbox" className={navLinkClass}>
-              Checkbox
+              Флажок
             </NavLink>
             <NavLink to="/components/radio" className={navLinkClass}>
-              Radio
+              Радиокнопки
             </NavLink>
             <NavLink to="/components/file-uploader" className={navLinkClass}>
-              File Uploader
+              Загрузка файлов
             </NavLink>
           </div>
 
           <div className="ds-sidebar-section">
-            <div className="ds-sidebar-section-title">Content & Layout</div>
+            <div className="ds-sidebar-section-title">Контент и вёрстка</div>
 
             <NavLink to="/components/badge" className={navLinkClass}>
-              Badge
+              Бейдж
             </NavLink>
             <NavLink to="/components/card" className={navLinkClass}>
-              Card
+              Карточка
             </NavLink>
             <NavLink to="/components/table" className={navLinkClass}>
-              Table
+              Таблица
             </NavLink>
             <NavLink to="/components/tabs" className={navLinkClass}>
-              Tabs
+              Вкладки
             </NavLink>
             <NavLink to="/components/accordion" className={navLinkClass}>
-              Accordion
+              Аккордеон
             </NavLink>
           </div>
 
           <div className="ds-sidebar-section">
-            <div className="ds-sidebar-section-title">Navigation</div>
+            <div className="ds-sidebar-section-title">Навигация</div>
 
             <NavLink to="/components/breadcrumbs" className={navLinkClass}>
-              Breadcrumbs
+              Хлебные крошки
             </NavLink>
             <NavLink to="/components/pagination" className={navLinkClass}>
-              Pagination
+              Пагинация
             </NavLink>
             <NavLink to="/components/search" className={navLinkClass}>
-              Search
+              Поиск
             </NavLink>
           </div>
 
           <div className="ds-sidebar-section">
-            <div className="ds-sidebar-section-title">Feedback & Overlays</div>
+            <div className="ds-sidebar-section-title">Уведомления и оверлеи</div>
 
             <NavLink to="/components/notification" className={navLinkClass}>
-              Notification
+              Уведомление
             </NavLink>
             <NavLink to="/components/modal" className={navLinkClass}>
-              Modal
+              Модальное окно
             </NavLink>
             <NavLink to="/components/tooltip" className={navLinkClass}>
-              Tooltip
+              Подсказка
             </NavLink>
           </div>
 
           <div className="ds-sidebar-section">
-            <div className="ds-sidebar-section-title">Assets</div>
+            <div className="ds-sidebar-section-title">Ресурсы</div>
 
             <NavLink to="/components/icon" className={navLinkClass}>
-              Icon
+              Иконки
             </NavLink>
           </div>
         </nav>

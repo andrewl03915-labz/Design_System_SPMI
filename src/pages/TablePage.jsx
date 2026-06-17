@@ -1,4 +1,3 @@
-import React from 'react'
 import Table from '../components/ui/Table'
 
 const programColumns = [
@@ -73,11 +72,7 @@ export default function TablePage() {
           быстро сравнивать значения между несколькими записями.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Отображение данных</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, text, shadow</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

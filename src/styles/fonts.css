@@ -1,0 +1,26 @@
+/* NT Somic — фирменный шрифт дизайн-системы.
+   Файлы лежат в src/assets/fonts/, Vite сам подставит хешированные пути. */
+
+@font-face {
+  font-family: "NT Somic";
+  src: url("../assets/fonts/01_NTSomic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NT Somic";
+  src: url("../assets/fonts/02_NTSomic-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NT Somic";
+  src: url("../assets/fonts/03_NTSomic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

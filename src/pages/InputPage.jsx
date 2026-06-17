@@ -1,4 +1,3 @@
-import React from 'react'
 import Input from '../components/ui/Input'
 
 export default function InputPage() {
@@ -12,11 +11,7 @@ export default function InputPage() {
           правила работы с label, placeholder, validation и disabled-state.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Форма</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, text, border</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

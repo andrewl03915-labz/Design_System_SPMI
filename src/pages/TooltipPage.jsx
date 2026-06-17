@@ -1,4 +1,3 @@
-import React from 'react'
 import Tooltip from '../components/ui/Tooltip'
 import Button from '../components/ui/Button'
 
@@ -14,11 +13,6 @@ export default function TooltipPage() {
           основного layout.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Обратная связь</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, shadow, text</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -81,11 +75,28 @@ export default function TooltipPage() {
 
           <div className="ds-demo-card">
             <h3>Показ по фокусу</h3>
-            <Tooltip content="Пользователи клавиатуры должны получать те же пояснения.">
-              <button type="button" className="ds-tooltip-demo-trigger">
-                Наведите фокус
-              </button>
-            </Tooltip>
+            <p>
+              Нажмите клавишу <kbd>Tab</kbd>, чтобы перевести фокус на кнопку и
+              увидеть подсказку. Каждое следующее нажатие <kbd>Tab</kbd> показывает
+              подсказку следующей кнопки.
+            </p>
+            <div className="ds-demo-row">
+              <Tooltip content="Пользователи клавиатуры должны получать те же пояснения.">
+                <button type="button" className="ds-tooltip-demo-trigger">
+                  Фокус 1
+                </button>
+              </Tooltip>
+              <Tooltip content="Подсказка появляется при фокусе с клавиатуры." placement="bottom">
+                <button type="button" className="ds-tooltip-demo-trigger">
+                  Фокус 2
+                </button>
+              </Tooltip>
+              <Tooltip content="Каждая кнопка показывает свою подсказку по фокусу.">
+                <button type="button" className="ds-tooltip-demo-trigger">
+                  Фокус 3
+                </button>
+              </Tooltip>
+            </div>
           </div>
 
           <div className="ds-demo-card">

@@ -1,4 +1,3 @@
-import React from 'react'
 import Textarea from '../components/ui/Textarea'
 
 export default function TextareaPage() {
@@ -13,11 +12,7 @@ export default function TextareaPage() {
           validation и disabled-state.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Форма</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, text, border</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

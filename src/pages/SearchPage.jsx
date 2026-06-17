@@ -1,10 +1,22 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Search from '../components/ui/Search'
 
 export default function SearchPage() {
-  const [query, setQuery] = useState('Design system')
-  const [emptyQuery, setEmptyQuery] = useState('')
-  const [tableQuery, setTableQuery] = useState('Application')
+  // у каждого примера — своё независимое значение строки поиска
+  const [queries, setQueries] = useState({
+    preview: 'Дизайн-система',
+    variantsDefault: 'Кнопка',
+    variantsEmpty: '',
+    statesEmpty: '',
+    statesFilled: 'Стипендия',
+    structure: 'Заявка',
+    exTable: 'Заявка',
+    exDocs: 'Пагинация',
+    exUsers: '',
+    recommend: 'Токены',
+  })
+
+  const setQuery = (key) => (value) => setQueries((prev) => ({ ...prev, [key]: value }))
 
   return (
     <section className="ds-section ds-section--search">
@@ -16,12 +28,6 @@ export default function SearchPage() {
           пользователю быстро уточнить набор результатов и сократить время на
           навигацию по большому объёму контента.
         </p>
-
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Поле ввода / Утилита</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, text, shadow</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -33,8 +39,8 @@ export default function SearchPage() {
 
         <div className="ds-demo-card">
           <Search
-            value={query}
-            onChange={setQuery}
+            value={queries.preview}
+            onChange={setQuery('preview')}
             placeholder="Поиск компонентов"
           />
         </div>
@@ -42,14 +48,14 @@ export default function SearchPage() {
 
       <div className="ds-section-block">
         <h3>Варианты</h3>
-        <p>Ниже показаны типичные варианты использования search field в интерфейсе.</p>
+        <p>Ниже показаны типичные варианты использования поля поиска в интерфейсе.</p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>По умолчанию</h3>
             <Search
-              value={query}
-              onChange={setQuery}
+              value={queries.variantsDefault}
+              onChange={setQuery('variantsDefault')}
               placeholder="Поиск компонентов"
             />
           </div>
@@ -57,8 +63,8 @@ export default function SearchPage() {
           <div className="ds-demo-card">
             <h3>Пустое состояние</h3>
             <Search
-              value={emptyQuery}
-              onChange={setEmptyQuery}
+              value={queries.variantsEmpty}
+              onChange={setQuery('variantsEmpty')}
               placeholder="Поиск по документации"
             />
           </div>
@@ -78,17 +84,17 @@ export default function SearchPage() {
       <div className="ds-section-block">
         <h3>Состояния</h3>
         <p>
-          Для search особенно важны empty, filled, focus и disabled states,
-          потому что они напрямую влияют на ввод запроса и восприятие доступности
-          действия.
+          Для search особенно важны пустое, заполненное состояния, фокус и
+          недоступность, потому что они напрямую влияют на ввод запроса и
+          восприятие доступности действия.
         </p>
 
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>Пусто</h3>
             <Search
-              value=""
-              onChange={() => {}}
+              value={queries.statesEmpty}
+              onChange={setQuery('statesEmpty')}
               placeholder="Поиск студентов"
             />
           </div>
@@ -96,8 +102,8 @@ export default function SearchPage() {
           <div className="ds-demo-card">
             <h3>Заполнено</h3>
             <Search
-              value="Scholarship"
-              onChange={() => {}}
+              value={queries.statesFilled}
+              onChange={setQuery('statesFilled')}
               placeholder="Поиск студентов"
             />
           </div>
@@ -123,15 +129,15 @@ export default function SearchPage() {
 
         <div className="ds-demo-card">
           <Search
-            value={tableQuery}
-            onChange={setTableQuery}
+            value={queries.structure}
+            onChange={setQuery('structure')}
             placeholder="Поиск заявок"
           />
 
           <ul className="ds-guidelines">
-            <li>Search должен clearly indicate назначение поля через placeholder или label.</li>
-            <li>Иконка помогает быстро распознать search pattern.</li>
-            <li>Clear action полезен, когда запрос уже введён и его нужно быстро сбросить.</li>
+            <li>Поле поиска должно ясно обозначать назначение через placeholder или label.</li>
+            <li>Иконка помогает быстро распознать сценарий поиска.</li>
+            <li>Действие очистки полезно, когда запрос уже введён и его нужно быстро сбросить.</li>
           </ul>
         </div>
       </div>
@@ -144,8 +150,8 @@ export default function SearchPage() {
           <div className="ds-demo-card">
             <h3>Фильтр таблицы</h3>
             <Search
-              value={tableQuery}
-              onChange={setTableQuery}
+              value={queries.exTable}
+              onChange={setQuery('exTable')}
               placeholder="Поиск заявок"
             />
           </div>
@@ -153,8 +159,8 @@ export default function SearchPage() {
           <div className="ds-demo-card">
             <h3>Поиск по документации</h3>
             <Search
-              value="Pagination"
-              onChange={() => {}}
+              value={queries.exDocs}
+              onChange={setQuery('exDocs')}
               placeholder="Поиск по документации"
             />
           </div>
@@ -162,8 +168,8 @@ export default function SearchPage() {
           <div className="ds-demo-card">
             <h3>Каталог пользователей</h3>
             <Search
-              value=""
-              onChange={() => {}}
+              value={queries.exUsers}
+              onChange={setQuery('exUsers')}
               placeholder="Поиск пользователей"
             />
           </div>
@@ -174,9 +180,9 @@ export default function SearchPage() {
         <h3>Правила использования</h3>
         <ul className="ds-guidelines">
           <li>Используйте search для быстрого поиска по большому набору элементов.</li>
-          <li>Не подменяйте search обычным input, если у поля есть отдельный сценарий поиска.</li>
+          <li>Не подменяйте search обычным полем ввода, если у поля есть отдельный сценарий поиска.</li>
           <li>Placeholder должен подсказывать, что именно можно искать.</li>
-          <li>Clear action должен быть доступен только когда значение непустое.</li>
+          <li>Действие очистки должно быть доступно только когда значение непустое.</li>
           <li>Search помогает уточнять результаты, но не заменяет полноценную навигацию.</li>
         </ul>
       </div>
@@ -189,15 +195,15 @@ export default function SearchPage() {
             <h3>Рекомендуется</h3>
             <div className="ds-demo-card">
               <Search
-                value="Design tokens"
-                onChange={() => {}}
+                value={queries.recommend}
+                onChange={setQuery('recommend')}
                 placeholder="Поиск по документации"
               />
             </div>
             <ul className="ds-guidelines">
-              <li>Делайте search сфокусированным и понятным.</li>
+              <li>Делайте поиск сфокусированным и понятным.</li>
               <li>Уточняйте область поиска через placeholder.</li>
-              <li>Показывайте clear action только при наличии значения.</li>
+              <li>Показывайте действие очистки только при наличии значения.</li>
             </ul>
           </div>
 
@@ -210,7 +216,7 @@ export default function SearchPage() {
               </p>
             </div>
             <ul className="ds-guidelines">
-              <li>Не делайте поле визуально неотличимым от generic input.</li>
+              <li>Не делайте поле визуально неотличимым от обычного поля ввода.</li>
               <li>Не используйте слишком общий placeholder.</li>
               <li>Не скрывайте сценарий использования search от пользователя.</li>
             </ul>
@@ -223,8 +229,8 @@ export default function SearchPage() {
         <div className="ds-note">
           Компонент принимает <code>value</code>, <code>onChange</code>,{' '}
           <code>placeholder</code> и <code>disabled</code>. В MVP search
-          реализован как controlled input pattern с leading icon и optional
-          clear action.
+          реализован как управляемое поле ввода с ведущей иконкой и необязательным
+          действием очистки.
         </div>
       </div>
     </section>

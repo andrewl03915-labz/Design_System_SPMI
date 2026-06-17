@@ -1,47 +1,47 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Icon from '../components/ui/Icon'
 
 const HOME_SECTIONS = [
   {
     title: 'Основы',
     description:
-      'Базовый слой системы: обзорная страница foundations, цвета, типографика, сетка и токены.',
-    meta: 'Foundations · Color · Typography · Grid · Tokens',
+      'Базовый слой системы: обзорная страница основ, цвета, типографика, сетка и токены.',
+    meta: 'Основы · Цвет · Типографика · Сетка · Токены',
     to: '/foundations',
   },
   {
     title: 'Действия и формы',
     description:
       'Компоненты для пользовательских действий и ввода данных: кнопка, поле ввода, многострочное поле, выпадающий список, флажок, переключатель и загрузка файлов.',
-    meta: 'Button · Input · Textarea · Select · Checkbox · Radio · File Uploader',
+    meta: 'Кнопка · Поле ввода · Многострочное поле · Выпадающий список · Флажок · Радиокнопки · Загрузка файлов',
     to: '/components/button',
   },
   {
-    title: 'Контент и компоновка',
+    title: 'Контент и вёрстка',
     description:
       'Компоненты для представления информации, организации контента и паттернов компоновки внутри интерфейса.',
-    meta: 'Badge · Card · Table · Tabs · Accordion',
+    meta: 'Бейдж · Карточка · Таблица · Вкладки · Аккордеон',
     to: '/components/badge',
   },
   {
     title: 'Навигация',
     description:
       'Навигационные элементы, которые помогают пользователю понимать своё положение в системе и перемещаться между разделами.',
-    meta: 'Breadcrumbs · Pagination · Search',
+    meta: 'Хлебные крошки · Пагинация · Поиск',
     to: '/components/breadcrumbs',
   },
   {
-    title: 'Обратная связь и оверлеи',
+    title: 'Уведомления и оверлеи',
     description:
       'Компоненты для системной обратной связи, модальных сценариев и вспомогательных интерактивных слоёв.',
-    meta: 'Notification · Modal · Tooltip',
+    meta: 'Уведомление · Модальное окно · Подсказка',
     to: '/components/notification',
   },
   {
     title: 'Ресурсы',
     description:
       'Визуальные системные ресурсы и базовые графические элементы, используемые во всей библиотеке.',
-    meta: 'Icon',
+    meta: 'Иконки',
     to: '/components/icon',
   },
 ]
@@ -50,25 +50,25 @@ const QUICK_PATHS = [
   {
     title: 'Перейти к основам',
     description:
-      'Начните с foundations, чтобы увидеть базовые правила цвета, типографики, сетки и токенов.',
+      'Начните с основ, чтобы увидеть базовые правила цвета, типографики, сетки и токенов.',
     to: '/foundations',
   },
   {
     title: 'Перейти к кнопкам',
     description:
-      'Откройте Button как базовый компонент действия внутри группы «Действия и формы».',
+      'Откройте «Кнопку» как базовый компонент действия внутри группы «Действия и формы».',
     to: '/components/button',
   },
   {
     title: 'Перейти к уведомлениям',
     description:
-      'Откройте Notification как пример компонента обратной связи внутри группы «Обратная связь и оверлеи».',
+      'Откройте «Уведомление» как пример компонента обратной связи внутри группы «Уведомления и оверлеи».',
     to: '/components/notification',
   },
   {
     title: 'Перейти к иконкам',
     description:
-      'Перейдите к Icon, чтобы посмотреть системный слой ресурсов и его роль в интерфейсе.',
+      'Перейдите к «Иконкам», чтобы посмотреть системный слой ресурсов и его роль в интерфейсе.',
     to: '/components/icon',
   },
 ]
@@ -85,12 +85,6 @@ export default function Home() {
           конкретным страницам системы.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Тип документации: Живая система</span>
-          <span className="ds-meta-item">Модель навигации: На основе боковой панели</span>
-          <span className="ds-meta-item">Структура: Foundations + группы компонентов</span>
-          <span className="ds-meta-item">Статус: В разработке</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -112,7 +106,7 @@ export default function Home() {
               <div className="ds-home-section-card__top">
                 <h3 className="ds-home-section-card__title">{item.title}</h3>
                 <span className="ds-home-section-card__icon" aria-hidden="true">
-                  →
+                  <Icon name="arrowRight" size={18} />
                 </span>
               </div>
 
@@ -129,7 +123,7 @@ export default function Home() {
       <div className="ds-section-block">
         <h3>Как организована система</h3>
         <p>
-          Сначала документация задаёт foundations как визуальный и системный
+          Сначала документация задаёт основы как визуальный и системный
           слой, а затем раскрывает библиотеку компонентов по функциональным
           группам. Такой порядок помогает читать систему последовательно: от
           базовых решений к интерфейсным строительным блокам.
@@ -176,7 +170,7 @@ export default function Home() {
               <div className="ds-home-quickpath-card__top">
                 <h4 className="ds-home-quickpath-card__title">{item.title}</h4>
                 <span className="ds-home-quickpath-card__icon" aria-hidden="true">
-                  →
+                  <Icon name="arrowRight" size={18} />
                 </span>
               </div>
 
@@ -187,8 +181,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      
     </section>
   )
 }

@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Modal from '../components/ui/Modal'
 import Button from '../components/ui/Button'
 import Notification from '../components/ui/Notification'
+import Icon from '../components/ui/Icon'
 
 export default function ModalPage() {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
@@ -19,11 +20,6 @@ export default function ModalPage() {
           перехода на отдельную страницу.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Overlay</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, shadow, text</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -173,7 +169,9 @@ export default function ModalPage() {
               <div className="ds-modal-preview__dialog">
                 <div className="ds-modal-preview__header">
                   <strong>Детали заявки</strong>
-                  <span>×</span>
+                  <button type="button" className="ds-modal__close" aria-label="Закрыть">
+                    <Icon name="close" size={18} />
+                  </button>
                 </div>
                 <div className="ds-modal-preview__body">
                   Modal открыт и визуально отделён от основного интерфейса с помощью overlay.
@@ -193,7 +191,9 @@ export default function ModalPage() {
               <div className="ds-modal-preview__dialog">
                 <div className="ds-modal-preview__header">
                   <strong>Удалить черновик</strong>
-                  <span>×</span>
+                  <button type="button" className="ds-modal__close" aria-label="Закрыть">
+                    <Icon name="close" size={18} />
+                  </button>
                 </div>
                 <div className="ds-modal-preview__body">
                   <Notification variant="warning" title="Это действие повлияет на сохранённый прогресс">
@@ -218,7 +218,9 @@ export default function ModalPage() {
               <div className="ds-modal-preview__dialog">
                 <div className="ds-modal-preview__header">
                   <strong>Подтвердить отправку</strong>
-                  <span>×</span>
+                  <button type="button" className="ds-modal__close" aria-label="Закрыть">
+                    <Icon name="close" size={18} />
+                  </button>
                 </div>
                 <div className="ds-modal-preview__body">
                   Primary action визуально выделено, а dismiss action остаётся вторичным.
@@ -245,7 +247,9 @@ export default function ModalPage() {
               <div className="ds-modal-preview__dialog">
                 <div className="ds-modal-preview__header">
                   <strong>Удалить черновик</strong>
-                  <span>×</span>
+                  <button type="button" className="ds-modal__close" aria-label="Закрыть">
+                    <Icon name="close" size={18} />
+                  </button>
                 </div>
                 <div className="ds-modal-preview__body">
                   Вы действительно хотите удалить черновик? Это действие нельзя отменить.
@@ -268,7 +272,9 @@ export default function ModalPage() {
               <div className="ds-modal-preview__dialog">
                 <div className="ds-modal-preview__header">
                   <strong>Запросить консультацию</strong>
-                  <span>×</span>
+                  <button type="button" className="ds-modal__close" aria-label="Закрыть">
+                    <Icon name="close" size={18} />
+                  </button>
                 </div>
                 <div className="ds-modal-preview__body">
                   <div className="ds-demo-column">
@@ -309,7 +315,9 @@ export default function ModalPage() {
               <div className="ds-modal-preview__dialog">
                 <div className="ds-modal-preview__header">
                   <strong>Срок подачи заявки изменён</strong>
-                  <span>×</span>
+                  <button type="button" className="ds-modal__close" aria-label="Закрыть">
+                    <Icon name="close" size={18} />
+                  </button>
                 </div>
                 <div className="ds-modal-preview__body">
                   <Notification variant="warning" title="Пожалуйста, ознакомьтесь с обновлёнными сроками">

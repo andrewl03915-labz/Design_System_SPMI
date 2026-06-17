@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import RadioGroup from '../components/ui/RadioGroup'
 
 export default function RadioPage() {
   const [programType, setProgramType] = useState('bachelor')
   const [deliveryMode, setDeliveryMode] = useState('online')
+  const [language, setLanguage] = useState('en')
+  const [selectedState, setSelectedState] = useState('option-2')
+  const [paymentMethod, setPaymentMethod] = useState('')
+  const [accommodation, setAccommodation] = useState('shared')
+  const [enrollment, setEnrollment] = useState('full-time')
+  const [theme, setTheme] = useState('system')
+  const [sortOrder, setSortOrder] = useState('latest')
+  const [attendance, setAttendance] = useState('in-person')
 
   return (
     <section className="ds-section ds-section--radio">
@@ -15,11 +23,6 @@ export default function RadioPage() {
           selection в понятной и структурированной форме.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Форма</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, text, shadow</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -95,8 +98,8 @@ export default function RadioPage() {
             <RadioGroup
               label="Язык"
               name="language"
-              value="en"
-              onChange={() => {}}
+              value={language}
+              onChange={setLanguage}
               direction="horizontal"
               options={[
                 { value: 'en', label: 'Английский' },
@@ -138,8 +141,8 @@ export default function RadioPage() {
             <RadioGroup
               label="Состояние выбора"
               name="selected-state"
-              value="option-2"
-              onChange={() => {}}
+              value={selectedState}
+              onChange={setSelectedState}
               options={[
                 { value: 'option-1', label: 'Вариант один' },
                 { value: 'option-2', label: 'Вариант два' },
@@ -153,9 +156,9 @@ export default function RadioPage() {
             <RadioGroup
               label="Способ оплаты"
               name="payment-method"
-              value=""
-              onChange={() => {}}
-              error="Перед продолжением выберите один способ оплаты."
+              value={paymentMethod}
+              onChange={setPaymentMethod}
+              error={paymentMethod ? undefined : 'Перед продолжением выберите один способ оплаты.'}
               options={[
                 { value: 'card', label: 'Карта' },
                 { value: 'invoice', label: 'Счёт' },
@@ -193,8 +196,8 @@ export default function RadioPage() {
           <RadioGroup
             label="Тип размещения"
             name="accommodation-type"
-            value="shared"
-            onChange={() => {}}
+            value={accommodation}
+            onChange={setAccommodation}
             helperText="Выберите один вариант для заявки."
             options={[
               {
@@ -228,8 +231,8 @@ export default function RadioPage() {
             <RadioGroup
               label="Форма обучения"
               name="enrollment-type"
-              value="full-time"
-              onChange={() => {}}
+              value={enrollment}
+              onChange={setEnrollment}
               options={[
                 { value: 'full-time', label: 'Очная' },
                 { value: 'part-time', label: 'Заочная' },
@@ -242,8 +245,8 @@ export default function RadioPage() {
             <RadioGroup
               label="Тема оформления"
               name="theme-preference"
-              value="system"
-              onChange={() => {}}
+              value={theme}
+              onChange={setTheme}
               options={[
                 { value: 'light', label: 'Светлая' },
                 { value: 'dark', label: 'Тёмная' },
@@ -257,8 +260,8 @@ export default function RadioPage() {
             <RadioGroup
               label="Порядок сортировки"
               name="sort-order"
-              value="latest"
-              onChange={() => {}}
+              value={sortOrder}
+              onChange={setSortOrder}
               direction="horizontal"
               options={[
                 { value: 'latest', label: 'Сначала новые' },
@@ -291,8 +294,8 @@ export default function RadioPage() {
               <RadioGroup
                 label="Формат участия"
                 name="attendance-mode"
-                value="in-person"
-                onChange={() => {}}
+                value={attendance}
+                onChange={setAttendance}
                 options={[
                   { value: 'in-person', label: 'Очно' },
                   { value: 'remote', label: 'Дистанционно' },

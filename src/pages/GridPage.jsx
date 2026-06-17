@@ -1,5 +1,3 @@
-import React from 'react'
-
 const BREAKPOINTS = [
   {
     label: 'Малый',
@@ -11,13 +9,13 @@ const BREAKPOINTS = [
     label: 'Средний',
     range: 'Планшеты',
     columns: '8 колонок',
-    note: 'Промежуточная сетка для более свободного layout и размещения блоков рядом.',
+    note: 'Промежуточная сетка для более свободной компоновки и размещения блоков рядом.',
   },
   {
     label: 'Большой',
     range: 'Настольные устройства',
     columns: '12 колонок',
-    note: 'Основная рабочая сетка для сложных интерфейсов, dashboards и документации.',
+    note: 'Основная рабочая сетка для сложных интерфейсов, дашбордов и документации.',
   },
 ]
 
@@ -28,16 +26,10 @@ export default function GridPage() {
         <h2>Сетка</h2>
         <p>
           Сетка определяет пространственную структуру интерфейса и помогает
-          согласованно размещать контент на разных экранах. Grid связывает layout,
-          spacing и visual hierarchy в единый системный каркас.
+          согласованно размещать контент на разных экранах. Она связывает компоновку,
+          отступы и визуальную иерархию в единый системный каркас.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Foundations</span>
-          <span className="ds-meta-item">Статус: В разработке</span>
-          <span className="ds-meta-item">Область: Колонки, gutters, margins, rhythm</span>
-          <span className="ds-meta-item">Связано: Spacing, layout, responsiveness</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -71,9 +63,9 @@ export default function GridPage() {
           </div>
 
           <ul className="ds-guidelines">
-            <li>Columns формируют основной каркас layout.</li>
-            <li>Gutters разделяют соседние блоки и улучшают читаемость композиции.</li>
-            <li>Margins задают безопасные внешние границы контента.</li>
+            <li>Колонки формируют основной каркас компоновки.</li>
+            <li>Промежутки между колонками разделяют соседние блоки и улучшают читаемость композиции.</li>
+            <li>Поля задают безопасные внешние границы контента.</li>
           </ul>
         </div>
       </div>
@@ -82,7 +74,7 @@ export default function GridPage() {
         <h3>Адаптивное поведение</h3>
         <p>
           Сетка должна адаптироваться к размеру экрана, а не оставаться
-          фиксированной. На мобильных экранах структура проще, а на desktop
+          фиксированной. На мобильных экранах структура проще, а на настольных
           она допускает более сложное распределение контента.
         </p>
 
@@ -102,15 +94,15 @@ export default function GridPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Примеры layout</h3>
+        <h3>Примеры компоновки</h3>
         <p>
-          Ниже показаны типичные layout patterns, которые строятся на основе
-          grid и spacing tokens.
+          Ниже показаны типичные паттерны компоновки, которые строятся на основе
+          сетки и токенов отступов.
         </p>
 
         <div className="ds-grid-example-stack">
           <div className="ds-grid-example-card">
-            <span className="ds-grid-example-card__label">Двухколоночный layout</span>
+            <span className="ds-grid-example-card__label">Двухколоночная компоновка</span>
             <div className="ds-grid-example ds-grid-example--two">
               <div className="ds-grid-example__block">Основной контент</div>
               <div className="ds-grid-example__block">Вспомогательная панель</div>
@@ -141,9 +133,9 @@ export default function GridPage() {
       <div className="ds-section-block">
         <h3>Отступы и ритм</h3>
         <p>
-          Grid не существует отдельно от spacing system. Размеры отступов,
-          gaps и container padding должны опираться на spacing tokens, чтобы
-          layout оставался последовательным и масштабируемым.
+          Сетка не существует отдельно от системы отступов. Размеры внешних отступов,
+          зазоров и внутренних отступов контейнера должны опираться на токены отступов,
+          чтобы компоновка оставалась последовательной и масштабируемой.
         </p>
 
         <div className="ds-demo-card">
@@ -155,7 +147,7 @@ export default function GridPage() {
 
             <div className="ds-grid-rhythm__item">
               <span className="ds-grid-rhythm__token">--space-4</span>
-              <p>Стандартный шаг для внутренних отступов карточек, промежутков между полями и небольших layout-групп.</p>
+              <p>Стандартный шаг для внутренних отступов карточек, промежутков между полями и небольших групп компоновки.</p>
             </div>
 
             <div className="ds-grid-rhythm__item">
@@ -169,11 +161,11 @@ export default function GridPage() {
       <div className="ds-section-block">
         <h3>Правила использования</h3>
         <ul className="ds-guidelines">
-          <li>Используйте grid для выравнивания и структурирования контента, а не только для декоративной симметрии.</li>
-          <li>Адаптируйте количество колонок под breakpoint и плотность интерфейса.</li>
-          <li>Используйте spacing tokens для gutters, gaps и container padding.</li>
-          <li>Сохраняйте alignment между текстом, controls и content blocks.</li>
-          <li>Не перегружайте layout слишком большим количеством конкурирующих колонок.</li>
+          <li>Используйте сетку для выравнивания и структурирования контента, а не только для декоративной симметрии.</li>
+          <li>Адаптируйте количество колонок под контрольную точку и плотность интерфейса.</li>
+          <li>Используйте токены отступов для промежутков, зазоров и внутренних отступов контейнера.</li>
+          <li>Сохраняйте выравнивание между текстом, элементами управления и блоками контента.</li>
+          <li>Не перегружайте компоновку слишком большим количеством конкурирующих колонок.</li>
         </ul>
       </div>
 
@@ -193,8 +185,8 @@ export default function GridPage() {
             </div>
 
             <ul className="ds-guidelines">
-              <li>Выстраивайте layout вокруг устойчивых колонок и spacing rhythm.</li>
-              <li>Сохраняйте явную связь между primary и supporting content.</li>
+              <li>Выстраивайте компоновку вокруг устойчивых колонок и ритма отступов.</li>
+              <li>Сохраняйте явную связь между основным и вспомогательным контентом.</li>
               <li>Делайте структуру понятной уже на первом взгляде.</li>
             </ul>
           </div>
@@ -214,8 +206,8 @@ export default function GridPage() {
 
             <ul className="ds-guidelines">
               <li>Не размещайте блоки без общей логики выравнивания.</li>
-              <li>Не смешивайте случайные gaps и разные контейнерные отступы.</li>
-              <li>Не усложняйте layout там, где достаточно простой структуры.</li>
+              <li>Не смешивайте случайные зазоры и разные контейнерные отступы.</li>
+              <li>Не усложняйте компоновку там, где достаточно простой структуры.</li>
             </ul>
           </div>
         </div>
@@ -224,10 +216,10 @@ export default function GridPage() {
       <div className="ds-section-block">
         <h3>Примечание по реализации</h3>
         <div className="ds-note">
-          grid foundation строится вокруг предсказуемых column layouts,
-          container bounds и spacing tokens. Реальные страницы и компоненты
-          должны использовать системные grid- и gap-решения вместо случайных
-          layout-значений.
+          Сетка строится вокруг предсказуемых колоночных раскладок,
+          границ контейнера и токенов отступов. Реальные страницы и компоненты
+          должны использовать системные решения по сетке и зазорам вместо случайных
+          значений компоновки.
         </div>
       </div>
     </section>

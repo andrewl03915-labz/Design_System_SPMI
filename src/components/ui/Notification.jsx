@@ -1,4 +1,11 @@
-import React from 'react'
+import Icon from './Icon'
+
+const variantIconMap = {
+  success: 'circleCheck',
+  warning: 'triangleAlert',
+  error: 'circleX',
+  info: 'info',
+}
 
 export default function Notification({
   title,
@@ -6,16 +13,15 @@ export default function Notification({
   variant = 'info',
   className = '',
 }) {
+  const iconName = variantIconMap[variant] || variantIconMap.info
+
   return (
     <div
       className={`ds-notification ds-notification--${variant} ${className}`.trim()}
       role={variant === 'error' || variant === 'warning' ? 'alert' : 'status'}
     >
       <div className="ds-notification__icon" aria-hidden="true">
-        {variant === 'success' && '✓'}
-        {variant === 'warning' && '!'}
-        {variant === 'error' && '×'}
-        {variant === 'info' && 'i'}
+        <Icon name={iconName} size={16} />
       </div>
 
       <div className="ds-notification__content">

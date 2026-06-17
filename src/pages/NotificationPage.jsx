@@ -1,4 +1,3 @@
-import React from 'react'
 import Notification from '../components/ui/Notification'
 
 export default function NotificationPage() {
@@ -13,11 +12,7 @@ export default function NotificationPage() {
           действия или состоянии интерфейса без перехода к отдельному экрану.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Feedback</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, text</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

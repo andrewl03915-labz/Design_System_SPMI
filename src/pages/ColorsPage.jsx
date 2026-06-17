@@ -1,5 +1,3 @@
-import React from 'react'
-
 const PRIMITIVE_GROUPS = [
   {
     title: 'Поверхности',
@@ -88,12 +86,7 @@ export default function ColorsPage() {
           сценариями применения в интерфейсе.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Foundations</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Модель: Primitive + Semantic tokens</span>
-          <span className="ds-meta-item">Тема: Зелёный / Золотой</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

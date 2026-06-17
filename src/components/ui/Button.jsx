@@ -1,5 +1,3 @@
-import React from 'react'
-
 const variantClassMap = {
   primary: 'ds-button--primary',
   secondary: 'ds-button--secondary',

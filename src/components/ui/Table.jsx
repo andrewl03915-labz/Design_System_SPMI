@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Table({
   columns = [],
   data = [],
@@ -37,7 +35,7 @@ export default function Table({
           {data.length === 0 && (
             <tr className="ds-table__row ds-table__row--empty">
               <td className="ds-table__empty" colSpan={columns.length}>
-                No data available.
+                Нет данных.
               </td>
             </tr>
           )}

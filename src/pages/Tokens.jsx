@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TOKEN_LAYERS = [
   {
     title: 'Примитивные токены',
@@ -32,12 +30,7 @@ export default function TokensPage() {
           с компонентами и помогают поддерживать единый источник истины для интерфейса.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Основы</span>
-          <span className="ds-meta-item">Статус: В процессе</span>
-          <span className="ds-meta-item">Область: Primitive, semantic, implementation</span>
-          <span className="ds-meta-item">Роль: Единый источник истины</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

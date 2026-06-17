@@ -1,9 +1,9 @@
-import React from 'react'
+import Icon from './Icon'
 
 export default function Search({
   value = '',
   onChange,
-  placeholder = 'Search',
+  placeholder = 'Поиск',
   disabled = false,
   className = '',
 }) {
@@ -12,7 +12,7 @@ export default function Search({
   return (
     <div className={`ds-search ${className}`.trim()}>
       <span className="ds-search__icon" aria-hidden="true">
-        ⌕
+        <Icon name="search" size={18} />
       </span>
 
       <input
@@ -26,27 +26,15 @@ export default function Search({
       />
 
       {hasValue && !disabled && (
-  <button
-    type="button"
-    className="ds-search__clear"
-    onClick={() => onChange?.('')}
-    aria-label="Clear search"
-  >
-    <svg
-      viewBox="0 0 16 16"
-      width="12"
-      height="12"
-      aria-hidden="true"
-    >
-      <path
-        d="M4 4L12 12M12 4L4 12"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-      />
-    </svg>
-  </button>
-)}
+        <button
+          type="button"
+          className="ds-search__clear"
+          onClick={() => onChange?.('')}
+          aria-label="Очистить поиск"
+        >
+          <Icon name="close" size={14} />
+        </button>
+      )}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import { createElement } from 'react'
 import { getIconComponent } from './iconRegistry'
 
 export default function Icon({
@@ -11,9 +11,9 @@ export default function Icon({
   className = '',
   ...props
 }) {
-  const LucideIcon = getIconComponent(name)
+  const iconComponent = getIconComponent(name)
 
-  if (!LucideIcon) {
+  if (!iconComponent) {
     return null
   }
 
@@ -21,14 +21,14 @@ export default function Icon({
     ? { 'aria-hidden': 'true' }
     : { role: 'img', 'aria-label': label || name }
 
-  return (
-    <LucideIcon
-      size={size}
-      strokeWidth={strokeWidth}
-      color={color}
-      className={className}
-      {...accessibilityProps}
-      {...props}
-    />
-  )
+  // The icon is a stable reference from the module-level registry; render it
+  // via createElement so a dynamically-selected component stays readable.
+  return createElement(iconComponent, {
+    size,
+    strokeWidth,
+    color,
+    className,
+    ...accessibilityProps,
+    ...props,
+  })
 }

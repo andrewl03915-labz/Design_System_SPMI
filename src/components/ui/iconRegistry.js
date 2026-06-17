@@ -19,6 +19,8 @@ import {
 
   Plus,
   Minus,
+  Check,
+  X,
   Pencil,
   Trash2,
   Copy,
@@ -102,6 +104,8 @@ export const ICON_CATEGORIES = {
     icons: [
       'plus',
       'minus',
+      'check',
+      'close',
       'pencil',
       'trash2',
       'copy',
@@ -282,6 +286,18 @@ export const ICON_REGISTRY = {
     category: 'actions',
     title: 'Минус',
     note: 'Удалить, свернуть или уменьшить.',
+  },
+  check: {
+    component: Check,
+    category: 'actions',
+    title: 'Галочка',
+    note: 'Подтверждение выбора, отметка, выполнено.',
+  },
+  close: {
+    component: X,
+    category: 'actions',
+    title: 'Закрыть',
+    note: 'Закрытие, сброс или отмена действия.',
   },
   pencil: {
     component: Pencil,

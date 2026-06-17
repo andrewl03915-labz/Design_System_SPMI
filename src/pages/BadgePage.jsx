@@ -1,4 +1,3 @@
-import React from 'react'
 import Badge from '../components/ui/Badge'
 
 export default function BadgePage() {
@@ -11,11 +10,7 @@ export default function BadgePage() {
           Компонент помогает быстро передавать смысл без перегрузки интерфейса.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Статус</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, radius, spacing, text</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

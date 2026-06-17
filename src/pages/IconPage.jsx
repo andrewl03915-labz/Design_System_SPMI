@@ -1,8 +1,7 @@
-import React from 'react'
 import Icon from '../components/ui/Icon'
 import { ICON_CATEGORIES, ICON_REGISTRY } from '../components/ui/iconRegistry'
 
-function IconCategorySection({ categoryKey, category }) {
+function IconCategorySection({ category }) {
   return (
     <div className="ds-section-block">
       <h3>{category.title}</h3>
@@ -31,29 +30,18 @@ function IconCategorySection({ categoryKey, category }) {
 }
 
 export default function IconsPage() {
-  const totalIcons = Object.keys(ICON_REGISTRY).length
-
   return (
     <section className="ds-section">
       <div className="ds-page-intro">
         <h2>Иконки</h2>
         <p>
-          Icons — это системная библиотека визуальных символов для
+          «Иконки» — это системная библиотека визуальных символов для
           образовательного, административного и сервисного интерфейса
           Горного университета. Библиотека построена на Lucide и оформлена как
-          curated icon registry с профессиональной категоризацией для
+          курируемый реестр иконок с профессиональной категоризацией для
           разработчиков и дизайнеров.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Foundations</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Библиотека: Lucide</span>
-          <span className="ds-meta-item">Размер набора: {totalIcons} иконок</span>
-          <span className="ds-meta-item">
-            Категории: {Object.keys(ICON_CATEGORIES).length}
-          </span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -66,22 +54,18 @@ export default function IconsPage() {
         </p>
 
         <ul className="ds-guidelines">
-          <li>Core — базовые сущности и общие интерфейсные сценарии.</li>
-          <li>Navigation — переходы, раскрытия и пространственная навигация.</li>
-          <li>Actions — действия пользователя и system controls.</li>
-          <li>Files &amp; Data — документы, таблицы, списки и файловые сценарии.</li>
-          <li>Academics — обучение, расписание, материалы и research context.</li>
-          <li>Campus &amp; Services — кампус, инфраструктура, сервисы и контакты.</li>
-          <li>Status &amp; Feedback — статусы, помощь, предупреждения и безопасность.</li>
+          <li>Базовые — базовые сущности и общие интерфейсные сценарии.</li>
+          <li>Навигация — переходы, раскрытия и пространственная навигация.</li>
+          <li>Действия — действия пользователя и системные элементы управления.</li>
+          <li>Файлы и данные — документы, таблицы, списки и файловые сценарии.</li>
+          <li>Учебный процесс — обучение, расписание, материалы и исследовательские сценарии.</li>
+          <li>Корпуса и сервисы — кампус, инфраструктура, сервисы и контакты.</li>
+          <li>Статусы и обратная связь — статусы, помощь, предупреждения и безопасность.</li>
         </ul>
       </div>
 
       {Object.entries(ICON_CATEGORIES).map(([categoryKey, category]) => (
-        <IconCategorySection
-          key={categoryKey}
-          categoryKey={categoryKey}
-          category={category}
-        />
+        <IconCategorySection key={categoryKey} category={category} />
       ))}
 
       <div className="ds-section-block">
@@ -192,7 +176,7 @@ export default function IconsPage() {
             <ul className="ds-guidelines">
               <li>Не смешивайте разные библиотеки иконок.</li>
               <li>Не используйте иконки как единственный носитель смысла.</li>
-              <li>Не добавляйте похожие символы без явной semantic necessity.</li>
+              <li>Не добавляйте похожие символы без явной семантической необходимости.</li>
             </ul>
           </div>
         </div>
@@ -203,7 +187,7 @@ export default function IconsPage() {
         <div className="ds-note">
           Компонент <code>Icon</code> работает как системная обёртка над Lucide и
           использует единый <code>iconRegistry</code>. Каждая иконка описана через
-          имя, категорию, title, note и React component, что делает библиотеку
+          имя, категорию, заголовок, описание и React-компонент, что делает библиотеку
           удобной для масштабирования, документирования и повторного
           использования.
         </div>

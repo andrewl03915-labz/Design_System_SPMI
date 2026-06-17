@@ -1,4 +1,3 @@
-import React from 'react'
 import Breadcrumbs from '../components/ui/Breadcrumbs'
 
 const simpleItems = [
@@ -32,11 +31,7 @@ export default function BreadcrumbsPage() {
           ориентацию и быстрый возврат на предыдущие уровни.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Навигация</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, text</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

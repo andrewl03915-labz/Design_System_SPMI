@@ -1,4 +1,3 @@
-import React from 'react'
 import Checkbox from '../components/ui/Checkbox'
 
 export default function CheckboxPage() {
@@ -13,11 +12,7 @@ export default function CheckboxPage() {
           или несколько пунктов.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Форма</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, text, border</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

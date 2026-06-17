@@ -1,4 +1,4 @@
-import React from 'react'
+import Icon from './Icon'
 
 export default function Checkbox({
   label,
@@ -31,7 +31,7 @@ export default function Checkbox({
 
         <span className={`ds-checkbox__control ${error ? 'ds-checkbox__control--error' : ''}`}>
           <span className="ds-checkbox__mark" aria-hidden="true">
-            ✓
+            <Icon name="check" size={12} strokeWidth={3} />
           </span>
         </span>
 

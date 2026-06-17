@@ -1,5 +1,5 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Icon from '../components/ui/Icon'
 
 const FOUNDATION_AREAS = [
   {
@@ -7,28 +7,28 @@ const FOUNDATION_AREAS = [
     to: '/foundations/color',
     description:
       'Цветовая система описывает фирменные цвета, семантические роли, иерархию поверхностей и статусные цвета для интерфейсов университета.',
-    meta: 'Palette · Semantic roles · Surfaces · Feedback',
+    meta: 'Палитра · Семантические роли · Поверхности · Обратная связь',
   },
   {
     title: 'Типографика',
     to: '/foundations/typography',
     description:
-      'Типографика определяет основную гарнитуру, иерархию текста, scale tokens и правила чтения в интерфейсе.',
-    meta: 'Font family · Scale · Headings · Body text',
+      'Типографика определяет основную гарнитуру, иерархию текста, токены шкалы и правила чтения в интерфейсе.',
+    meta: 'Гарнитура · Шкала · Заголовки · Основной текст',
   },
   {
     title: 'Сетка',
     to: '/foundations/grid',
     description:
-      'Сетка задаёт структуру страниц, контейнеры, отступы, responsive behavior и пространственный ритм системы.',
-    meta: 'Layout · Columns · Spacing · Responsiveness',
+      'Сетка задаёт структуру страниц, контейнеры, отступы, адаптивное поведение и пространственный ритм системы.',
+    meta: 'Компоновка · Колонки · Отступы · Адаптивность',
   },
   {
     title: 'Токены',
     to: '/foundations/tokens',
     description:
-      'Токены связывают foundation decisions с кодом и обеспечивают единый source of truth для компонентов.',
-    meta: 'Primitive · Semantic · Aliases · Implementation',
+      'Токены связывают базовые решения с кодом и обеспечивают единый источник истины для компонентов.',
+    meta: 'Примитивные · Семантические · Алиасы · Реализация',
   },
 ]
 
@@ -38,24 +38,18 @@ export default function FoundationsPage() {
       <div className="ds-page-intro">
         <h2>Основы</h2>
         <p>
-          Foundations формируют визуальную и системную основу дизайн-системы.
+          Основы формируют визуальную и системную базу дизайн-системы.
           Этот раздел объединяет цвет, типографику, сетку и токены как набор
           правил, переменных и решений, на которых строятся компоненты и
           интерфейсные сценарии.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Foundations</span>
-          <span className="ds-meta-item">Статус: В разработке</span>
-          <span className="ds-meta-item">Структура: 4 раздела</span>
-          <span className="ds-meta-item">Роль: Визуальная и системная основа</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
         <h3>Изучение основ</h3>
         <p>
-          Foundations разделены на самостоятельные направления, чтобы каждая тема
+          Основы разделены на самостоятельные направления, чтобы каждая тема
           раскрывалась глубже и не терялась внутри одной обзорной страницы.
         </p>
 
@@ -74,7 +68,7 @@ export default function FoundationsPage() {
                   className="ds-foundation-nav-card__icon"
                   aria-hidden="true"
                 >
-                  →
+                  <Icon name="arrowRight" size={18} />
                 </span>
               </div>
 
@@ -94,9 +88,10 @@ export default function FoundationsPage() {
       <div className="ds-section-block">
         <h3>Как работает система</h3>
         <p>
-          Foundations работают как связующий слой между визуальной идентичностью
+          Основы работают как связующий слой между визуальной идентичностью
           проекта и компонентным уровнем. Они задают правила, которыми затем
-          пользуются Button, Input, Notification, Icon и другие части системы.
+          пользуются «Кнопка», «Поле ввода», «Уведомление», «Иконки» и другие
+          части системы.
         </p>
 
         <div className="ds-principles-grid">
@@ -112,7 +107,7 @@ export default function FoundationsPage() {
             <h4>Структура</h4>
             <p>
               Сетка и пространственные правила помогают строить устойчивые,
-              читаемые и масштабируемые layout-решения.
+              читаемые и масштабируемые решения по компоновке.
             </p>
           </div>
 
@@ -130,19 +125,19 @@ export default function FoundationsPage() {
         <h3>Связь с компонентами</h3>
         <p>
           Компоненты не должны самостоятельно определять визуальные значения.
-          Они используют foundations как источник решений для цвета, текста,
-          spacing, borders, surfaces и states.
+          Они используют основы как источник решений для цвета, текста,
+          отступов, границ, поверхностей и состояний.
         </p>
 
         <div className="ds-demo-card">
           <div className="ds-foundation-flow">
             <div className="ds-foundation-flow__item">
               <span className="ds-foundation-flow__label">Цвет</span>
-              <p>Primary, accent, success, warning, surfaces</p>
+              <p>Основной, акцентный, успех, предупреждение, поверхности</p>
             </div>
 
             <div className="ds-foundation-flow__arrow" aria-hidden="true">
-              →
+              <Icon name="arrowRight" size={18} />
             </div>
 
             <div className="ds-foundation-flow__item">
@@ -151,12 +146,12 @@ export default function FoundationsPage() {
             </div>
 
             <div className="ds-foundation-flow__arrow" aria-hidden="true">
-              →
+              <Icon name="arrowRight" size={18} />
             </div>
 
             <div className="ds-foundation-flow__item">
               <span className="ds-foundation-flow__label">Компоненты</span>
-              <p>Button, Input, Badge, Notification, Icon</p>
+              <p>Кнопка, Поле ввода, Бейдж, Уведомление, Иконки</p>
             </div>
           </div>
         </div>
@@ -165,19 +160,17 @@ export default function FoundationsPage() {
       <div className="ds-section-block">
         <h3>Начало работы</h3>
         <p>
-          Начинать работу с системой лучше с foundations, чтобы сразу увидеть
-          логику цвета, типографики, layout и token-based implementation.
+          Начинать работу с системой лучше с основ, чтобы сразу увидеть
+          логику цвета, типографики, компоновки и реализации на основе токенов.
         </p>
 
         <ol className="ds-guidelines ds-guidelines--ordered">
-          <li>Изучите Color, чтобы понять brand palette и semantic roles.</li>
-          <li>Откройте Typography, чтобы увидеть hierarchy и scale tokens.</li>
-          <li>Проверьте Grid перед проектированием layout-heavy экранов.</li>
-          <li>Используйте Tokens как reference layer для разработки компонентов.</li>
+          <li>Изучите «Цвет», чтобы понять фирменную палитру и семантические роли.</li>
+          <li>Откройте «Типографику», чтобы увидеть иерархию и токены шкалы.</li>
+          <li>Проверьте «Сетку» перед проектированием экранов с плотной компоновкой.</li>
+          <li>Используйте «Токены» как опорный слой для разработки компонентов.</li>
         </ol>
       </div>
-
-      
     </section>
   )
 }

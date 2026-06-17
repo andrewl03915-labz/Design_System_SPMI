@@ -1,4 +1,5 @@
-import React, { useId, useState } from 'react'
+import { useId, useState } from 'react'
+import Icon from './Icon'
 
 function AccordionItem({
   title,
@@ -23,7 +24,7 @@ function AccordionItem({
         >
           <span className="ds-accordion__title">{title}</span>
           <span className="ds-accordion__icon" aria-hidden="true">
-            {open ? '−' : '+'}
+            <Icon name={open ? 'minus' : 'plus'} size={18} />
           </span>
         </button>
       </h3>
@@ -33,7 +34,7 @@ function AccordionItem({
         className="ds-accordion__panel"
         role="region"
         aria-labelledby={buttonId}
-        hidden={!open}
+        inert={!open}
       >
         <div className="ds-accordion__content">{children}</div>
       </div>

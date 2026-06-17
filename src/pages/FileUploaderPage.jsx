@@ -1,4 +1,3 @@
-import React from 'react'
 import FileUploader from '../components/ui/FileUploader'
 
 export default function FileUploaderPage() {
@@ -13,11 +12,6 @@ export default function FileUploaderPage() {
           выбранного файла.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Форма</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, text, shadow</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -32,6 +26,7 @@ export default function FileUploaderPage() {
             label="Копия паспорта"
             helperText="PDF, JPG или PNG до 10 МБ."
             accept=".pdf,.jpg,.jpeg,.png"
+            maxSize={10 * 1024 * 1024}
           />
         </div>
       </div>
@@ -47,6 +42,7 @@ export default function FileUploaderPage() {
               label="Загрузить документ"
               helperText="PDF или DOCX до 5 МБ."
               accept=".pdf,.doc,.docx"
+              maxSize={5 * 1024 * 1024}
             />
           </div>
 
@@ -56,6 +52,7 @@ export default function FileUploaderPage() {
               label="Фотография профиля"
               helperText="JPG или PNG до 3 МБ."
               accept=".jpg,.jpeg,.png"
+              maxSize={3 * 1024 * 1024}
             />
           </div>
 
@@ -85,6 +82,7 @@ export default function FileUploaderPage() {
               label="Вложение к заявке"
               helperText="PDF до 10 МБ."
               accept=".pdf"
+              maxSize={10 * 1024 * 1024}
             />
           </div>
 
@@ -122,6 +120,7 @@ export default function FileUploaderPage() {
             label="Академическая справка"
             helperText="Только PDF, не более 10 МБ."
             accept=".pdf"
+            maxSize={10 * 1024 * 1024}
           />
 
           <ul className="ds-guidelines">
@@ -143,6 +142,7 @@ export default function FileUploaderPage() {
               label="Мотивационное письмо"
               helperText="PDF или DOCX до 5 МБ."
               accept=".pdf,.doc,.docx"
+              maxSize={5 * 1024 * 1024}
             />
           </div>
 
@@ -152,6 +152,7 @@ export default function FileUploaderPage() {
               label="Изображение профиля"
               helperText="PNG или JPG до 3 МБ."
               accept=".png,.jpg,.jpeg"
+              maxSize={3 * 1024 * 1024}
             />
           </div>
 
@@ -161,6 +162,7 @@ export default function FileUploaderPage() {
               label="Документ, удостоверяющий личность"
               helperText="PDF, JPG или PNG до 10 МБ."
               accept=".pdf,.jpg,.jpeg,.png"
+              maxSize={10 * 1024 * 1024}
             />
           </div>
         </div>
@@ -188,6 +190,7 @@ export default function FileUploaderPage() {
                 label="Загрузить диплом"
                 helperText="Только PDF, до 10 МБ."
                 accept=".pdf"
+                maxSize={10 * 1024 * 1024}
               />
             </div>
             <ul className="ds-guidelines">

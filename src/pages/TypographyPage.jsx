@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TYPE_SCALE = [
   {
     token: '--text-xl',
@@ -43,12 +41,7 @@ export default function TypographyPage() {
           иерархию и правила использования текста в дизайн-системе.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Основы</span>
-          <span className="ds-meta-item">Статус: В процессе</span>
-          <span className="ds-meta-item">Область: Scale, hierarchy, readability</span>
-          <span className="ds-meta-item">Токены: text, line-height, weight</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

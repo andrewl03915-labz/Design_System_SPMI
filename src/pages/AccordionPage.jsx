@@ -1,4 +1,3 @@
-import React from 'react'
 import Accordion from '../components/ui/Accordion'
 
 const previewItems = [
@@ -66,11 +65,7 @@ export default function AccordionPage() {
           действительно нужны пользователю.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Раскрытие контента</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, text</span>
-        </div>
+
       </div>
 
       <div className="ds-section-block">

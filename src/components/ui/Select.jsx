@@ -1,4 +1,4 @@
-import React from 'react'
+import Icon from './Icon'
 
 export default function Select({
   label,
@@ -59,7 +59,7 @@ export default function Select({
         </select>
 
         <span className="ds-select-icon" aria-hidden="true">
-          ▾
+          <Icon name="chevronDown" size={18} />
         </span>
       </div>
 

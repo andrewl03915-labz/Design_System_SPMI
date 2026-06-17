@@ -1,4 +1,3 @@
-import React from 'react'
 import Tabs from '../components/ui/Tabs'
 import Badge from '../components/ui/Badge'
 
@@ -56,11 +55,6 @@ export default function TabsPage() {
           навигацию внутри одного контекста.
         </p>
 
-        <div className="ds-meta-row">
-          <span className="ds-meta-item">Категория: Навигация</span>
-          <span className="ds-meta-item">Статус: Готово</span>
-          <span className="ds-meta-item">Токены: color, spacing, radius, border, text</span>
-        </div>
       </div>
 
       <div className="ds-section-block">
@@ -71,7 +65,7 @@ export default function TabsPage() {
         </p>
 
         <div className="ds-demo-card">
-          <Tabs items={overviewTabs} />
+          <Tabs items={overviewTabs} keyboardFocusable={false} />
         </div>
       </div>
 
@@ -83,6 +77,7 @@ export default function TabsPage() {
           <div className="ds-demo-card">
             <h3>Навигация по разделам</h3>
             <Tabs
+              keyboardFocusable={false}
               items={[
                 {
                   value: 'foundation',
@@ -106,6 +101,7 @@ export default function TabsPage() {
           <div className="ds-demo-card">
             <h3>Компактное переключение контента</h3>
             <Tabs
+              keyboardFocusable={false}
               items={[
                 {
                   value: 'description',
@@ -140,18 +136,18 @@ export default function TabsPage() {
           <div className="ds-demo-card">
             <h3>По умолчанию</h3>
             <div className="ds-tabs__list">
-              <button type="button" className="ds-tabs__tab">Обзор</button>
-              <button type="button" className="ds-tabs__tab">Детали</button>
-              <button type="button" className="ds-tabs__tab">Настройки</button>
+              <button type="button" tabIndex={-1} className="ds-tabs__tab">Обзор</button>
+              <button type="button" tabIndex={-1} className="ds-tabs__tab">Детали</button>
+              <button type="button" tabIndex={-1} className="ds-tabs__tab">Настройки</button>
             </div>
           </div>
 
           <div className="ds-demo-card">
             <h3>Активно</h3>
             <div className="ds-tabs__list">
-              <button type="button" className="ds-tabs__tab ds-tabs__tab--active">Обзор</button>
-              <button type="button" className="ds-tabs__tab">Детали</button>
-              <button type="button" className="ds-tabs__tab">Настройки</button>
+              <button type="button" tabIndex={-1} className="ds-tabs__tab ds-tabs__tab--active">Обзор</button>
+              <button type="button" tabIndex={-1} className="ds-tabs__tab">Детали</button>
+              <button type="button" tabIndex={-1} className="ds-tabs__tab">Настройки</button>
             </div>
             <p>Active-state показывает текущий раздел и управляет видимой панелью контента.</p>
           </div>
@@ -163,7 +159,12 @@ export default function TabsPage() {
               <button type="button" className="ds-tabs__tab">Детали</button>
               <button type="button" className="ds-tabs__tab">Настройки</button>
             </div>
-            <p>Focus-state помогает навигации с клавиатуры и делает взаимодействие более предсказуемым.</p>
+            <p>
+              Нажмите клавишу <kbd>Tab</kbd>, чтобы перевести фокус на вкладку и
+              увидеть состояние фокуса. Повторные нажатия <kbd>Tab</kbd> переключают
+              фокус только между этими вкладками. Состояние фокуса помогает навигации
+              с клавиатуры и делает взаимодействие более предсказуемым.
+            </p>
           </div>
         </div>
       </div>
@@ -177,6 +178,7 @@ export default function TabsPage() {
 
         <div className="ds-demo-card">
           <Tabs
+            keyboardFocusable={false}
             items={[
               {
                 value: 'status',
@@ -230,6 +232,7 @@ export default function TabsPage() {
             <h3>Рекомендуется</h3>
             <div className="ds-demo-column">
               <Tabs
+                keyboardFocusable={false}
                 items={[
                   { value: 'one', label: 'Обзор', content: <p>Содержимое обзора.</p> },
                   { value: 'two', label: 'Детали', content: <p>Содержимое деталей.</p> },
@@ -248,9 +251,9 @@ export default function TabsPage() {
             <h3>Не рекомендуется</h3>
             <div className="ds-demo-column">
               <div className="ds-tabs__list">
-                <button type="button" className="ds-tabs__tab">Очень длинное название вкладки номер один</button>
-                <button type="button" className="ds-tabs__tab">Очень длинное название вкладки номер два</button>
-                <button type="button" className="ds-tabs__tab">Очень длинное название вкладки номер три</button>
+                <button type="button" tabIndex={-1} className="ds-tabs__tab">Очень длинное название вкладки номер один</button>
+                <button type="button" tabIndex={-1} className="ds-tabs__tab">Очень длинное название вкладки номер два</button>
+                <button type="button" tabIndex={-1} className="ds-tabs__tab">Очень длинное название вкладки номер три</button>
               </div>
             </div>
             <ul className="ds-guidelines">
