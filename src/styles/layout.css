@@ -93,18 +93,78 @@
 .ds-sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-1);
   font-size: var(--text-sm);
+}
+
+/* Кнопка-заголовок категории: раскрывает/сворачивает список ссылок */
+.ds-sidebar-section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .ds-sidebar-section-title {
   font-weight: 700;
-  margin-bottom: var(--space-1);
   /* приглушённый светлый — заголовки групп не спорят с пунктами */
   color: rgba(255, 255, 255, 0.55);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: var(--font-size-12);
+}
+
+.ds-sidebar-section-toggle:hover .ds-sidebar-section-title {
+  color: var(--color-text-inverse);
+}
+
+.ds-sidebar-section-chevron {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.55);
+  transition: transform 0.2s ease;
+}
+
+.ds-sidebar-section-chevron svg {
+  display: block;
+}
+
+.ds-sidebar-section.is-open .ds-sidebar-section-chevron {
+  transform: rotate(180deg);
+}
+
+.ds-sidebar-section-toggle:hover .ds-sidebar-section-chevron {
+  color: var(--color-text-inverse);
+}
+
+/* Список ссылок категории: плавное раскрытие от 0 до содержимого */
+.ds-sidebar-section-list {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.22s ease;
+}
+
+.ds-sidebar-section.is-open .ds-sidebar-section-list {
+  grid-template-rows: 1fr;
+}
+
+.ds-sidebar-section-list-inner {
+  overflow: hidden;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--space-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-sidebar-section-list {
+    transition: none;
+  }
 }
 
 .ds-link {
