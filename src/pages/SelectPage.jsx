@@ -116,22 +116,6 @@ export default function SelectPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Фокус</h3>
-            <Select
-              label="Кафедра"
-              placeholder="Выберите кафедру"
-              defaultValue=""
-              className="is-focus-demo"
-              options={[
-                { value: 'ux', label: 'Высшая математика' },
-                { value: 'product', label: 'Иностранные языки' },
-                { value: 'research', label: 'История' },
-              ]}
-            />
-            <p>Focus-state помогает показать активный выбор и поддерживает визуальный контекст взаимодействия.</p>
-          </div>
-
-          <div className="ds-demo-card">
             <h3>Ошибка</h3>
             <Select
               label="Траектория поступления"

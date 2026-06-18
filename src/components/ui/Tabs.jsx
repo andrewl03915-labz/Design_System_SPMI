@@ -4,9 +4,6 @@ export default function Tabs({
   items = [],
   defaultValue,
   className = '',
-  // когда false — вкладки не попадают в Tab-навигацию с клавиатуры
-  // (используется в документации, чтобы не уводить фокус по всей странице)
-  keyboardFocusable = true,
 }) {
   const initialValue = defaultValue || items[0]?.value
   const [activeTab, setActiveTab] = useState(initialValue)
@@ -25,7 +22,6 @@ export default function Tabs({
               type="button"
               role="tab"
               aria-selected={isActive}
-              tabIndex={keyboardFocusable ? undefined : -1}
               className={`ds-tabs__tab ${isActive ? 'ds-tabs__tab--active' : ''}`}
               onClick={() => setActiveTab(item.value)}
             >

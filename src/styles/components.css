@@ -1664,13 +1664,6 @@ body {
   border-color: var(--color-primary);
 }
 
-.is-focus-demo {
-  background-color: color-mix(in srgb, var(--color-primary) 8%, white);
-  border-color: var(--color-primary);
-  outline: none;
-  box-shadow: none;
-}
-
 .ds-textarea {
   width: 100%;
   min-height: 120px;
@@ -1879,13 +1872,6 @@ body {
   font-size: var(--text-sm);
 }
 
-.ds-select.is-focus-demo {
-  border-color: var(--color-primary);
-  background-color: color-mix(in srgb, var(--color-primary) 8%, white);
-  outline: none;
-  box-shadow: none;
-}
-
 .ds-checkbox-field {
   display: flex;
   flex-direction: column;
@@ -2053,12 +2039,6 @@ body {
 
 .ds-tabs__panel > *:last-child {
   margin-bottom: 0;
-}
-
-.ds-tabs__tab.is-focus-demo {
-  border-color: var(--color-primary);
-  background-color: color-mix(in srgb, var(--color-primary) 8%, white);
-  color: var(--color-text);
 }
 
 .ds-notification {
@@ -2566,7 +2546,9 @@ body {
   overflow: hidden;
 }
 
-.ds-accordion__heading {
+/* перебиваем .ds-section-block h3 (margin-bottom), иначе под кнопкой остаётся
+   незакрашенная белая полоска в 8px */
+.ds-accordion .ds-accordion__heading {
   margin: 0;
 }
 
@@ -2617,9 +2599,13 @@ body {
   grid-template-rows: 1fr;
 }
 
+/* collapsing-обёртка: без паддинга, чтобы строка грида сжималась в 0 */
 .ds-accordion__content {
   overflow: hidden;
   min-height: 0;
+}
+
+.ds-accordion__content-inner {
   padding: var(--space-4);
   border-top: 1px solid var(--color-border-subtle);
   color: var(--color-text);
@@ -2633,11 +2619,11 @@ body {
   }
 }
 
-.ds-accordion__content p {
+.ds-accordion__content-inner p {
   margin: 0;
 }
 
-.ds-accordion__content > * + * {
+.ds-accordion__content-inner > * + * {
   margin-top: var(--space-3);
 }
 

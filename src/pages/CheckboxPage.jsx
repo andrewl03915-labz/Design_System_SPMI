@@ -80,14 +80,6 @@ export default function CheckboxPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Фокус</h3>
-            <div className="is-focus-demo">
-              <Checkbox label="Фокус на области управления" />
-            </div>
-            <p>Состояние focus должно помогать пользователю при навигации с клавиатуры.</p>
-          </div>
-
-          <div className="ds-demo-card">
             <h3>Ошибка</h3>
             <Checkbox
               label="Я подтверждаю согласие на обработку данных"

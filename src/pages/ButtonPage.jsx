@@ -84,16 +84,6 @@ export default function ButtonPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Фокус</h3>
-            <div className="ds-demo-row">
-              <Button variant="ghost" className="is-focus-demo">
-                Ghost
-              </Button>
-            </div>
-            <p>Состояние фокуса важно для клавиатурной навигации, доступности и ясного положения курсора.</p>
-          </div>
-
-          <div className="ds-demo-card">
             <h3>Отключено</h3>
             <div className="ds-demo-row">
               <Button variant="primary" disabled>

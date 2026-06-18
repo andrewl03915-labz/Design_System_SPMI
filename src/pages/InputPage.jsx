@@ -75,17 +75,6 @@ export default function InputPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Фокус</h3>
-            <Input
-              label="Email"
-              placeholder="name@example.com"
-              className="is-focus-demo"
-              helperText="Активное поле ввода"
-            />
-            <p>Состояние focus показывает активное взаимодействие с полем и помогает ориентироваться при клавиатурной навигации.</p>
-          </div>
-
-          <div className="ds-demo-card">
             <h3>Ошибка</h3>
             <Input
               label="Email"

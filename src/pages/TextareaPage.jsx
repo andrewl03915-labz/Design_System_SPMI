@@ -90,18 +90,6 @@ export default function TextareaPage() {
           </div>
 
           <div className="ds-demo-card">
-            <h3>Фокус</h3>
-            <Textarea
-              label="Сообщение"
-              placeholder="Введите сообщение"
-              helperText="Активное поле ввода"
-              className="is-focus-demo"
-              rows={4}
-            />
-            <p>Focus-state показывает активное взаимодействие с полем и помогает удерживать контекст ввода.</p>
-          </div>
-
-          <div className="ds-demo-card">
             <h3>Ошибка</h3>
             <Textarea
               label="Описание"

@@ -36,7 +36,9 @@ function AccordionItem({
         aria-labelledby={buttonId}
         inert={!open}
       >
-        <div className="ds-accordion__content">{children}</div>
+        <div className="ds-accordion__content">
+          <div className="ds-accordion__content-inner">{children}</div>
+        </div>
       </div>
     </div>
   )

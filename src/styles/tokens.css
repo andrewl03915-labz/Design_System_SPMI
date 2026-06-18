@@ -5,7 +5,7 @@
   /* Font weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-semibold: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   /* Primitive font sizes */
@@ -83,7 +83,6 @@
   --text-xl: var(--font-size-24);
 
     /* Primitive color tokens */
-  --color-white: #ffffff;
 
   --color-bg-base: #f6f7f5;
   --color-surface-base: #ffffff;
@@ -122,7 +121,7 @@
 
   --color-text: var(--color-text-base);
   --color-text-muted: var(--color-text-muted-base);
-  --color-text-inverse: var(--color-white);
+  --color-text-inverse: var(--color-surface-base);
 
   --color-border-subtle: var(--color-border-subtle-base);
   --color-border-strong: var(--color-border-strong-base);

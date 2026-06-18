@@ -60,8 +60,8 @@ export default function TooltipPage() {
       <div className="ds-section-block">
         <h3>Состояния</h3>
         <p>
-          Для tooltip особенно важны default, visible, focus-triggered и
-          disabled states, потому что компонент должен быть деликатным, но
+          Для tooltip особенно важны состояния по умолчанию, показанной подсказки
+          и недоступности, потому что компонент должен быть деликатным, но
           предсказуемым.
         </p>
 
@@ -71,32 +71,6 @@ export default function TooltipPage() {
             <Tooltip content="Эта подсказка появляется при взаимодействии.">
               <span className="ds-tooltip-demo-trigger">По умолчанию</span>
             </Tooltip>
-          </div>
-
-          <div className="ds-demo-card">
-            <h3>Показ по фокусу</h3>
-            <p>
-              Нажмите клавишу <kbd>Tab</kbd>, чтобы перевести фокус на кнопку и
-              увидеть подсказку. Каждое следующее нажатие <kbd>Tab</kbd> показывает
-              подсказку следующей кнопки.
-            </p>
-            <div className="ds-demo-row">
-              <Tooltip content="Пользователи клавиатуры должны получать те же пояснения.">
-                <button type="button" className="ds-tooltip-demo-trigger">
-                  Фокус 1
-                </button>
-              </Tooltip>
-              <Tooltip content="Подсказка появляется при фокусе с клавиатуры." placement="bottom">
-                <button type="button" className="ds-tooltip-demo-trigger">
-                  Фокус 2
-                </button>
-              </Tooltip>
-              <Tooltip content="Каждая кнопка показывает свою подсказку по фокусу.">
-                <button type="button" className="ds-tooltip-demo-trigger">
-                  Фокус 3
-                </button>
-              </Tooltip>
-            </div>
           </div>
 
           <div className="ds-demo-card">
