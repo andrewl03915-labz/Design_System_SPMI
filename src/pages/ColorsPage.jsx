@@ -2,7 +2,6 @@ const PRIMITIVE_GROUPS = [
   {
     title: 'Поверхности',
     items: [
-      { token: '--color-white', value: '#ffffff', name: 'Белый' },
       { token: '--color-bg-base', value: '#f6f7f5', name: 'Базовый фон' },
       { token: '--color-surface-base', value: '#ffffff', name: 'Базовая поверхность' },
       { token: '--color-surface-alt-base', value: '#eef1ec', name: 'Альтернативная базовая поверхность' },
