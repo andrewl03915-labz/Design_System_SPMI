@@ -9,7 +9,7 @@ const FIGMA_LINKS = {
   '/foundations/color':
     'https://www.figma.com/design/czujzGf62skYeMfDan9RhX/%D0%A6%D0%B2%D0%B5%D1%82%D0%B0?node-id=0-1&t=OWLRD3D2GfDxpznP-1',
   '/foundations/typography':
-    'https://www.figma.com/design/IuapYRKzgjzYZfLXI7vIdE/%D0%A2%D0%B8%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0?node-id=0-1&t=vzFz60Zg563nyowI-1',
+    'https://www.figma.com/design/jE7uCRvYCBbi7oJNCTwwyJ/%D0%A2%D0%B8%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0?node-id=0-1&t=o0DmLM9DCenasB2d-1',
   '/foundations/grid':
     'https://www.figma.com/design/oFe5MJbbPpCyQbMA3R75nz/%D0%A1%D0%B5%D1%82%D0%BA%D0%B0?node-id=0-1&t=9BHEAlsn1723jDRd-1',
   '/foundations/tokens':
@@ -17,7 +17,7 @@ const FIGMA_LINKS = {
 
   // Компоненты
   '/components/button':
-    'https://www.figma.com/design/7tHkfj7xW6GnmwZc0wWfkh/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0?node-id=0-1&t=PrDrh1gwsCdgMfCD-1',
+    'https://www.figma.com/design/czujzGf62skYeMfDan9RhX/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0?node-id=0-1&t=OWLRD3D2GfDxpznP-1',
   '/components/input':
     'https://www.figma.com/design/AZ9HeADVHW9XdP63TM0eKK/%D0%9F%D0%BE%D0%BB%D0%B5-%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0?node-id=0-1&t=z0Gd6x8EHk2wIs6o-1',
   '/components/textarea':
