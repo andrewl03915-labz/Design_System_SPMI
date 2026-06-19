@@ -13,23 +13,23 @@ const FIGMA_LINKS = {
   '/foundations/grid':
     'https://www.figma.com/design/NrBsUmAWCPFNcXuuuzkYmj/%D0%A1%D0%B5%D1%82%D0%BA%D0%B0?node-id=0-1&t=0MuomsBSojPUoOaH-1',
   '/foundations/tokens':
-    'https://www.figma.com/design/MuuhH5FMhvIEvca1jS1CvX/%D0%A2%D0%BE%D0%BA%D0%B5%D0%BD%D1%8B?node-id=0-1&t=Q3UPrAdUvNzcAxcI-1',
+    'https://www.figma.com/design/czujzGf62skYeMfDan9RhX/%D0%A2%D0%BE%D0%BA%D0%B5%D0%BD%D1%8B?node-id=0-1&t=FJRm8EoUNmQhyF0w-1',
 
   // Компоненты
   '/components/button':
-    'https://www.figma.com/design/czujzGf62skYeMfDan9RhX/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0?node-id=0-1&t=OWLRD3D2GfDxpznP-1',
+    'https://www.figma.com/design/YfPYPU2M2RuWLuayJtBaqc/%D0%9A%D0%BD%D0%BE%D0%BF%D0%BA%D0%B0?node-id=0-1&t=uUBd6Vafv3bfaIsl-1',
   '/components/input':
-    'https://www.figma.com/design/AZ9HeADVHW9XdP63TM0eKK/%D0%9F%D0%BE%D0%BB%D0%B5-%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0?node-id=0-1&t=z0Gd6x8EHk2wIs6o-1',
+    'https://www.figma.com/design/t2Kg3w96eoyIg7G6ZxED5F/%D0%9F%D0%BE%D0%BB%D0%B5-%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0?node-id=0-1&t=IjGRuJeUtafcmvvq-1',
   '/components/textarea':
-    'https://www.figma.com/design/FU6mXOYfHfhuLp71k6CtWy/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%81%D1%82%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5?node-id=0-1&t=CmetCUsmYpaURjf5-1',
+    'https://www.figma.com/design/dDDw6H0klijX2ZvZohSOW3/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%81%D1%82%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5?node-id=0-1&t=Mmj7P3SQZU8OfL6m-1',
   '/components/select':
     'https://www.figma.com/design/OHB0dxKuF1OSxjTpnDBdaO/%D0%92%D1%8B%D0%BF%D0%B0%D0%B4%D0%B0%D1%8E%D1%89%D0%B8%D0%B9-%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA?node-id=0-1&t=4efOwAZcKfrJIGug-1',
   '/components/checkbox':
-    'https://www.figma.com/design/uRCJ6G4zBq3vPV01LM28vP/%D0%A4%D0%BB%D0%B0%D0%B6%D0%BE%D0%BA?node-id=0-1&t=JORpoKPUVXxAG1UI-1',
+    'https://www.figma.com/design/CVxMhxzvggD6OoWSw40Bhr/%D0%A4%D0%BB%D0%B0%D0%B6%D0%BE%D0%BA?node-id=0-1&t=Zsk2W4UGfsretV21-1',
   '/components/radio':
-    'https://www.figma.com/design/SQiCoE14nW4iTc9zXTTzJp/%D0%A0%D0%B0%D0%B4%D0%B8%D0%BE%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8?node-id=0-1&t=TaQRzZxQiSzKnQQ6-1',
+    'https://www.figma.com/design/Zbro6Z1FdXzHB7XGOWAD5P/%D0%A0%D0%B0%D0%B4%D0%B8%D0%BE%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8?node-id=0-1&t=DNRjRl6ddkR4q8nS-1',
   '/components/file-uploader':
-    'https://www.figma.com/design/XBH1UfJHX0f4dD9UyfX4iA/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2?node-id=0-1&t=Yn0jdWRgCOjmYhLi-1',
+    'https://www.figma.com/design/uCLSknhe7B72nVv9vygxiN/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2?node-id=0-1&t=O9lXwKNuOz0cBuZt-1',
   '/components/badge':
     'https://www.figma.com/design/5ntav2iNRhzPVJaf7zIaGO/%D0%91%D0%B5%D0%B9%D0%B4%D0%B6?node-id=0-1&t=LQq9OOsea3teKFSk-1',
   '/components/card':
