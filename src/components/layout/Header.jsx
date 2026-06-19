@@ -2,9 +2,13 @@ import { useLocation } from 'react-router-dom'
 import Icon from '../ui/Icon'
 import { getFigmaLink } from '../../app/figmaLinks'
 
+// Ссылка на репозиторий — показывается только на обзорной странице.
+const GITHUB_URL = 'https://github.com/andrewl03915-labz/Design_System_SPMI'
+
 export default function Header() {
   const { pathname } = useLocation()
   const figmaUrl = getFigmaLink(pathname)
+  const isOverview = pathname === '/'
 
   return (
     <header className="ds-header">
@@ -63,6 +67,18 @@ export default function Header() {
           >
             <Icon name="externalLink" size={16} />
             <span>Открыть в Figma</span>
+          </a>
+        )}
+
+        {isOverview && (
+          <a
+            className="ds-figma-link"
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="externalLink" size={16} />
+            <span>Для разработчиков</span>
           </a>
         )}
       </div>
