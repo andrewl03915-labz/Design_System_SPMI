@@ -3790,6 +3790,19 @@ body {
 
 /* semantic mapping */
 
+/* Семантические токены — в две колонки, на узких экранах в одну */
+.ds-token-map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 720px) {
+  .ds-token-map-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ds-token-map-row {
   display: grid;
   grid-template-columns: auto 1fr;

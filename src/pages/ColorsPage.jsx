@@ -132,7 +132,7 @@ export default function ColorsPage() {
           должен использоваться в компонентах вместо прямых primitive values.
         </p>
 
-        <div className="ds-demo-column">
+        <div className="ds-token-map-grid">
           {SEMANTIC_TOKENS.map((item) => (
             <div className="ds-demo-card ds-token-map-row" key={item.token}>
               <div
@@ -177,10 +177,11 @@ export default function ColorsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Статусные цвета</h3>
+        <h3>Примеры использования статусных цветов</h3>
         <p>
-          Success, warning, error и info образуют отдельный semantic слой для
-          notification patterns, validation, alerts и system feedback.
+          Успех, предупреждение, ошибка и информация образуют отдельный 
+          семантический слой для шаблонов оповещений, подтверждения, 
+          ошибок и обратной связи от системы.
         </p>
 
         <div className="ds-status-grid">
@@ -207,7 +208,7 @@ export default function ColorsPage() {
       </div>
 
       <div className="ds-section-block">
-        <h3>Поверхности и текст</h3>
+        <h3>Немного про поверхности и текст</h3>
         <p>
           Нейтральные поверхности и текстовые цвета обеспечивают читаемость,
           глубину и стабильный фон для брендовых акцентов. Именно они должны
