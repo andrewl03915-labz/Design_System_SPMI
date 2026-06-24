@@ -77,6 +77,54 @@ export default function TypographyPage() {
         </div>
       </div>
 
+      <div className="ds-section-block" id="font-setup">
+        <h3>Как подключить шрифт к своему проекту</h3>
+        <p>
+          Компоненты, скопированные способом <strong>HTML + CSS</strong>, самодостаточны,
+          но фирменный шрифт NT Somic в сниппет не входит (это бинарные файлы). Без него
+          текст отрисуется системным шрифтом. Чтобы получить точную типографику, подключите
+          шрифт один раз:
+        </p>
+
+        <div className="ds-demo-card">
+          <ol className="ds-guidelines">
+            <li>
+              Скопируйте файлы шрифта в свой проект:
+              <code> 01_NTSomic-Regular.woff2</code>, <code>02_NTSomic-Medium.woff2</code>,
+              <code> 03_NTSomic-Bold.woff2</code>.
+            </li>
+            <li>
+              Добавьте в свой CSS объявления <code>@font-face</code> (поправьте путь
+              <code> url(...)</code> под расположение файлов):
+            </li>
+          </ol>
+
+          <pre className="ds-code">
+            <code>{`@font-face {
+  font-family: "NT Somic";
+  src: url("./fonts/01_NTSomic-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("./fonts/02_NTSomic-Medium.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("./fonts/03_NTSomic-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}`}</code>
+          </pre>
+
+          <p className="ds-type-scale-card__note">
+            Больше ничего делать не нужно: в скопированных компонентах уже задан
+            <code> font-family: var(--font-family-base)</code>, где NT Somic стоит первым.
+            Как только <code>@font-face</code> подключён, шрифт применится автоматически.
+          </p>
+        </div>
+      </div>
+
       <div className="ds-section-block">
         <h3>Шкала размеров</h3>
         <p>

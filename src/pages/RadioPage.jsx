@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import RadioGroup from '../components/ui/RadioGroup'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function RadioPage() {
   const [programType, setProgramType] = useState('bachelor')
@@ -67,63 +68,109 @@ export default function RadioPage() {
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>Вертикальная группа</h3>
-            <RadioGroup
-              label="Формат обучения"
-              name="study-format"
-              value={deliveryMode}
-              onChange={setDeliveryMode}
-              helperText="Выберите один формат."
-              options={[
-                {
-                  value: 'online',
-                  label: 'Онлайн',
-                  description: 'Дистанционное участие с цифровыми материалами и видеозанятиями.',
-                },
-                {
-                  value: 'hybrid',
-                  label: 'Гибридный формат',
-                  description: 'Сочетание онлайн-обучения и очных занятий.',
-                },
-                {
-                  value: 'campus',
-                  label: 'Очно',
-                  description: 'Полноценное очное участие в университете.',
-                },
-              ]}
-            />
+            <CopyControl
+              jsx={`<RadioGroup
+  label="Формат обучения"
+  name="study-format"
+  value={value}
+  onChange={setValue}
+  helperText="Выберите один формат."
+  options={[
+    { value: 'online', label: 'Онлайн', description: 'Дистанционное участие с цифровыми материалами и видеозанятиями.' },
+    { value: 'hybrid', label: 'Гибридный формат', description: 'Сочетание онлайн-обучения и очных занятий.' },
+    { value: 'campus', label: 'Очно', description: 'Полноценное очное участие в университете.' },
+  ]}
+/>`}
+            >
+              <RadioGroup
+                label="Формат обучения"
+                name="study-format"
+                value={deliveryMode}
+                onChange={setDeliveryMode}
+                helperText="Выберите один формат."
+                options={[
+                  {
+                    value: 'online',
+                    label: 'Онлайн',
+                    description: 'Дистанционное участие с цифровыми материалами и видеозанятиями.',
+                  },
+                  {
+                    value: 'hybrid',
+                    label: 'Гибридный формат',
+                    description: 'Сочетание онлайн-обучения и очных занятий.',
+                  },
+                  {
+                    value: 'campus',
+                    label: 'Очно',
+                    description: 'Полноценное очное участие в университете.',
+                  },
+                ]}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Горизонтальная группа</h3>
-            <RadioGroup
-              label="Язык"
-              name="language"
-              value={language}
-              onChange={setLanguage}
-              direction="horizontal"
-              options={[
-                { value: 'en', label: 'Английский' },
-                { value: 'de', label: 'Немецкий' },
-                { value: 'fr', label: 'Французский' },
-              ]}
-            />
+            <CopyControl
+              jsx={`<RadioGroup
+  label="Язык"
+  name="language"
+  value={value}
+  onChange={setValue}
+  direction="horizontal"
+  options={[
+    { value: 'en', label: 'Английский' },
+    { value: 'de', label: 'Немецкий' },
+    { value: 'fr', label: 'Французский' },
+  ]}
+/>`}
+            >
+              <RadioGroup
+                label="Язык"
+                name="language"
+                value={language}
+                onChange={setLanguage}
+                direction="horizontal"
+                options={[
+                  { value: 'en', label: 'Английский' },
+                  { value: 'de', label: 'Немецкий' },
+                  { value: 'fr', label: 'Французский' },
+                ]}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Недоступная группа</h3>
-            <RadioGroup
-              label="Статус заявки"
-              name="application-status"
-              value="submitted"
-              onChange={() => {}}
-              helperText="После отправки выбор блокируется."
-              disabled
-              options={[
-                { value: 'draft', label: 'Черновик' },
-                { value: 'submitted', label: 'Отправлено' },
-                { value: 'review', label: 'На рассмотрении' },
-              ]}
-            />
+            <CopyControl
+              jsx={`<RadioGroup
+  label="Статус заявки"
+  name="application-status"
+  value="submitted"
+  onChange={() => {}}
+  helperText="После отправки выбор блокируется."
+  disabled
+  options={[
+    { value: 'draft', label: 'Черновик' },
+    { value: 'submitted', label: 'Отправлено' },
+    { value: 'review', label: 'На рассмотрении' },
+  ]}
+/>`}
+            >
+              <RadioGroup
+                label="Статус заявки"
+                name="application-status"
+                value="submitted"
+                onChange={() => {}}
+                helperText="После отправки выбор блокируется."
+                disabled
+                options={[
+                  { value: 'draft', label: 'Черновик' },
+                  { value: 'submitted', label: 'Отправлено' },
+                  { value: 'review', label: 'На рассмотрении' },
+                ]}
+              />
+            </CopyControl>
           </div>
         </div>
       </div>
@@ -131,7 +178,7 @@ export default function RadioPage() {
       <div className="ds-section-block">
         <h3>Состояния</h3>
         <p>
-          Для radio особенно важны default, selected, focus, disabled и error
+          Для radio особенно важны default, selected, disabled и error
           states, потому что выбор должен быть очевидным и легко проверяемым.
         </p>
 

@@ -1,4 +1,5 @@
 import Table from '../components/ui/Table'
+import CopyControl from '../components/ui/CopyControl'
 
 const programColumns = [
   { key: 'program', label: 'Программа' },
@@ -105,17 +106,23 @@ export default function TablePage() {
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>По умолчанию</h3>
-            <Table columns={programColumns} data={programData} />
+            <CopyControl jsx={`<Table columns={columns} data={data} />`}>
+              <Table columns={programColumns} data={programData} />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>С чередованием строк</h3>
-            <Table columns={programColumns} data={programData} striped />
+            <CopyControl jsx={`<Table columns={columns} data={data} striped />`}>
+              <Table columns={programColumns} data={programData} striped />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Компактная</h3>
-            <Table columns={compactColumns} data={compactData} compact />
+            <CopyControl jsx={`<Table columns={columns} data={data} compact />`}>
+              <Table columns={compactColumns} data={compactData} compact />
+            </CopyControl>
           </div>
         </div>
       </div>

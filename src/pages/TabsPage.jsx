@@ -1,5 +1,6 @@
 import Tabs from '../components/ui/Tabs'
 import Badge from '../components/ui/Badge'
+import CopyControl from '../components/ui/CopyControl'
 
 const overviewTabs = [
   {
@@ -65,7 +66,17 @@ export default function TabsPage() {
         </p>
 
         <div className="ds-demo-card">
-          <Tabs items={overviewTabs} />
+          <CopyControl interactive
+            jsx={`<Tabs
+  items={[
+    { value: 'overview', label: 'Обзор', content: <p>Сводка по разделу.</p> },
+    { value: 'details', label: 'Детали', content: <p>Расширенное описание.</p> },
+    { value: 'settings', label: 'Настройки', content: <p>Параметры и режимы.</p> },
+  ]}
+/>`}
+          >
+            <Tabs items={overviewTabs} />
+          </CopyControl>
         </div>
       </div>
 

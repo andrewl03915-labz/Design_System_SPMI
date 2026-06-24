@@ -1,5 +1,61 @@
+import { useRef, useState } from 'react'
 import Icon from '../components/ui/Icon'
 import { ICON_CATEGORIES, ICON_REGISTRY } from '../components/ui/iconRegistry'
+
+// Фирменный зелёный (--color-primary) — иконки на странице показаны им,
+// поэтому копируем SVG с этим цветом, а не с чёрным currentColor.
+const ICON_GREEN = '#125735'
+
+function svgToCode(svg) {
+  return svg.outerHTML
+    .replace(/\s*class="[^"]*"/, '') // убираем служебные классы
+    .replace(/currentColor/g, ICON_GREEN) // запекаем фирменный цвет
+    .replace(/>\s+</g, '><')
+    .trim()
+}
+
+function IconCopyCard({ iconName }) {
+  const icon = ICON_REGISTRY[iconName]
+  const previewRef = useRef(null)
+  const [copied, setCopied] = useState(false)
+
+  const copy = async () => {
+    const svg = previewRef.current?.querySelector('svg')
+    if (!svg) return
+    const code = svgToCode(svg)
+    try {
+      await navigator.clipboard.writeText(code)
+    } catch {
+      const ta = document.createElement('textarea')
+      ta.value = code
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1500)
+  }
+
+  return (
+    <div className="ds-icon-card">
+      <div className="ds-icon-preview" ref={previewRef}>
+        <Icon name={iconName} size={20} className="ds-icon" />
+      </div>
+
+      <div>
+        <p className="ds-icon-name">{icon.title}</p>
+        <p className="ds-icon-meta">{icon.note}</p>
+      </div>
+
+      <button type="button" className="ds-icon-card__copy" onClick={copy}>
+        {copied ? 'Скопировано' : 'Скопировать SVG'}
+      </button>
+    </div>
+  )
+}
 
 function IconCategorySection({ category }) {
   return (
@@ -8,22 +64,9 @@ function IconCategorySection({ category }) {
       <p>{category.description}</p>
 
       <div className="ds-icon-grid">
-        {category.icons.map((iconName) => {
-          const icon = ICON_REGISTRY[iconName]
-
-          return (
-            <div className="ds-icon-card" key={iconName}>
-              <div className="ds-icon-preview">
-                <Icon name={iconName} size={20} className="ds-icon" />
-              </div>
-
-              <div>
-                <p className="ds-icon-name">{icon.title}</p>
-                <p className="ds-icon-meta">{icon.note}</p>
-              </div>
-            </div>
-          )
-        })}
+        {category.icons.map((iconName) => (
+          <IconCopyCard key={iconName} iconName={iconName} />
+        ))}
       </div>
     </div>
   )

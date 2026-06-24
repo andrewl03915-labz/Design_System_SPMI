@@ -3,6 +3,40 @@ import Modal from '../components/ui/Modal'
 import Button from '../components/ui/Button'
 import Notification from '../components/ui/Notification'
 import Icon from '../components/ui/Icon'
+import CopyControl from '../components/ui/CopyControl'
+
+const modalHtml = `<div class="ds-modal-layer" role="presentation">
+  <div class="ds-modal-backdrop"></div>
+  <div class="ds-modal" role="dialog" aria-modal="true" aria-labelledby="ds-modal-title">
+    <div class="ds-modal__header">
+      <h3 id="ds-modal-title" class="ds-modal__title">Детали заявки</h3>
+      <button type="button" class="ds-modal__close" aria-label="Закрыть">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <div class="ds-modal__body">
+      <p>Modal помогает показать связанный контент поверх текущего контекста.</p>
+    </div>
+    <div class="ds-modal__footer">
+      <button type="button" class="ds-button ds-button--ghost">Отмена</button>
+      <button type="button" class="ds-button ds-button--primary">Продолжить</button>
+    </div>
+  </div>
+</div>`
+
+const modalJsx = `<Modal
+  open={open}
+  title="Детали заявки"
+  onClose={() => setOpen(false)}
+  footer={
+    <>
+      <Button variant="ghost" onClick={() => setOpen(false)}>Отмена</Button>
+      <Button variant="primary" onClick={() => setOpen(false)}>Продолжить</Button>
+    </>
+  }
+>
+  <p>Modal помогает показать связанный контент поверх текущего контекста.</p>
+</Modal>`
 
 export default function ModalPage() {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false)
@@ -30,11 +64,11 @@ export default function ModalPage() {
         </p>
 
         <div className="ds-demo-card">
-          <div className="ds-demo-row">
+          <CopyControl interactive cssPrefixes={['ds-modal', 'ds-button']} html={modalHtml} jsx={modalJsx}>
             <Button variant="primary" onClick={() => setIsPreviewOpen(true)}>
               Открыть модальное окно
             </Button>
-          </div>
+          </CopyControl>
 
           <ul className="ds-guidelines">
             <li>Modal должен использоваться для задач, требующих временного фокуса.</li>

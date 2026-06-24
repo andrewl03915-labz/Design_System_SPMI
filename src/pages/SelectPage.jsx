@@ -1,4 +1,5 @@
 import Select from '../components/ui/Select'
+import CopyControl from '../components/ui/CopyControl'
 
 const facultyOptions = [
   { value: 'design', label: 'ИБИО' },
@@ -54,42 +55,76 @@ export default function SelectPage() {
         <div className="ds-split-grid">
           <div className="ds-demo-card">
             <h3>Пусто</h3>
-            <Select
-              label="Программа"
-              placeholder="Выберите программу"
-              defaultValue=""
-              options={[
-                { value: 'bachelor', label: 'Бакалавриат' },
-                { value: 'master', label: 'СпецВО' }
-              ]}
-            />
+            <CopyControl interactive
+              jsx={`<Select
+  label="Программа"
+  placeholder="Выберите программу"
+  options={[
+    { value: 'bachelor', label: 'Бакалавриат' },
+    { value: 'master', label: 'СпецВО' },
+  ]}
+/>`}
+            >
+              <Select
+                label="Программа"
+                placeholder="Выберите программу"
+                defaultValue=""
+                options={[
+                  { value: 'bachelor', label: 'Бакалавриат' },
+                  { value: 'master', label: 'СпецВО' }
+                ]}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Выбрано</h3>
-            <Select
-              label="Семестр"
-              value="spring"
-              onChange={() => {}}
-              options={[
-                { value: 'autumn', label: 'Осенний семестр' },
-                { value: 'spring', label: 'Весенний семестр' },
-              ]}
-            />
+            <CopyControl interactive
+              jsx={`<Select
+  label="Семестр"
+  defaultValue="spring"
+  options={[
+    { value: 'autumn', label: 'Осенний семестр' },
+    { value: 'spring', label: 'Весенний семестр' },
+  ]}
+/>`}
+            >
+              <Select
+                label="Семестр"
+                value="spring"
+                onChange={() => {}}
+                options={[
+                  { value: 'autumn', label: 'Осенний семестр' },
+                  { value: 'spring', label: 'Весенний семестр' },
+                ]}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Недоступно</h3>
-            <Select
-              label="Общежитие"
-              placeholder="Недоступно"
-              disabled
-              defaultValue=""
-              options={[
-                { value: 'spb', label: 'Санкт-Петербург' },
-                { value: 'msk', label: 'Москва' },
-              ]}
-            />
+            <CopyControl interactive
+              jsx={`<Select
+  label="Общежитие"
+  placeholder="Недоступно"
+  disabled
+  options={[
+    { value: 'spb', label: 'Санкт-Петербург' },
+    { value: 'msk', label: 'Москва' },
+  ]}
+/>`}
+            >
+              <Select
+                label="Общежитие"
+                placeholder="Недоступно"
+                disabled
+                defaultValue=""
+                options={[
+                  { value: 'spb', label: 'Санкт-Петербург' },
+                  { value: 'msk', label: 'Москва' },
+                ]}
+              />
+            </CopyControl>
           </div>
         </div>
       </div>

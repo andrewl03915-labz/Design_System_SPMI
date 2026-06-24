@@ -1,4 +1,5 @@
 import Checkbox from '../components/ui/Checkbox'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function CheckboxPage() {
   return (
@@ -45,17 +46,23 @@ export default function CheckboxPage() {
         <div className="ds-split-grid">
           <div className="ds-demo-card">
             <h3>Не отмечено</h3>
-            <Checkbox label="Получать обновления о новых программах" />
+            <CopyControl jsx={`<Checkbox label="Получать обновления о новых программах" />`}>
+              <Checkbox label="Получать обновления о новых программах" />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Отмечено</h3>
-            <Checkbox label="Подписка на обновления активна" defaultChecked />
+            <CopyControl jsx={`<Checkbox label="Подписка на обновления активна" defaultChecked />`}>
+              <Checkbox label="Подписка на обновления активна" defaultChecked />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Недоступно</h3>
-            <Checkbox label="Опция временно недоступна" disabled />
+            <CopyControl jsx={`<Checkbox label="Опция временно недоступна" disabled />`}>
+              <Checkbox label="Опция временно недоступна" disabled />
+            </CopyControl>
           </div>
         </div>
       </div>
@@ -63,8 +70,8 @@ export default function CheckboxPage() {
       <div className="ds-section-block">
         <h3>Состояния</h3>
         <p>
-          Состояния checkbox помогают показать активный выбор, фокус клавиатурной
-          навигации, ошибку и недоступность.
+          Состояния checkbox помогают показать активный выбор, ошибку и
+          недоступность.
         </p>
 
         <div className="ds-demo-column">

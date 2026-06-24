@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Pagination from '../components/ui/Pagination'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function PaginationPage() {
   // у каждого примера — своя независимая текущая страница
@@ -54,29 +55,35 @@ export default function PaginationPage() {
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>Стандартная навигация по списку</h3>
-            <Pagination
-              currentPage={pages.list}
-              totalPages={5}
-              onPageChange={setPage('list')}
-            />
+            <CopyControl jsx={`<Pagination currentPage={2} totalPages={5} onPageChange={setPage} />`}>
+              <Pagination
+                currentPage={pages.list}
+                totalPages={5}
+                onPageChange={setPage('list')}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Большой набор данных</h3>
-            <Pagination
-              currentPage={pages.big}
-              totalPages={8}
-              onPageChange={setPage('big')}
-            />
+            <CopyControl jsx={`<Pagination currentPage={4} totalPages={8} onPageChange={setPage} />`}>
+              <Pagination
+                currentPage={pages.big}
+                totalPages={8}
+                onPageChange={setPage('big')}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Состояние первой страницы</h3>
-            <Pagination
-              currentPage={pages.first}
-              totalPages={4}
-              onPageChange={setPage('first')}
-            />
+            <CopyControl jsx={`<Pagination currentPage={1} totalPages={4} onPageChange={setPage} />`}>
+              <Pagination
+                currentPage={pages.first}
+                totalPages={4}
+                onPageChange={setPage('first')}
+              />
+            </CopyControl>
           </div>
         </div>
       </div>

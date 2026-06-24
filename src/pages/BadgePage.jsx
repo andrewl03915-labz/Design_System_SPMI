@@ -1,4 +1,5 @@
 import Badge from '../components/ui/Badge'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function BadgePage() {
   return (
@@ -38,22 +39,30 @@ export default function BadgePage() {
 
         <div className="ds-split-grid">
           <div className="ds-demo-card">
-            <Badge variant="neutral">Нейтральный</Badge>
+            <CopyControl jsx={`<Badge variant="neutral">Нейтральный</Badge>`}>
+              <Badge variant="neutral">Нейтральный</Badge>
+            </CopyControl>
             <p>Нейтральная метка для общей категоризации и вторичной информации.</p>
           </div>
 
           <div className="ds-demo-card">
-            <Badge variant="primary">Основной</Badge>
+            <CopyControl jsx={`<Badge variant="primary">Основной</Badge>`}>
+              <Badge variant="primary">Основной</Badge>
+            </CopyControl>
             <p>Акцентная метка для выделенного системного ярлыка или важного контекста.</p>
           </div>
 
           <div className="ds-demo-card">
-            <Badge variant="success">Успешно</Badge>
+            <CopyControl jsx={`<Badge variant="success">Успешно</Badge>`}>
+              <Badge variant="success">Успешно</Badge>
+            </CopyControl>
             <p>Позитивный статус, подтверждение результата.</p>
           </div>
 
           <div className="ds-demo-card">
-            <Badge variant="warning">Предупреждение</Badge>
+            <CopyControl jsx={`<Badge variant="warning">Предупреждение</Badge>`}>
+              <Badge variant="warning">Предупреждение</Badge>
+            </CopyControl>
             <p>Акцент внимания или состояние, требующее проверки.</p>
           </div>
         </div>

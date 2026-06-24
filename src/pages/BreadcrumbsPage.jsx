@@ -1,4 +1,5 @@
 import Breadcrumbs from '../components/ui/Breadcrumbs'
+import CopyControl from '../components/ui/CopyControl'
 
 const simpleItems = [
   { label: 'Главная', href: '#' },
@@ -56,17 +57,49 @@ export default function BreadcrumbsPage() {
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>Путь из трёх уровней</h3>
-            <Breadcrumbs items={simpleItems} />
+            <CopyControl
+              jsx={`<Breadcrumbs
+  items={[
+    { label: 'Главная', href: '#' },
+    { label: 'Компоненты', href: '#' },
+    { label: 'Текущая страница' },
+  ]}
+/>`}
+            >
+              <Breadcrumbs items={simpleItems} />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Более глубокая иерархия</h3>
-            <Breadcrumbs items={nestedItems} />
+            <CopyControl
+              jsx={`<Breadcrumbs
+  items={[
+    { label: 'Главная', href: '#' },
+    { label: 'Поступление', href: '#' },
+    { label: 'Заявки', href: '#' },
+    { label: 'Детали заявки' },
+  ]}
+/>`}
+            >
+              <Breadcrumbs items={nestedItems} />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Пользовательский разделитель</h3>
-            <Breadcrumbs items={settingsItems} separator="›" />
+            <CopyControl
+              jsx={`<Breadcrumbs
+  separator="›"
+  items={[
+    { label: 'Главная', href: '#' },
+    { label: 'Аккаунт', href: '#' },
+    { label: 'Настройки безопасности' },
+  ]}
+/>`}
+            >
+              <Breadcrumbs items={settingsItems} separator="›" />
+            </CopyControl>
           </div>
         </div>
       </div>

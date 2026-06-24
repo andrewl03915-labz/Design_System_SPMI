@@ -1,4 +1,5 @@
 import Textarea from '../components/ui/Textarea'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function TextareaPage() {
   return (
@@ -47,27 +48,40 @@ export default function TextareaPage() {
         <div className="ds-split-grid">
           <div className="ds-demo-card">
             <h3>Пусто</h3>
-            <Textarea label="Комментарий" placeholder="Введите комментарий" rows={4} />
+            <CopyControl jsx={`<Textarea label="Комментарий" placeholder="Введите комментарий" rows={4} />`}>
+              <Textarea label="Комментарий" placeholder="Введите комментарий" rows={4} />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Заполнено</h3>
-            <Textarea
-              label="Комментарий"
-              value="Текущий MVP уже покрывает foundations, tokens и базовые компоненты."
-              readOnly
-              rows={4}
-            />
+            <CopyControl
+              jsx={`<Textarea
+  label="Комментарий"
+  value="Текущий MVP уже покрывает foundations, tokens и базовые компоненты."
+  readOnly
+  rows={4}
+/>`}
+            >
+              <Textarea
+                label="Комментарий"
+                value="Текущий MVP уже покрывает foundations, tokens и базовые компоненты."
+                readOnly
+                rows={4}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Недоступно</h3>
-            <Textarea
-              label="Внутренняя заметка"
-              placeholder="Недоступно"
-              disabled
-              rows={4}
-            />
+            <CopyControl jsx={`<Textarea label="Внутренняя заметка" placeholder="Недоступно" disabled rows={4} />`}>
+              <Textarea
+                label="Внутренняя заметка"
+                placeholder="Недоступно"
+                disabled
+                rows={4}
+              />
+            </CopyControl>
           </div>
         </div>
       </div>

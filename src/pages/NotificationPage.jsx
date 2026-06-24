@@ -1,4 +1,5 @@
 import Notification from '../components/ui/Notification'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function NotificationPage() {
   return (
@@ -43,21 +44,45 @@ export default function NotificationPage() {
         <p>Ниже показаны основные semantic variants для разных типов обратной связи.</p>
 
         <div className="ds-demo-column">
-          <Notification variant="info" title="Информация">
-            <p>Информационное сообщение помогает объяснить состояние интерфейса или процесса.</p>
-          </Notification>
+          <CopyControl
+            jsx={`<Notification variant="info" title="Информация">
+  <p>Информационное сообщение помогает объяснить состояние интерфейса или процесса.</p>
+</Notification>`}
+          >
+            <Notification variant="info" title="Информация">
+              <p>Информационное сообщение помогает объяснить состояние интерфейса или процесса.</p>
+            </Notification>
+          </CopyControl>
 
-          <Notification variant="success" title="Изменения сохранены">
-            <p>Изменения были успешно сохранены и уже применены к вашему профилю.</p>
-          </Notification>
+          <CopyControl
+            jsx={`<Notification variant="success" title="Изменения сохранены">
+  <p>Изменения были успешно сохранены и уже применены к вашему профилю.</p>
+</Notification>`}
+          >
+            <Notification variant="success" title="Изменения сохранены">
+              <p>Изменения были успешно сохранены и уже применены к вашему профилю.</p>
+            </Notification>
+          </CopyControl>
 
-          <Notification variant="warning" title="Не хватает документов">
-            <p>Некоторые обязательные документы ещё не загружены. Проверьте список перед отправкой.</p>
-          </Notification>
+          <CopyControl
+            jsx={`<Notification variant="warning" title="Не хватает документов">
+  <p>Некоторые обязательные документы ещё не загружены. Проверьте список перед отправкой.</p>
+</Notification>`}
+          >
+            <Notification variant="warning" title="Не хватает документов">
+              <p>Некоторые обязательные документы ещё не загружены. Проверьте список перед отправкой.</p>
+            </Notification>
+          </CopyControl>
 
-          <Notification variant="error" title="Не удалось отправить">
-            <p>Не удалось отправить форму. Проверьте обязательные поля и повторите попытку.</p>
-          </Notification>
+          <CopyControl
+            jsx={`<Notification variant="error" title="Не удалось отправить">
+  <p>Не удалось отправить форму. Проверьте обязательные поля и повторите попытку.</p>
+</Notification>`}
+          >
+            <Notification variant="error" title="Не удалось отправить">
+              <p>Не удалось отправить форму. Проверьте обязательные поля и повторите попытку.</p>
+            </Notification>
+          </CopyControl>
         </div>
       </div>
 

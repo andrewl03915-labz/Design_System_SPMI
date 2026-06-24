@@ -1,4 +1,5 @@
 import Accordion from '../components/ui/Accordion'
+import CopyControl from '../components/ui/CopyControl'
 
 const previewItems = [
   {
@@ -76,7 +77,16 @@ export default function AccordionPage() {
         </p>
 
         <div className="ds-demo-card">
-          <Accordion items={previewItems} />
+          <CopyControl interactive
+            jsx={`<Accordion
+  items={[
+    { title: 'Какие документы необходимы?', content: <p>Список документов…</p>, defaultOpen: true },
+    { title: 'Когда я получу ответ?', content: <p>Сроки рассмотрения…</p> },
+  ]}
+/>`}
+          >
+            <Accordion items={previewItems} />
+          </CopyControl>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import Tooltip from '../components/ui/Tooltip'
 import Button from '../components/ui/Button'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function TooltipPage() {
   return (
@@ -36,23 +37,41 @@ export default function TooltipPage() {
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>Размещение сверху</h3>
-            <Tooltip content="Дополнительный контекст отображается над триггером.">
-              <span className="ds-tooltip-demo-trigger">Инфо</span>
-            </Tooltip>
+            <CopyControl interactive
+              jsx={`<Tooltip content="Дополнительный контекст отображается над триггером.">
+  <span>Инфо</span>
+</Tooltip>`}
+            >
+              <Tooltip content="Дополнительный контекст отображается над триггером.">
+                <span className="ds-tooltip-demo-trigger">Инфо</span>
+              </Tooltip>
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Размещение снизу</h3>
-            <Tooltip content="Дополнительный контекст отображается под триггером." placement="bottom">
-              <span className="ds-tooltip-demo-trigger">Помощь</span>
-            </Tooltip>
+            <CopyControl interactive
+              jsx={`<Tooltip content="Дополнительный контекст отображается под триггером." placement="bottom">
+  <span>Помощь</span>
+</Tooltip>`}
+            >
+              <Tooltip content="Дополнительный контекст отображается под триггером." placement="bottom">
+                <span className="ds-tooltip-demo-trigger">Помощь</span>
+              </Tooltip>
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Текстовый триггер</h3>
-            <Tooltip content="Этот термин обозначает этап проверки после отправки.">
-              <span className="ds-tooltip-demo-text">Этап проверки</span>
-            </Tooltip>
+            <CopyControl interactive
+              jsx={`<Tooltip content="Этот термин обозначает этап проверки после отправки.">
+  <span>Этап проверки</span>
+</Tooltip>`}
+            >
+              <Tooltip content="Этот термин обозначает этап проверки после отправки.">
+                <span className="ds-tooltip-demo-text">Этап проверки</span>
+              </Tooltip>
+            </CopyControl>
           </div>
         </div>
       </div>

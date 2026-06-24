@@ -1,4 +1,5 @@
 import Button from '../components/ui/Button'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function ButtonPage() {
   return (
@@ -41,17 +42,23 @@ export default function ButtonPage() {
 
         <div className="ds-split-grid">
           <div className="ds-demo-card">
-            <Button variant="primary">Основная</Button>
+            <CopyControl jsx={`<Button variant="primary">Основная</Button>`}>
+              <Button variant="primary">Основная</Button>
+            </CopyControl>
             <p>Главное действие в текущем блоке или сценарии.</p>
           </div>
 
           <div className="ds-demo-card">
-            <Button variant="secondary">Вторичная</Button>
+            <CopyControl jsx={`<Button variant="secondary">Вторичная</Button>`}>
+              <Button variant="secondary">Вторичная</Button>
+            </CopyControl>
             <p>Вторичное действие, которое поддерживает основной сценарий.</p>
           </div>
 
           <div className="ds-demo-card">
-            <Button variant="ghost">Ghost</Button>
+            <CopyControl jsx={`<Button variant="ghost">Ghost</Button>`}>
+              <Button variant="ghost">Ghost</Button>
+            </CopyControl>
             <p>Низкоприоритетное действие для вспомогательных сценариев и менее заметных команд.</p>
           </div>
         </div>

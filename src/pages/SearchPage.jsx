@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Search from '../components/ui/Search'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function SearchPage() {
   // у каждого примера — своё независимое значение строки поиска
@@ -53,30 +54,36 @@ export default function SearchPage() {
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>По умолчанию</h3>
-            <Search
-              value={queries.variantsDefault}
-              onChange={setQuery('variantsDefault')}
-              placeholder="Поиск компонентов"
-            />
+            <CopyControl interactive jsx={`<Search placeholder="Поиск компонентов" />`}>
+              <Search
+                value={queries.variantsDefault}
+                onChange={setQuery('variantsDefault')}
+                placeholder="Поиск компонентов"
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Пустое состояние</h3>
-            <Search
-              value={queries.variantsEmpty}
-              onChange={setQuery('variantsEmpty')}
-              placeholder="Поиск по документации"
-            />
+            <CopyControl interactive jsx={`<Search placeholder="Поиск по документации" />`}>
+              <Search
+                value={queries.variantsEmpty}
+                onChange={setQuery('variantsEmpty')}
+                placeholder="Поиск по документации"
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Недоступно</h3>
-            <Search
-              value="Поиск недоступен"
-              onChange={() => {}}
-              placeholder="Поиск"
-              disabled
-            />
+            <CopyControl interactive jsx={`<Search placeholder="Поиск" disabled />`}>
+              <Search
+                value="Поиск недоступен"
+                onChange={() => {}}
+                placeholder="Поиск"
+                disabled
+              />
+            </CopyControl>
           </div>
         </div>
       </div>
@@ -84,7 +91,7 @@ export default function SearchPage() {
       <div className="ds-section-block">
         <h3>Состояния</h3>
         <p>
-          Для search особенно важны пустое, заполненное состояния, фокус и
+          Для search особенно важны пустое, заполненное состояния и
           недоступность, потому что они напрямую влияют на ввод запроса и
           восприятие доступности действия.
         </p>

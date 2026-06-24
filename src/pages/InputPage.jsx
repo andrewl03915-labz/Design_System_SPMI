@@ -1,4 +1,5 @@
 import Input from '../components/ui/Input'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function InputPage() {
   return (
@@ -45,17 +46,23 @@ export default function InputPage() {
         <div className="ds-split-grid">
           <div className="ds-demo-card">
             <h3>Пустое поле</h3>
-            <Input label="Имя" placeholder="Введите имя" />
+            <CopyControl jsx={`<Input label="Имя" placeholder="Введите имя" />`}>
+              <Input label="Имя" placeholder="Введите имя" />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Заполненное поле</h3>
-            <Input label="Имя" value="Алексей" readOnly />
+            <CopyControl jsx={`<Input label="Имя" value="Алексей" readOnly />`}>
+              <Input label="Имя" value="Алексей" readOnly />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Недоступно</h3>
-            <Input label="Организация" placeholder="Недоступно" disabled />
+            <CopyControl jsx={`<Input label="Организация" placeholder="Недоступно" disabled />`}>
+              <Input label="Организация" placeholder="Недоступно" disabled />
+            </CopyControl>
           </div>
         </div>
       </div>

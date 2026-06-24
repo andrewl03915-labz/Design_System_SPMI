@@ -1,4 +1,5 @@
 import FileUploader from '../components/ui/FileUploader'
+import CopyControl from '../components/ui/CopyControl'
 
 export default function FileUploaderPage() {
   return (
@@ -38,31 +39,57 @@ export default function FileUploaderPage() {
         <div className="ds-demo-column">
           <div className="ds-demo-card">
             <h3>По умолчанию</h3>
-            <FileUploader
-              label="Загрузить документ"
-              helperText="PDF или DOCX до 5 МБ."
-              accept=".pdf,.doc,.docx"
-              maxSize={5 * 1024 * 1024}
-            />
+            <CopyControl
+              jsx={`<FileUploader
+  label="Загрузить документ"
+  helperText="PDF или DOCX до 5 МБ."
+  accept=".pdf,.doc,.docx"
+  maxSize={5 * 1024 * 1024}
+/>`}
+            >
+              <FileUploader
+                label="Загрузить документ"
+                helperText="PDF или DOCX до 5 МБ."
+                accept=".pdf,.doc,.docx"
+                maxSize={5 * 1024 * 1024}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Загрузка изображения</h3>
-            <FileUploader
-              label="Фотография профиля"
-              helperText="JPG или PNG до 3 МБ."
-              accept=".jpg,.jpeg,.png"
-              maxSize={3 * 1024 * 1024}
-            />
+            <CopyControl
+              jsx={`<FileUploader
+  label="Фотография профиля"
+  helperText="JPG или PNG до 3 МБ."
+  accept=".jpg,.jpeg,.png"
+  maxSize={3 * 1024 * 1024}
+/>`}
+            >
+              <FileUploader
+                label="Фотография профиля"
+                helperText="JPG или PNG до 3 МБ."
+                accept=".jpg,.jpeg,.png"
+                maxSize={3 * 1024 * 1024}
+              />
+            </CopyControl>
           </div>
 
           <div className="ds-demo-card">
             <h3>Недоступно</h3>
-            <FileUploader
-              label="Архивная загрузка"
-              helperText="Загрузка файлов сейчас недоступна."
-              disabled
-            />
+            <CopyControl
+              jsx={`<FileUploader
+  label="Архивная загрузка"
+  helperText="Загрузка файлов сейчас недоступна."
+  disabled
+/>`}
+            >
+              <FileUploader
+                label="Архивная загрузка"
+                helperText="Загрузка файлов сейчас недоступна."
+                disabled
+              />
+            </CopyControl>
           </div>
         </div>
       </div>
